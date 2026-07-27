@@ -1,8 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import AppLayout from "./components/AppLayout";
-import SignIn from "./auth/Signin";
-import SignUp from "./auth/SignUp";
-import AuthLayout from "./auth/AuthLayout";
+import SignIn from "./pages/auth/SignIn";
+import SignUp from "./pages/auth/SignUp";
+import AuthLayout from "./pages/auth/AuthLayout";
+import ForgetPassword from "./pages/auth/ForgetPassword";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route element={<AuthLayout />}>
           <Route path="signin" element={<SignIn />} />
           <Route path="signup" element={<SignUp />} />
+          <Route path="forgot-password" element={<ForgetPassword />} />
         </Route>
 
         <Route path="/" element={<AppLayout />}></Route>
