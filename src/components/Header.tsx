@@ -19,7 +19,7 @@ function Header() {
   }
 
   return (
-    <header className="flex items-center justify-between px-5 sm:px-10 md:px-20 h-25 sm:h-37.5">
+    <header className="flex items-center justify-between px-5 sm:px-10 md:px-20 h-25 sm:h-30.5">
       <Link to="/" className="cursor-pointer">
         <img
           src="/logo.png"

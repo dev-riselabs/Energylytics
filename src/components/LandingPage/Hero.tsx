@@ -1,0 +1,56 @@
+const stats = [
+  { title: "Africans lack electricity", value: "600M+" },
+  { title: "Renewables potential by 2040", value: "67%" },
+  { title: "Countries tracked", value: "40+" },
+];
+
+function Hero() {
+  return (
+    <section className="hero-bg flex items-center justify-center px-5 sm:px-10 py-15  sm:py-25 relative font-inter">
+      <div className="absolute inset-0 bg-linear-to-r from-black/70 to-black/60 z-1"></div>
+      <div className="max-w-250 flex flex-col gap-17.5 items-center w-full z-2 relative">
+        <div className="flex flex-col gap-14">
+          <div className="flex flex-col gap-5">
+            <div className="flex items-center gap-4 px-5 py-2 rounded-full bg-green10 self-center">
+              <div className="w-2 h-2 rounded-full bg-green"></div>
+              <span className="text-green text-sm font-bold">
+                Data. Energy. Transformation.
+              </span>
+            </div>
+            <div className="flex flex-col gap-3 items-center">
+              <h1 className="text-white text-[32px] font-bold text-center">
+                Leveraging data, artificial intelligence and knowledge-sharing
+                to accelerate Africa's clean energy transition
+              </h1>
+              <p className="text-xl text-white text-center">
+                We bring together energy data, analytics, policy insights and AI
+                modelling to help stakeholders understand emerging opportunities
+                and barriers across the clean energy value chain.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-3 justify-center ">
+            <button className="px-5 py-3 rounded-xl border border-green bg-green text-white text-sm font-bold font-dmSans hover:bg-white  hover:text-green transition-all cursor-pointer">
+              Explore Our Work
+            </button>
+            <button className="px-5 py-3 rounded-xl border border-green30 bg-white text-green text-sm font-bold font-dmSans hover:bg-green hover:text-white transition-all cursor-pointer">
+              Get in Touch
+            </button>
+          </div>
+        </div>
+        <div className="flex justify-between items-center max-w-193 w-full">
+          {stats.map(({ title, value }) => (
+            <div key={title} className="flex flex-col gap-3">
+              <h4 className="text-green15 text-[32px] font-dmSans font-bold">
+                {value}
+              </h4>
+              <p className="text-base  text-white">{title}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Hero;

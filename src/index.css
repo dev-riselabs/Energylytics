@@ -19,6 +19,14 @@
   --color-green80: #003227;
   --color-green90: #00211a;
   --color-green100: #00140f;
+  --color-green15: #00E2AE;
+  --color-green25: #009689;
+  --color-green35: #EEFDF7;
+  --color-green45: #D0FAE5;
+  --color-green55: #E9FDF3;
+  --color-green65: #EAFDFF;
+  --color-green75: #EAFDF9;
+  --color-green85: #009966;
 
   /* Slate */
   --color-slate: #45464b;
@@ -35,11 +43,50 @@
 
   --color-zinc: #c4c4c4;
   --color-zinc100: #939090;
-  --color-black100 : #333333;
+  --color-zinc200 : #F9FAFB;
+  --color-zinc300: #172030;
+  --color-zinc400: #242C3C;
+  --color-black100: #333333;
 }
 
 .auth-bg {
   background-image: url("/auth.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-bg {
+  background-image: url("/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.data-bg{
+  background-image: url('/data.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.focus-area-bg{
+  background-image:
+    linear-gradient(
+      to bottom right,
+      #009689 80%,
+      rgba(0,0,0,0.2),
+      rgba(0,0,0,0.2),
+      rgba(0, 150, 137, 0.2),
+      rgba(0, 150, 137, 0.2),
+      rgba(0, 150, 137, 0.57)
+    ),
+    url('/focus-area.jpg');
+
+  background-size: cover;
+  background-position: bottom;
+  background-blend-mode: multiply;
+}
+
+.build-bg{
+  background-image: url('/build-bg.jpg');
   background-size: cover;
   background-position: center;
 }

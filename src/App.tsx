@@ -4,6 +4,7 @@ import SignIn from "./pages/auth/SignIn";
 import SignUp from "./pages/auth/SignUp";
 import AuthLayout from "./pages/auth/AuthLayout";
 import ForgetPassword from "./pages/auth/ForgetPassword";
+import Homepage from "./pages/Homepage";
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
           <Route path="forgot-password" element={<ForgetPassword />} />
         </Route>
 
-        <Route path="/" element={<AppLayout />}></Route>
+        <Route path="/" element={<AppLayout />}>
+          <Route index element={<Homepage />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
