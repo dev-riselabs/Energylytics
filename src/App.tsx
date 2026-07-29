@@ -5,6 +5,8 @@ import SignUp from "./pages/auth/SignUp";
 import AuthLayout from "./pages/auth/AuthLayout";
 import ForgetPassword from "./pages/auth/ForgetPassword";
 import Homepage from "./pages/Homepage";
+import About from "./pages/About";
+import Solutions from "./pages/Solutions";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
 
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Homepage />} />
+          <Route path="about" element={<About />} />
+          <Route path='services' element={<Solutions/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

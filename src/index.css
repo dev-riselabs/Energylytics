@@ -27,6 +27,7 @@
   --color-green65: #EAFDFF;
   --color-green75: #EAFDF9;
   --color-green85: #009966;
+  --color-green95: #C7F0D4;
 
   /* Slate */
   --color-slate: #45464b;
@@ -46,7 +47,12 @@
   --color-zinc200 : #F9FAFB;
   --color-zinc300: #172030;
   --color-zinc400: #242C3C;
+  --color-zinc500: #F8FAFC;
+  --color-zinc600: #F8FCF9;
+  --color-zinc700: #F2F6F9;
+  --color-zinc800: #F6F8F6;
   --color-black100: #333333;
+  --color-black200 : #222222;
 }
 
 .auth-bg {
@@ -63,6 +69,12 @@
 
 .data-bg{
   background-image: url('/data.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.about-bg{
+  background-image: url('/about-hero.jpg');
   background-size: cover;
   background-position: center;
 }
