@@ -8,7 +8,7 @@
   --font-prata: "Prata", serif;
 
   /* Green */
-  --color-green: #00644d;
+  --color-green: #00644D;
   --color-green10: #cce0db;
   --color-green20: #aacbc4;
   --color-green30: #80b2a6;
@@ -29,6 +29,7 @@
   --color-green85: #009966;
   --color-green95: #C7F0D4;
   --color-green200: #C9F3D7;
+  --color-green300: #34C759;
 
   /* Slate */
   --color-slate: #45464b;
@@ -55,7 +56,7 @@
   --color-black100: #333333;
   --color-black200 : #222222;
   --color-red : #FF383C;
-  --color-green: #34C759;
+  
 }
 
 .auth-bg {
