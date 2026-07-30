@@ -53,6 +53,8 @@
   --color-zinc800: #F6F8F6;
   --color-black100: #333333;
   --color-black200 : #222222;
+  --color-red : #FF383C;
+  --color-green: #34C759;
 }
 
 .auth-bg {

@@ -32,7 +32,7 @@ function SmartEnergy() {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 gap-7 px-5 sm:px-10 md:px-20 py-15">
       <div className="grid grid-cols-2 gap-5">
-        {features.map(({ title, icon: Icon, description }, i) => (
+        {features.map(({ title, icon: Icon, description }) => (
           <div
             key={title}
             className={`rounded-2xl p-7 flex flex-col gap-5.5 flex-1 border border-zinc `}

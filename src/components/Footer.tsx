@@ -8,10 +8,10 @@ const navLinks = [
 ];
 
 const services = [
-  "Energy Data Platform",
-  "AI Management Tools",
-  "Education & Advocacy",
-  "Research & Insights",
+  { name: "Energy Data Platform", path: "/energy-platform" },
+  { name: "AI Management Tools", path: "/management-tool" },
+  { name: "Education & Advocacy", path: "/insights" },
+  { name: "Research & Insights", path: "/contact" },
 ];
 
 function Footer() {
@@ -30,13 +30,15 @@ function Footer() {
         </div>
         <div className="w-full md:w-1/2 flex items-center justify-between font-sora">
           <div className="flex flex-col gap-5">
-            <h4 className="text-slate text-lg sm:text-xl font-semibold">Company</h4>
+            <h4 className="text-slate text-lg sm:text-xl font-semibold">
+              Company
+            </h4>
             <nav className="flex flex-col gap-3">
               {navLinks.map(({ name, path }) => (
                 <Link
                   to={path}
                   key={name}
-                  className="text-sm sm:text-base text-slate font-light"
+                  className="text-sm sm:text-base text-slate font-light hover:text-green25 transition-all"
                 >
                   {name}
                 </Link>
@@ -44,15 +46,18 @@ function Footer() {
             </nav>
           </div>
           <div className="flex flex-col gap-5">
-            <h4 className="text-slate text-lg sm:text-xl font-semibold">Services</h4>
+            <h4 className="text-slate text-lg sm:text-xl font-semibold">
+              Services
+            </h4>
             <nav className="flex flex-col gap-3">
-              {services.map((name) => (
-                <span
+              {services.map(({ name, path }) => (
+                <Link
+                  to={path}
                   key={name}
-                  className="text-sm sm:text-base text-slate font-light"
+                  className="text-sm sm:text-base text-slate font-light hover:text-green25 transition-all"
                 >
                   {name}
-                </span>
+                </Link>
               ))}
             </nav>
           </div>
