@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Solutions from "./pages/Solutions";
 import EnergyPlatform from "./pages/EnergyPlatform";
 import ManagementTool from "./pages/ManagementTool";
+import EducationPlatform from "./pages/EducationPlatform";
 
 function App() {
   return (
@@ -23,9 +24,10 @@ function App() {
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Homepage />} />
           <Route path="about" element={<About />} />
-          <Route path="services" element={<Solutions />} />
+          <Route path="research-insight" element={<Solutions />} />
           <Route path="energy-platform" element={<EnergyPlatform />} />
           <Route path="management-tool" element={<ManagementTool />} />
+          <Route path="education-advocacy" element={<EducationPlatform />} />
         </Route>
       </Routes>
     </BrowserRouter>

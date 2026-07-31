@@ -15,7 +15,7 @@ function Solutions() {
       <EnergyInsight />
       <SmartEnergy />
       <AdvocacyPlatform />
-      <Strategy />
+      <Strategy title='Ready to transform your energy strategy?' description="Join the leading organizations using Energylytics Africa to power the continent’s green transition." btn1="Get Started Now" btn2="Contact Sales" />
     </>
   );
 }

@@ -1,8 +1,9 @@
 import DataDrive from "../components/Services/EnergyPlatform/DataDrive";
 import Hero from "../components/Services/EnergyPlatform/Hero";
-import Optimize from "../components/Services/EnergyPlatform/Optimize";
+
 import PlatformCapability from "../components/Services/EnergyPlatform/PlatformCapability";
 import WhyEnergylytics from "../components/Services/EnergyPlatform/WhyEnergylytics";
+import Strategy from "../components/Services/Strategy";
 
 function EnergyPlatform() {
   return (
@@ -11,7 +12,12 @@ function EnergyPlatform() {
       <PlatformCapability />
       <DataDrive />
       <WhyEnergylytics />
-      <Optimize />
+      <Strategy
+        title="Ready to optimize your assets?"
+        description="Join the leading renewable energy producers in Africa. Schedule a personalized demo of the Energy Insights Platform today."
+        btn1="Request a Demo"
+        btn2="Contact Sales"
+      />
     </>
   );
 }

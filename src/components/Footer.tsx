@@ -10,8 +10,8 @@ const navLinks = [
 const services = [
   { name: "Energy Data Platform", path: "/energy-platform" },
   { name: "AI Management Tools", path: "/management-tool" },
-  { name: "Education & Advocacy", path: "/insights" },
-  { name: "Research & Insights", path: "/contact" },
+  { name: "Education & Advocacy", path: "/education-advocacy" },
+  { name: "Research & Insights", path: "/research-insight" },
 ];
 
 function Footer() {
