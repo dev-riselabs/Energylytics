@@ -2,12 +2,14 @@ import Hero from "../components/Services/ManagementTool/Hero";
 import ManagementSuite from "../components/Services/ManagementTool/ManagementSuite";
 import ProvenImpact from "../components/Services/ManagementTool/ProvenImpact";
 import SmartManagement from "../components/Services/ManagementTool/SmartManagement";
+import PartnersCarousel from "../components/Services/PartnerCarousel";
 import Strategy from "../components/Services/Strategy";
 
 function ManagementTool() {
   return (
     <>
       <Hero />
+      <PartnersCarousel />
       <ManagementSuite />
       <SmartManagement />
       <ProvenImpact />

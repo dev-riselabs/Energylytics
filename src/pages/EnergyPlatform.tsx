@@ -3,12 +3,14 @@ import Hero from "../components/Services/EnergyPlatform/Hero";
 
 import PlatformCapability from "../components/Services/EnergyPlatform/PlatformCapability";
 import WhyEnergylytics from "../components/Services/EnergyPlatform/WhyEnergylytics";
+import PartnersCarousel from "../components/Services/PartnerCarousel";
 import Strategy from "../components/Services/Strategy";
 
 function EnergyPlatform() {
   return (
     <>
       <Hero />
+      <PartnersCarousel />
       <PlatformCapability />
       <DataDrive />
       <WhyEnergylytics />

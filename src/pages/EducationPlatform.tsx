@@ -10,6 +10,7 @@ function EducationPlatform() {
   return (
     <>
       <Hero />
+      
       <WhyJoin />
       <EventWorkshop />
       <div className="bg-white px-5 sm:px-10 md:px-20 py-15">
