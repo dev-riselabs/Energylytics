@@ -8,7 +8,7 @@ const navLinks = [
   { name: "About Us", path: "/about" },
   { name: "Services", path: "/services" },
   { name: "Insights", path: "/insights" },
-  { name: "Contact", path: "/contact" },
+  { name: "Contact", path: "/blog" },
 ];
 
 function Header() {
@@ -31,7 +31,11 @@ function Header() {
         onClick={handleToggleShowMenu}
         className="cursor-pointer md:hidden z-20"
       >
-        {showMenu ? <MdClose className="w-5 h-5"/> : <FiMenu className="w-5 h-5"/>}
+        {showMenu ? (
+          <MdClose className="w-5 h-5" />
+        ) : (
+          <FiMenu className="w-5 h-5" />
+        )}
       </button>
       <div
         className={`${showMenu ? "fixed right-0 top-0 w-2/3 h-screen" : "hidden"} bg-white p-4 pt-20 flex flex-col gap-10 `}
@@ -41,7 +45,9 @@ function Header() {
             <NavLink
               to={path}
               className={({ isActive }) =>
-                isActive ? "text-green text-base font-semibold" : "text-slate text-base"
+                isActive
+                  ? "text-green text-base font-semibold"
+                  : "text-slate text-base"
               }
             >
               {name}
@@ -64,7 +70,9 @@ function Header() {
             <NavLink
               to={path}
               className={({ isActive }) =>
-                isActive ? "text-green text-base font-semibold" : "text-slate text-base"
+                isActive
+                  ? "text-green text-base font-semibold"
+                  : "text-slate text-base"
               }
             >
               {name}
@@ -72,10 +80,10 @@ function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-4">
-          <button className="px-5 py-3 rounded-xl border border-green30 text-green text-sm font-bold font-dmSans hover:bg-green30 transition-all cursor-pointer">
+          <button className="px-5 py-3 rounded-xl border border-green30 text-green25 text-sm font-bold font-dmSans hover:bg-green25 hover:text-white transition-all cursor-pointer">
             Get a demo
           </button>
-          <button className="px-5 py-3 rounded-xl border border-green bg-green text-white text-sm font-bold font-dmSans hover:bg-transparent hover:text-green transition-all cursor-pointer">
+          <button className="px-5 py-3 rounded-xl border border-green25 bg-green25 text-white text-sm font-bold font-dmSans hover:bg-transparent hover:text-green25 transition-all cursor-pointer">
             Login/Sign Up
           </button>
         </div>

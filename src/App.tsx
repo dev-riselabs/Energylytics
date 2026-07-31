@@ -10,6 +10,7 @@ import Solutions from "./pages/Solutions";
 import EnergyPlatform from "./pages/EnergyPlatform";
 import ManagementTool from "./pages/ManagementTool";
 import EducationPlatform from "./pages/EducationPlatform";
+import Blog from "./pages/Blog";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="energy-platform" element={<EnergyPlatform />} />
           <Route path="management-tool" element={<ManagementTool />} />
           <Route path="education-advocacy" element={<EducationPlatform />} />
+          <Route path="blog" element={<Blog />} />
         </Route>
       </Routes>
     </BrowserRouter>

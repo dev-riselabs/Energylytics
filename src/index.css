@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Prata&family=Sora:wght@100..800&display=swap");
 @import "tailwindcss";
 
@@ -6,9 +7,10 @@
   --font-dmSans: "DM Sans", sans-serif;
   --font-sora: "Sora", sans-serif;
   --font-prata: "Prata", serif;
+  --font-inria: "Inria Sans", sans-serif;
 
   /* Green */
-  --color-green: #00644D;
+  --color-green: #00644d;
   --color-green10: #cce0db;
   --color-green20: #aacbc4;
   --color-green30: #80b2a6;
@@ -19,17 +21,17 @@
   --color-green80: #003227;
   --color-green90: #00211a;
   --color-green100: #00140f;
-  --color-green15: #00E2AE;
+  --color-green15: #00e2ae;
   --color-green25: #009689;
-  --color-green35: #EEFDF7;
-  --color-green45: #D0FAE5;
-  --color-green55: #E9FDF3;
-  --color-green65: #EAFDFF;
-  --color-green75: #EAFDF9;
+  --color-green35: #eefdf7;
+  --color-green45: #d0fae5;
+  --color-green55: #e9fdf3;
+  --color-green65: #eafdff;
+  --color-green75: #eafdf9;
   --color-green85: #009966;
-  --color-green95: #C7F0D4;
-  --color-green200: #C9F3D7;
-  --color-green300: #34C759;
+  --color-green95: #c7f0d4;
+  --color-green200: #c9f3d7;
+  --color-green300: #34c759;
 
   /* Slate */
   --color-slate: #45464b;
@@ -43,25 +45,26 @@
   --color-slate80: #232326;
   --color-slate90: #171719;
   --color-slate100: #0e0e0f;
+  --color-slate200: #797979;
 
   --color-zinc: #c4c4c4;
   --color-zinc100: #939090;
-  --color-zinc200 : #F9FAFB;
+  --color-zinc200: #f9fafb;
   --color-zinc300: #172030;
-  --color-zinc400: #242C3C;
-  --color-zinc500: #F8FAFC;
-  --color-zinc600: #F8FCF9;
-  --color-zinc700: #F2F6F9;
-  --color-zinc800: #F6F8F6;
+  --color-zinc400: #242c3c;
+  --color-zinc500: #f8fafc;
+  --color-zinc600: #f8fcf9;
+  --color-zinc700: #f2f6f9;
+  --color-zinc800: #f6f8f6;
+  --color-zinc900: #ededed;
   --color-black100: #333333;
-  --color-black200 : #222222;
-  --color-black300: #0D1B12;
-  --color-red : #FF383C;
-  --color-purple: #EDE3FF;
-  --color-purple10: #3D00B7;
-  --color-brown: #FFEACC;
-  --color-brown10 : #995B03;
-  
+  --color-black200: #222222;
+  --color-black300: #0d1b12;
+  --color-red: #ff383c;
+  --color-purple: #ede3ff;
+  --color-purple10: #3d00b7;
+  --color-brown: #ffeacc;
+  --color-brown10: #995b03;
 }
 
 .auth-bg {
@@ -76,38 +79,38 @@
   background-position: center;
 }
 
-.data-bg{
-  background-image: url('/data.png');
+.data-bg {
+  background-image: url("/data.png");
   background-size: cover;
   background-position: center;
 }
 
-.about-bg{
-  background-image: url('/about-hero.jpg');
+.about-bg {
+  background-image: url("/about-hero.jpg");
   background-size: cover;
   background-position: center;
 }
 
-.focus-area-bg{
+.focus-area-bg {
   background-image:
     linear-gradient(
       to bottom right,
       #009689 80%,
-      rgba(0,0,0,0.2),
-      rgba(0,0,0,0.2),
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2),
       rgba(0, 150, 137, 0.2),
       rgba(0, 150, 137, 0.2),
       rgba(0, 150, 137, 0.57)
     ),
-    url('/focus-area.jpg');
+    url("/focus-area.jpg");
 
   background-size: cover;
   background-position: bottom;
   background-blend-mode: multiply;
 }
 
-.build-bg{
-  background-image: url('/build-bg.jpg');
+.build-bg {
+  background-image: url("/build-bg.jpg");
   background-size: cover;
   background-position: center;
 }
