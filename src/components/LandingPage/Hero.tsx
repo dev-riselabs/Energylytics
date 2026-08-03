@@ -18,11 +18,11 @@ function Hero() {
               </span>
             </div>
             <div className="flex flex-col gap-3 items-center">
-              <h1 className="text-white text-[32px] font-bold text-center">
+              <h1 className="text-white text-3xl sm:text-[32px] font-bold text-center">
                 Leveraging data, artificial intelligence and knowledge-sharing
                 to accelerate Africa's clean energy transition
               </h1>
-              <p className="text-xl text-white text-center">
+              <p className="text-lg sm:text-xl text-white text-center">
                 We bring together energy data, analytics, policy insights and AI
                 modelling to help stakeholders understand emerging opportunities
                 and barriers across the clean energy value chain.
@@ -38,13 +38,13 @@ function Hero() {
             </button>
           </div>
         </div>
-        <div className="flex justify-between items-center max-w-193 w-full">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-193 w-full">
           {stats.map(({ title, value }) => (
             <div key={title} className="flex flex-col gap-3">
-              <h4 className="text-green15 text-[32px] font-dmSans font-bold">
+              <h4 className="text-green15 text-2xl sm:text-[32px] font-dmSans font-bold">
                 {value}
               </h4>
-              <p className="text-base  text-white">{title}</p>
+              <p className="text-sm sm:text-base text-white">{title}</p>
             </div>
           ))}
         </div>

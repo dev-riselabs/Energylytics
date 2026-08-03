@@ -22,21 +22,21 @@ function AccentFeature({ label, title, description, features, isColored }: Accen
           <div className="w-2 h-2 rounded-full bg-green"></div>
           <span className="text-green text-sm font-bold">{label}</span>
         </div>
-        <h3 className="text-[15px] font-bold text-white">{title}</h3>
+        <h3 className="text-[15px] font-bold text-white text-center">{title}</h3>
       </div>
-      <p className="text-xl text-white text-center">{description}</p>
-      <div className="flex flex-col sm:flex-row gap-5">
+      <p className="text-lg sm:text-xl text-white text-center">{description}</p>
+      <div className={`grid grid-cols-1 sm:grid-cols-2  gap-5 ${isColored ? 'lg:grid-cols-6' : 'lg:grid-cols-3'}`}>
         {features.map(({ title, icon: Icon, description }) => (
           <div
             key={title}
-            className={`rounded-2xl p-10 flex flex-col gap-7.5 flex-1 ${
-                isColored ? 'bg-green35' : 'bg-white'
+            className={`rounded-2xl p-7 sm:p-10 flex flex-col gap-5 sm:gap-7.5 flex-1 ${
+                isColored ? 'bg-green35 lg:col-span-3' : 'bg-white'
             }`}
           >
-            <div className="w-12.5 h-12.5 bg-green25 rounded-md flex items-center justify-center">
+            <div className="w-10 sm:w-12.5 h-10 sm:h-12.5 bg-green25 rounded-md flex items-center justify-center">
               <Icon className="w-6 h-6 text-white" />
             </div>
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-4 sm:gap-6">
               <h4 className="text-base font-bold text-slate60">{title}</h4>
               <p className="text-base text-slate50">{description}</p>
             </div>

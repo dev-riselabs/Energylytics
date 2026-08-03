@@ -17,7 +17,7 @@ const services = [
 function Footer() {
   return (
     <footer className="flex flex-col gap-6 px-5 sm:px-10 md:px-20 py-15 divide-y-2 divide-zinc">
-      <div className="flex flex-col md:flex-row md:items-center gap-15 justify-between pb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-15 justify-between pb-6">
         <div className="flex flex-col gap-5">
           <img src="/logo.png" alt="" className="w-50 h-25 object-cover" />
           <span className="text-sm sm:text-base text-slate50 max-w-[50ch]">
@@ -28,7 +28,7 @@ function Footer() {
             Headquarters: Abuja, Nigeria
           </span>
         </div>
-        <div className="w-full md:w-1/2 flex items-center justify-between font-sora">
+        <div className="w-full flex items-center justify-between font-sora">
           <div className="flex flex-col gap-5">
             <h4 className="text-slate text-lg sm:text-xl font-semibold">
               Company

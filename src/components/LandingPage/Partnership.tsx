@@ -30,23 +30,23 @@ function Partnership() {
           Partnerships & Collaborations
         </span>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         {features.map(({ title, icon: Icon, description }) => (
           <div
             key={title}
-            className={`rounded-2xl p-10 flex flex-col gap-7.5 flex-1 border border-zinc `}
+            className={`rounded-2xl p-7 sm:p-10 flex flex-col gap-6 sm:gap-7.5 flex-1 border border-zinc `}
           >
             <div className="w-12.5 h-12.5 bg-green85 rounded-md flex items-center justify-center">
               <Icon className="w-6 h-6 text-white" />
             </div>
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-4 sm:gap-6">
               <h4 className="text-base font-bold text-slate60">{title}</h4>
               <p className="text-base text-slate50">{description}</p>
             </div>
           </div>
         ))}
       </div>
-      <p className="text-xl text-slate text-center ">
+      <p className="text-lg sm:text-xl text-slate text-center ">
         We collaborate across sectors to ensure that renewable energy data
         drives smarter decisions, accelerates investment, and creates lasting
         impact for communities across Africa.

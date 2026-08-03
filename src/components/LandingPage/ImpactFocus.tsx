@@ -24,11 +24,11 @@ function ImpactFocus() {
           Driving Change Across the Value Chain
         </h3>
       </div>
-      <p className="text-xl text-white text-center">
+      <p className="text-lg sm:text-xl text-white text-center">
         Our work creates measurable impact across renewable energy optimization,
         policy development, and sustainable innovation.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-5 w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-5 w-full">
         {
             chains.map(({icon:Icon, title }) => <div key={title} className="flex border border-zinc px-2 py-10 gap-7.5 rounded-2xl items-center flex-col bg-white">
                 <div className="w-12.5 h-12.5 rounded-md flex items-center justify-center bg-green45"><Icon className="w-6 h-6 text-green25"/></div>

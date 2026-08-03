@@ -13,14 +13,14 @@ function Insight() {
           Insights & Publications
         </span>
       </div>
-      <p className="text-xl text-white text-center max-w-[60ch]">
+      <p className="text-lg sm:text-xl text-white text-center max-w-[60ch]">
         Stay informed with Energylytics' data-driven analyses and research on
         Africa's renewable energy landscape.
       </p>
-      <div className="grid grid-cols-1 gap-8 md:gap-11.5 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-8 lg:gap-11.5 md:grid-cols-2">
         <div className="flex flex-col gap-6 ">
             {
-                insights.map(insight => <div key={insight} className="bg-zinc400 rounded-2xl py-6 px-10 flex items-center gap-4.5">
+                insights.map(insight => <div key={insight} className="bg-zinc400 rounded-2xl py-6 px-4 md:px-10 flex items-center gap-4.5">
                 <div className="w-2 h-2 bg-green25 rounded-full shrink-0"></div>
                 <span className="text-white text-base">{insight}</span>
                 </div>)

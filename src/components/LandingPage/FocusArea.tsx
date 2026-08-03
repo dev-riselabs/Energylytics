@@ -45,7 +45,7 @@ function FocusArea() {
         <div className="w-2 h-2 rounded-full bg-green"></div>
         <span className="text-green text-sm font-bold">Our Focus Areas</span>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-7 items-stretch">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-7 items-stretch">
         {areas.map((area, i) => {
           if (area.isImage) {
             return (
@@ -53,7 +53,7 @@ function FocusArea() {
                 <img
                   src={area.img}
                   alt=""
-                  className="w-full h-full object-cover rounded-xl"
+                  className="w-full h-full object-cover rounded-xl lg:h-100"
                 />
               </div>
             );
@@ -61,7 +61,7 @@ function FocusArea() {
             return (
               <div
                 key={i}
-                className="border border-zinc flex flex-col gap-8 p-10 rounded-xl bg-white"
+                className="border border-zinc flex flex-col gap-8 p-7 md:p-10 rounded-xl bg-white"
               >
                 <div className="w-12.5 h-12.5 bg-green rounded-md flex items-center justify-center">
                   <BiCoinStack className="w-6 h-6 text-white" />

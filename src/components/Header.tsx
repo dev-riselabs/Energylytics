@@ -29,7 +29,7 @@ function Header() {
       </Link>
       <button
         onClick={handleToggleShowMenu}
-        className="cursor-pointer md:hidden z-20"
+        className="cursor-pointer lg:hidden z-20"
       >
         {showMenu ? (
           <MdClose className="w-5 h-5" />
@@ -64,15 +64,16 @@ function Header() {
         </div>
       </div>
 
-      <div className="md:flex hidden flex-col gap-4 md:w-2/3 md:flex-row md:items-center md:justify-between">
-        <nav className="flex items-center gap-4">
+      <div className="lg:flex hidden flex-col gap-4 md:w-2/3 md:flex-row md:items-center md:justify-between">
+        <nav className="flex items-center gap-2 xl:gap-4">
           {navLinks.map(({ name, path }) => (
             <NavLink
+              key={name}
               to={path}
               className={({ isActive }) =>
                 isActive
-                  ? "text-green text-base font-semibold"
-                  : "text-slate text-base"
+                  ? "text-green text-sm xl:text-base font-semibold"
+                  : "text-slate text-sm xl:text-base"
               }
             >
               {name}

@@ -1,13 +1,13 @@
 function ReadySection() {
   return (
     <section className="py-20 px-5 sm:px-10 md:px-20 font-inter">
-      <div className="h-75 rounded-4xl flex items-center justify-center gap-6 build-bg relative overflow-hidden">
+      <div className="h-75 rounded-4xl flex items-center justify-center gap-6 build-bg relative overflow-hidden px-4">
         <div className="absolute inset-0 bg-[#125749E8]"></div>
         <div className="flex flex-col gap-7.5 items-center relative z-2">
           <h3 className="text-white font-bold text-[15px]">
             Ready to Power the Future?
           </h3>
-          <p className="text-xl text-white text-center max-w-[60ch]">
+          <p className="text-lg sm:text-xl text-white text-center max-w-[60ch]">
             Whether you are an investor looking for opportunities or a
             government entity planning infrastructure, our data lights the way
           </p>

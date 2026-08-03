@@ -9,7 +9,7 @@ function Expert() {
   return (
     <section className="bg-zinc500 px-5 sm:px-10 md:px-20 py-20 flex flex-col items-center gap-8">
       <h3 className="text-slate font-bold text-[15px]">Made the Experts</h3>
-      <p className="text-xl text-slate50 text-center max-w-[60ch]">
+      <p className="text-lg sm:text-xl text-slate50 text-center max-w-[60ch]">
         The diverse team of analysts, engineers and strategies powering our
         intelligence.
       </p>
@@ -18,8 +18,8 @@ function Expert() {
             experts.map(({img, name, title}, i) => <div key={`${name}-${i}`} className="flex flex-col items-center gap-5">
                <img src={img} alt="" className="w-25 h-25 rounded-full object-cover object-top"/>
                <div className="flex flex-col gap-2 items-center font-sora">
-                <h5 className="text-base font-bold text-black200">{name}</h5>
-                <span className="text-black font-light text-sm">{title}</span>
+                <h5 className="text-base font-bold text-black200 text-center">{name}</h5>
+                <span className="text-black font-light text-sm text-center">{title}</span>
                </div>
             </div>)
         }
