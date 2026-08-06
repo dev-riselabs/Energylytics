@@ -3,7 +3,7 @@ import { FaArrowRightLong, FaCircleCheck } from "react-icons/fa6";
 
 function EnergyInsight() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-zinc800 px-5 sm:px-10 md:px-20 py-10">
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-zinc800 px-5 sm:px-7 md:px-15 py-10">
       <div className="flex flex-col gap-7">
         <div className="flex flex-col gap-6">
           <div className="py-2 px-5 rounded-full items-center justify-center flex gap-2 bg-green45  text-green text-sm font-bold self-start">
@@ -40,12 +40,12 @@ function EnergyInsight() {
             </li>
           </div>
         </ul>
-        <button className="flex items-center gap-3.5 border-b-3 pb-2.5 self-start border-green25 font-sora text-sm text-slate font-semibold ">Explore Platform Features <FaArrowRightLong className="w-5 h-5" /></button>
+        <button className="flex items-center gap-3.5 cursor-pointer border-b-3 pb-2.5 self-start border-green25 font-sora text-sm text-slate font-semibold ">Explore Platform Features <FaArrowRightLong className="w-5 h-5" /></button>
       </div>
       <img
         src="/reliability.png"
         alt=""
-        className="object-cover w-full rounded-2xl h-100"
+        className="object-cover sm:object-fill w-full rounded-2xl h-100"
       />
     </section>
   );

@@ -31,8 +31,8 @@ const features = [
 ];
 
 function ManagementSuite() {
-  return <section className="py-20 px-5 sm:px-10 md:px-20 font-inter flex flex-col gap-10 items-center bg-zinc800">
-      <h2 className="text-slate text-2xl font-medium">Enterprise-grade Smart Management Suite</h2>
+  return <section className="py-20 px-5 sm:px-7 md:px-15 font-inter flex flex-col gap-10 items-center bg-zinc800">
+      <h2 className="text-slate text-2xl font-medium text-center">Enterprise-grade Smart Management Suite</h2>
       <p className="text-base text-slate50 text-center max-w-[60ch]">
         Our integrated toolset offers complete visibility and control over your energy infrastructure through advanced AI monitoring and forecasting.
       </p>

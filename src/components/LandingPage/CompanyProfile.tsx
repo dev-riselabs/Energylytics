@@ -8,7 +8,7 @@ const stats=[
 
 function CompanyProfile() {
   return (
-    <section className="px-5 sm:px-10 md:px-20 py-20 flex items-center flex-col gap-10 font-inter">
+    <section className="px-5 sm:px-7 md:px-15 py-20 flex items-center flex-col gap-10 font-inter">
       <div className="bg-zinc200 p-7 sm:p-10 rounded-2xl flex w-full flex-col gap-12.5">
         <div className="flex items-center gap-3 ">
             <div className="w-10 sm:w-12.5 h-10 sm:h-12.5 rounded-md bg-slate flex items-center justify-center"><PiBuildingApartment className="w-6 h-6 text-white" /></div>

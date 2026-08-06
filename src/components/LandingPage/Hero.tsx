@@ -6,7 +6,7 @@ const stats = [
 
 function Hero() {
   return (
-    <section className="hero-bg flex items-center justify-center px-5 sm:px-10 py-15  sm:py-25 relative font-inter">
+    <section className="hero-bg flex items-center justify-center px-5 sm:px-7 py-15  sm:py-25 relative font-inter">
       <div className="absolute inset-0 bg-linear-to-r from-black/70 to-black/60 z-1"></div>
       <div className="max-w-250 flex flex-col gap-17.5 items-center w-full z-2 relative">
         <div className="flex flex-col gap-14">

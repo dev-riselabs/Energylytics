@@ -30,7 +30,7 @@ const PartnersCarousel = () => {
   }, [emblaApi]);
 
   return (
-    <section className="w-full bg-white py-15 flex flex-col gap-8 px-5 sm:px-10 md:px-20">
+    <section className="w-full bg-white py-15 flex flex-col gap-8 px-5 sm:px-7 md:px-15">
       <h2 className=" text-center text-lg font-medium uppercase tracking-[0.2em] text-black/80 font-inria">
         TRUSTED BY ENERGY LEADERS ACROSS AFRICA
       </h2>
@@ -39,7 +39,7 @@ const PartnersCarousel = () => {
         {/* Left Button */}
         <button
           onClick={scrollPrev}
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 hover:bg-slate-100"
+          className="flex h-8 sm:h-10 w-8 sm:w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 hover:bg-slate-100"
         >
           <MdKeyboardArrowLeft className="w-6 h-6" />
         </button>
@@ -50,7 +50,7 @@ const PartnersCarousel = () => {
             {logos.map((logo, index) => (
               <div
                 key={index}
-                className="min-w-55 px-2 sm:min-w-45 md:min-w-40 lg:min-w-40"
+                className="min-w-50 px-2 sm:min-w-45 md:min-w-40 lg:min-w-40"
               >
                 <div className="flex h-18 w-full items-center justify-center border border-slate-200 bg-white">
                   <img
@@ -67,7 +67,7 @@ const PartnersCarousel = () => {
         {/* Right Button */}
         <button
           onClick={scrollNext}
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 hover:bg-slate-100"
+          className="flex h-8 sm:h-10 w-8 sm:w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 hover:bg-slate-100"
         >
           <MdKeyboardArrowRight className="w-6 h-6" />
         </button>

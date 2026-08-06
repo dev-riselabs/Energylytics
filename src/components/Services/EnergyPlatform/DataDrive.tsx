@@ -14,7 +14,7 @@ const stats = [
 
 function DataDrive() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-zinc800 px-5 sm:px-10 md:px-20 py-15 md:items-stretch">
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-zinc800 px-5 sm:px-7 md:px-15 py-15 md:items-stretch">
       <img
         src="/data-drive.png"
         alt=""
@@ -36,7 +36,7 @@ function DataDrive() {
         <div className="grid grid-cols-1 gap-4">
           {stats.map(({ title, desc }) => (
             <div key={title} className="flex items-center gap-3">
-              <div className="w-7.5 h-7.5 flex items-center justify-center bg-green95 rounded-sm">
+              <div className="w-8 h-8 flex items-center justify-center bg-green95 rounded-sm">
                 <GoBook className="w-5 h-5 text-green25" />
               </div>
 
@@ -47,7 +47,7 @@ function DataDrive() {
             </div>
           ))}
         </div>
-        <button className="flex items-center gap-3.5 border-b-3 pb-2.5 self-start border-green25 font-sora text-sm text-slate font-semibold ">
+        <button className="flex items-center cursor-pointer gap-3.5 border-b-3 pb-2.5 self-start border-green25 font-sora text-sm text-slate font-semibold ">
           Explore Dashboard Features <FaArrowRightLong className="w-5 h-5" />
         </button>
       </div>

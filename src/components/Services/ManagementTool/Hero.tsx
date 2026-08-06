@@ -1,11 +1,11 @@
 function Hero() {
   return (
-    <section className="bg-zinc600 px-5 sm:px-10 md:px-20 py-15 grid grid-cols-1 md:grid-cols-2 gap-6 font-inter">
+    <section className="bg-zinc600 px-5 sm:px-7 md:px-15 py-15 grid grid-cols-1 md:grid-cols-2 gap-6 font-inter">
       <div className="flex flex-col gap-6.5 justify-center">
-        <h1 className="text-[32px] font-bold text-slate">
+        <h1 className="text-3xl sm:text-[32px] font-bold text-slate">
           Smart Energy Management for a Sustainable Africa
         </h1>
-        <p className="text-xl text-slate">
+        <p className="text-lg sm:text-xl text-slate">
           Deploy our comprehensive smart energy toolset to monitor, predict and
           optimize renewable assets with real-time AI intelligence.
         </p>
@@ -16,7 +16,7 @@ function Hero() {
       <img
         src="/smart-energy.png"
         alt=""
-        className="object-cover rounded-3xl h-103 w-full"
+        className="rounded-3xl sm:h-auto min-h-80 w-full object-fill"
       />
     </section>
   );

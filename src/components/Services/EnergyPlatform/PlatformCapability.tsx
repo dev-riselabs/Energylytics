@@ -23,17 +23,17 @@ const features = [
 
 function PlatformCapability() {
   return (
-    <section className="py-20 px-5 sm:px-10 md:px-20 font-inter flex flex-col gap-10 items-center bg-zinc800">
+    <section className="py-20 px-5 sm:px-7 md:px-15 font-inter flex flex-col gap-10 items-center bg-zinc800">
       <h2 className="text-slate text-2xl font-medium">Platform Capabilities</h2>
       <p className="text-base text-slate50 text-center ">
         Built specifically to handle the variability and unique infrastructure
         challenges of the African energy grid.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         {features.map(({ title, icon: Icon, description }) => (
           <div
             key={title}
-            className={`rounded-2xl p-10 flex flex-col gap-7.5 flex-1 border border-zinc `}
+            className={`rounded-2xl p-7 sm:p-10 flex flex-col gap-6 sm:gap-7.5 flex-1 border border-zinc `}
           >
             <div className="w-12.5 h-12.5 bg-green85 rounded-md flex items-center justify-center">
               <Icon className="w-6 h-6 text-white" />

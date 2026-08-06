@@ -10,7 +10,7 @@ type Props = {
 
 function PlaformTemplate({label1, label2, title, description, btn, img, order} : Props) {
   return <section className="grid grid-cols-1 gap-5 md:grid-cols-2">
-    <img src={img} alt={title} className={`h-100 object-cover rounded-2xl ${order ===1 ? '' : 'order-2'}`} />
+    <img src={img} alt={title} className={`h-auto object-cover w-full rounded-2xl self-center ${order ===1 ? '' : 'order-2'}`} />
     <div className="flex flex-col gap-7.5 justify-center">
         <div className="flex flex-col gap-5">
             <div className="flex items-center gap-3">

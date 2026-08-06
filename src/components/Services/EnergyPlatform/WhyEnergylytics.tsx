@@ -6,7 +6,7 @@ const reasons = [
 ]
 
 function WhyEnergylytics() {
-  return <section className="bg-zinc600 px-5 sm:px-10 md:px-20 py-20 flex flex-col items-center gap-8">
+  return <section className="bg-zinc600 px-5 sm:px-7 md:px-15 py-20 flex flex-col items-center gap-8">
     <h3 className="text-2xl font-medium text-slate text-center">Why energy leaders choose Energylytics</h3>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
         {

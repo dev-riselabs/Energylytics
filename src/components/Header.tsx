@@ -6,8 +6,8 @@ import { Link, NavLink } from "react-router";
 const navLinks = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
-  { name: "Services", path: "/services" },
-  { name: "Insights", path: "/insights" },
+  { name: "Services", path: "" },
+  { name: "Insights", path: "" },
   { name: "Contact", path: "/blog" },
 ];
 
@@ -19,7 +19,7 @@ function Header() {
   }
 
   return (
-    <header className="flex items-center justify-between px-5 sm:px-10 md:px-20 h-25 sm:h-30.5">
+    <header className="flex items-center justify-between px-5 sm:px-7 md:px-15 h-25 sm:h-30.5">
       <Link to="/" className="cursor-pointer">
         <img
           src="/logo.png"
@@ -29,21 +29,34 @@ function Header() {
       </Link>
       <button
         onClick={handleToggleShowMenu}
-        className="cursor-pointer lg:hidden z-20"
+        className="cursor-pointer lg:hidden z-40"
       >
         {showMenu ? (
-          <MdClose className="w-5 h-5" />
+          <MdClose className="w-5 h-5 text-black" />
         ) : (
           <FiMenu className="w-5 h-5" />
         )}
       </button>
       <div
-        className={`${showMenu ? "fixed right-0 top-0 w-2/3 h-screen" : "hidden"} bg-white p-4 pt-20 flex flex-col gap-10 `}
+        className={`
+    fixed top-0 right-0 z-30
+    w-2/3 h-screen
+    bg-white p-4 pt-20
+    flex flex-col gap-10
+    transition-all duration-500 ease-in-out
+    ${
+      showMenu
+        ? "translate-x-0 opacity-100"
+        : "translate-x-full opacity-0 pointer-events-none"
+    }
+  `}
       >
         <nav className="flex flex-col gap-4">
           {navLinks.map(({ name, path }) => (
             <NavLink
+              key={name}
               to={path}
+              onClick={() => setShowMenu(false)}
               className={({ isActive }) =>
                 isActive
                   ? "text-green text-base font-semibold"

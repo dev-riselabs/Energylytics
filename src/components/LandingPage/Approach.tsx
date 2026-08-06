@@ -58,7 +58,7 @@ const actions = [
 
 function Approach() {
   return (
-    <section className="flex flex-col gap-7 items-center fonr-inter bg-white px-5 sm:px-10 md:px-20 py-20">
+    <section className="flex flex-col gap-7 items-center fonr-inter bg-white px-5 sm:px-7 md:px-15 py-20">
       <div className="flex items-center gap-4 px-5 py-2 rounded-full bg-green25 self-center">
         <div className="w-2 h-2 rounded-full bg-white"></div>
         <span className="text-white text-sm font-bold">Our Approach</span>

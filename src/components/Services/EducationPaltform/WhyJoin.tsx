@@ -25,7 +25,7 @@ const features = [
 
 function WhyJoin() {
   return (
-    <section className="py-20 px-5 sm:px-10 md:px-20 font-inter flex flex-col gap-10 items-center bg-white">
+    <section className="py-20 px-5 sm:px-7 md:px-15 font-inter flex flex-col gap-10 items-center bg-white">
       <h2 className="text-slate text-2xl font-medium">
         Why Join Our Platform?
       </h2>

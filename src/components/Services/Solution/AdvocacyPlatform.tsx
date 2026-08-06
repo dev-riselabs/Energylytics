@@ -11,7 +11,7 @@ const stats = [
 
 function AdvocacyPlatform() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-zinc800 px-5 sm:px-10 md:px-20 py-15 md:items-stretch">
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-zinc800 px-5 sm:px-7 md:px-15 py-15 md:items-stretch">
       <div className="flex flex-col gap-7">
         <div className="flex flex-col gap-6">
           <div className="py-2 px-5 rounded-full items-center justify-center flex gap-2 bg-green45  text-green text-sm font-bold self-start">
@@ -32,7 +32,7 @@ function AdvocacyPlatform() {
         <div className="grid grid-cols-2 gap-4">
           {stats.map(({ title, desc }) => (
             <div key={title} className="flex items-center gap-3">
-              <div className="w-7.5 h-7.5 flex items-center justify-center bg-green95 rounded-sm">
+              <div className="w-8 h-8 flex items-center justify-center bg-green95 rounded-sm">
                 <GoBook className="w-5 h-5 text-green25" />
               </div>
 
@@ -43,14 +43,14 @@ function AdvocacyPlatform() {
             </div>
           ))}
         </div>
-        <button className="flex items-center gap-3.5 border-b-3 pb-2.5 self-start border-green25 font-sora text-sm text-slate font-semibold ">
+        <button className="flex items-center cursor-pointer gap-3.5 border-b-3 pb-2.5 self-start border-green25 font-sora text-sm text-slate font-semibold ">
           Visit Learning Hub <FaArrowRightLong className="w-5 h-5" />
         </button>
       </div>
       <img
         src="/advocacy.png"
         alt=""
-        className="object-cover w-full rounded-2xl"
+        className="object-fill h-auto  w-full rounded-2xl"
       />
     </section>
   );

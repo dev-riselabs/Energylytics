@@ -18,7 +18,7 @@ function Featured() {
             <span>8 min read</span>
         </div>
         <div className="flex flex-col gap-7">
-            <h4 className="text-2xl font-bold text-slate">The Rise of Off-Grid Solar in West Africa: A 2025 Outlook</h4>
+            <h4 className="text-xl sm:text-2xl font-bold text-slate">The Rise of Off-Grid Solar in West Africa: A 2025 Outlook</h4>
             <p className="text-sm text-slate">Discover how decentralized solar solutions are transforming rural electrification and empowering local economics across the region, defying traditional grid limitations.</p>
         </div>
       </div>

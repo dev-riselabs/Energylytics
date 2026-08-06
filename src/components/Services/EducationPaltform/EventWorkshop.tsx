@@ -2,7 +2,7 @@ import PlaformTemplate from "./PlaformTemplate";
 
 function EventWorkshop() {
   return (
-    <div className="flex flex-col gap-8 px-5 sm:px-10 md:px-20 py-15 items-center bg-zinc600">
+    <div className="flex flex-col gap-8 px-5 sm:px-7 md:px-15 py-15 items-center bg-zinc600">
       <h3 className="text-center text-2xl font-medium text-slate">
         Explore the Platform
       </h3>

@@ -29,7 +29,7 @@ const stories = [
 
 function CommunityStory() {
   return (
-    <section className="bg-zinc600 px-5 sm:px-10 md:px-20 py-15 flex flex-col gap-8 items-center">
+    <section className="bg-zinc600 px-5 sm:px-7 md:px-15 py-15 flex flex-col gap-8 items-center">
       <h2 className="text-slate text-2xl font-medium">
         Community Success Stories
       </h2>

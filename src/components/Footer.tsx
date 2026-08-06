@@ -3,8 +3,8 @@ import { Link } from "react-router";
 const navLinks = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
-  { name: "Insights", path: "/insights" },
-  { name: "Contact", path: "/contact" },
+  { name: "Insights", path: "" },
+  { name: "Contact", path: "/blog" },
 ];
 
 const services = [
@@ -16,7 +16,7 @@ const services = [
 
 function Footer() {
   return (
-    <footer className="flex flex-col gap-6 px-5 sm:px-10 md:px-20 py-15 divide-y-2 divide-zinc">
+    <footer className="flex flex-col gap-6 px-5 sm:px-7 md:px-15 py-15 divide-y-2 divide-zinc">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-15 justify-between pb-6">
         <div className="flex flex-col gap-5">
           <img src="/logo.png" alt="" className="w-50 h-25 object-cover" />

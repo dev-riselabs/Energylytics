@@ -16,7 +16,7 @@ interface AccentProps {
 
 function AccentFeature({ label, title, description, features, isColored }: AccentProps) {
   return (
-    <section className="flex flex-col gap-7 items-center font-inter bg-green25 px-5 sm:px-10 md:px-20 py-20">
+    <section className="flex flex-col gap-7 items-center font-inter bg-green25 px-5 sm:px-7 md:px-15 py-20">
       <div className="flex flex-col items-center gap-4">
         <div className="flex items-center gap-4 px-5 py-2 rounded-full bg-white self-center">
           <div className="w-2 h-2 rounded-full bg-green"></div>

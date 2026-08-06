@@ -40,7 +40,7 @@ const areas = [
 
 function FocusArea() {
   return (
-    <section className="flex flex-col gap-7 items-center fonr-inter px-5 sm:px-10 md:px-20 py-20 focus-area-bg">
+    <section className="flex flex-col gap-7 items-center fonr-inter px-5 sm:px-7 md:px-15 py-20 focus-area-bg">
       <div className="flex items-center gap-4 px-5 py-2 rounded-full bg-white self-center">
         <div className="w-2 h-2 rounded-full bg-green"></div>
         <span className="text-green text-sm font-bold">Our Focus Areas</span>

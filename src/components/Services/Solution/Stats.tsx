@@ -6,12 +6,12 @@ const stats = [
 ]
 
 function Stats() {
-  return <section className="px-5 sm:px-10 md:px-20 py-10 bg-slate60 flex  justify-between gap-2">
+  return <section className="px-5 sm:px-7 md:px-15 py-10 bg-slate60 grid grid-cols-2 sm:grid-cols-4 gap-4">
 
 {
     stats.map(({value, title}) => <div key={value} className="flex flex-col gap-3">
-        <h4 className="text-[32px] font-bold text-green15">{value}</h4>
-        <span className="text-white text-base">{title}</span>
+        <h4 className="text-3xl sm:text-[32px] font-bold text-green15">{value}</h4>
+        <span className="text-white text-sm sm:text-base">{title}</span>
     </div>)
 }
   </section>;

@@ -7,13 +7,13 @@ import WeeklyIntelligence from "../components/Blog/WeeklyIntelligence";
 
 function Blog() {
   return (
-    <div className="bg-zinc900 grid grid-cols-1 md:grid-cols-3 gap-5 px-5 sm:px-10 md:px-20 py-20">
-      <div className="md:col-span-2 flex flex-col gap-7">
+    <div className="bg-zinc900 grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-5 px-5 sm:px-7 md:px-15 py-20">
+      <div className="md:col-span-3 lg:col-span-2 flex flex-col gap-7">
         <div className="flex flex-col gap-6.5">
-          <h1 className="text-[32px] text-slate font-bold">
+          <h1 className="text-3xl sm:text-[32px] text-slate font-bold">
             Energy Intelligence Insights
           </h1>
-          <p className="text-xl text-slate">
+          <p className="text-lg sm:text-xl text-slate">
             Leading analysis on renewable energy trends, policy and investment
             across Africa. Stay ahead of the transition.
           </p>
@@ -34,7 +34,7 @@ function Blog() {
         </div>
         <Pagination />
       </div>
-      <aside className="md:col-span-1 flex flex-col gap-7">
+      <aside className="md:col-span-2 lg:col-span-1 flex flex-col gap-7">
         <Search />
         <SearchInsight />
         <WeeklyIntelligence />
