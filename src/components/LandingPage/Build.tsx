@@ -1,5 +1,5 @@
 function Build() {
-  return <section className="py-20 px-5 sm:px-7 md:px-15 font-inter">
+  return <section className="py-20 px-5 sm:px-7 md:px-15 font-inter bg-white">
       <div className="h-75 rounded-4xl flex items-center justify-center gap-6 build-bg relative px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[#125749E8]"></div>
         <div className="flex flex-col gap-7.5 items-center relative z-2">
