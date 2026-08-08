@@ -25,7 +25,7 @@ function Footer() {
             revolution through data, AI, and education.
           </span>
           <span className="text-sm sm:text-base text-slate50">
-            Headquarters: <span className="font-semibold">Abuja, Nigeria</span>
+            <span className="font-semibold">Headquarters:</span> Abuja, Nigeria
           </span>
         </div>
         <div className="w-full flex items-center justify-between ">
