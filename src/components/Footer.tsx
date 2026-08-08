@@ -1,5 +1,4 @@
-import { GoDotFill } from "react-icons/go";
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -36,13 +35,19 @@ function Footer() {
             </h4>
             <nav className="flex flex-col gap-3">
               {navLinks.map(({ name, path }) => (
-                <Link
-                  to={path}
+                <NavLink
+                  to={path || "/"}
                   key={name}
-                  className="text-sm sm:text-base text-slate font-light hover:text-green25 transition-all flex gap-2 items-center"
+                  end={path === "/"}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-sm sm:text-base text-green25 font-light transition-all flex items-center gap-2 pl-4 relative"
+                      : "text-sm sm:text-base text-slate font-light hover:text-green25 transition-all flex items-center gap-2 pl-4 relative"
+                  }
                 >
-                  <GoDotFill className="w-4 h-4" /> {name}
-                </Link>
+                  <span className="absolute left-0 top-1/2 -translate-y-1/2 block h-0 w-0 border-t-[5px] border-b-[5px] border-l-[7px] border-t-transparent border-b-transparent border-l-current" />
+                  {name}
+                </NavLink>
               ))}
             </nav>
           </div>
@@ -52,13 +57,18 @@ function Footer() {
             </h4>
             <nav className="flex flex-col gap-3">
               {services.map(({ name, path }) => (
-                <Link
+                <NavLink
                   to={path}
                   key={name}
-                  className="text-sm sm:text-base text-slate font-light hover:text-green25 transition-all flex items-center gap-2"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-sm sm:text-base text-green25 font-light transition-all flex items-center gap-2 pl-4 relative"
+                      : "text-sm sm:text-base text-slate font-light hover:text-green25 transition-all flex items-center gap-2 pl-4 relative"
+                  }
                 >
-                  <GoDotFill className="w-4 h-4" /> {name}
-                </Link>
+                  <span className="absolute left-0 top-1/2 -translate-y-1/2 block h-0 w-0 border-t-[5px] border-b-[5px] border-l-[7px] border-t-transparent border-b-transparent border-l-current" />
+                  {name}
+                </NavLink>
               ))}
             </nav>
           </div>

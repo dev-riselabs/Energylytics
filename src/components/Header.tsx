@@ -55,12 +55,13 @@ function Header() {
           {navLinks.map(({ name, path }) => (
             <NavLink
               key={name}
-              to={path}
+              to={path || "/"}
+              end={path === "/"}
               onClick={() => setShowMenu(false)}
               className={({ isActive }) =>
                 isActive
-                  ? "text-green text-base font-semibold"
-                  : "text-slate text-base"
+                  ? "group relative text-green text-base font-semibold pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:border-t-[6px] before:border-b-[6px] before:border-l-[8px] before:border-t-transparent before:border-b-transparent before:border-l-current before:content-[''] before:block before:h-0 before:w-0"
+                  : "group relative text-slate text-base pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:border-t-[6px] before:border-b-[6px] before:border-l-[8px] before:border-t-transparent before:border-b-transparent before:border-l-current before:content-[''] before:block before:h-0 before:w-0"
               }
             >
               {name}
@@ -82,11 +83,12 @@ function Header() {
           {navLinks.map(({ name, path }) => (
             <NavLink
               key={name}
-              to={path}
+              to={path || "/"}
+              end={path === "/"}
               className={({ isActive }) =>
                 isActive
-                  ? "text-green text-sm xl:text-base font-semibold"
-                  : "text-slate text-sm xl:text-base"
+                  ? "group relative text-green text-sm xl:text-base font-semibold pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:border-t-[6px] before:border-b-[6px] before:border-l-[8px] before:border-t-transparent before:border-b-transparent before:border-l-current before:content-[''] before:block before:h-0 before:w-0"
+                  : "group relative text-slate text-sm xl:text-base pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:border-t-[6px] before:border-b-[6px] before:border-l-[8px] before:border-t-transparent before:border-b-transparent before:border-l-current before:content-[''] before:block before:h-0 before:w-0"
               }
             >
               {name}
