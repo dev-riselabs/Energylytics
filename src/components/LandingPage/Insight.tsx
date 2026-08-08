@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { scaleIn } from "../../animation";
+
 const insights = [
   "Africa’s Solar and Wind Energy Outlooks",
   "Financing the Net-Zero Transition",
@@ -19,14 +22,25 @@ function Insight() {
       </p>
       <div className="grid grid-cols-1 gap-8 lg:gap-11.5 md:grid-cols-2">
         <div className="flex flex-col gap-6 ">
-            {
-                insights.map(insight => <div key={insight} className="bg-zinc400 rounded-2xl py-6 px-4 md:px-10 flex items-center gap-4.5">
-                <div className="w-2 h-2 bg-green25 rounded-full shrink-0"></div>
-                <span className="text-white text-base">{insight}</span>
-                </div>)
-            }
+          {insights.map((insight) => (
+            <div
+              key={insight}
+              className="bg-zinc400 rounded-2xl py-6 px-4 md:px-10 flex items-center gap-4.5"
+            >
+              <div className="w-2 h-2 bg-green25 rounded-full shrink-0"></div>
+              <span className="text-white text-base">{insight}</span>
+            </div>
+          ))}
         </div>
-        <img src="/insight.jpg" alt="" className="w-full h-auto rounded-2xl" />
+        <motion.img
+          variants={scaleIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          src="/insight.jpg"
+          alt=""
+          className="w-full h-auto rounded-2xl"
+        />
       </div>
     </section>
   );

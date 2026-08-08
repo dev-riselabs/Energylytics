@@ -1,3 +1,4 @@
+import { GoDotFill } from "react-icons/go";
 import { Link } from "react-router";
 
 const navLinks = [
@@ -16,7 +17,7 @@ const services = [
 
 function Footer() {
   return (
-    <footer className="flex flex-col gap-6 px-5 sm:px-7 md:px-15 py-15 divide-y-2 divide-zinc">
+    <footer className="flex flex-col gap-6 px-5 sm:px-7 md:px-15 py-15 divide-y-2 divide-zinc font-inter">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-15 justify-between pb-6">
         <div className="flex flex-col gap-5">
           <img src="/logo.png" alt="" className="w-50 h-25 object-cover" />
@@ -25,12 +26,12 @@ function Footer() {
             revolution through data, AI, and education.
           </span>
           <span className="text-sm sm:text-base text-slate50">
-            Headquarters: Abuja, Nigeria
+            Headquarters: <span className="font-semibold">Abuja, Nigeria</span>
           </span>
         </div>
-        <div className="w-full flex items-center justify-between font-sora">
+        <div className="w-full flex items-center justify-between ">
           <div className="flex flex-col gap-5">
-            <h4 className="text-slate text-lg sm:text-xl font-semibold">
+            <h4 className="text-green25 text-lg sm:text-xl font-semibold">
               Company
             </h4>
             <nav className="flex flex-col gap-3">
@@ -38,15 +39,15 @@ function Footer() {
                 <Link
                   to={path}
                   key={name}
-                  className="text-sm sm:text-base text-slate font-light hover:text-green25 transition-all"
+                  className="text-sm sm:text-base text-slate font-light hover:text-green25 transition-all flex gap-2 items-center"
                 >
-                  {name}
+                  <GoDotFill className="w-4 h-4" /> {name}
                 </Link>
               ))}
             </nav>
           </div>
           <div className="flex flex-col gap-5">
-            <h4 className="text-slate text-lg sm:text-xl font-semibold">
+            <h4 className="text-green25 text-lg sm:text-xl font-semibold">
               Services
             </h4>
             <nav className="flex flex-col gap-3">
@@ -54,9 +55,9 @@ function Footer() {
                 <Link
                   to={path}
                   key={name}
-                  className="text-sm sm:text-base text-slate font-light hover:text-green25 transition-all"
+                  className="text-sm sm:text-base text-slate font-light hover:text-green25 transition-all flex items-center gap-2"
                 >
-                  {name}
+                  <GoDotFill className="w-4 h-4" /> {name}
                 </Link>
               ))}
             </nav>
@@ -65,7 +66,7 @@ function Footer() {
       </div>
       <div className="flex flex-col gap-4  items-center md:flex-row md:justify-between">
         <span className="font-inter text-sm sm:text-base text-slate50 text-center sm:text-left">
-          © 2025 Energylytics Africa Limited. All rights reserved.
+          © 2026 Energylytics Africa Limited. All rights reserved.
         </span>
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-10">
           <span className="font-inter text-sm sm:text-base text-slate50">

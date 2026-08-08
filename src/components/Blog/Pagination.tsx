@@ -1,27 +1,73 @@
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-function Pagination() {
+interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+}
+
+function Pagination({
+  currentPage,
+  totalPages,
+  onPageChange,
+}: PaginationProps) {
+  const getPages = () => {
+    if (totalPages <= 6) {
+      return Array.from({ length: totalPages }, (_, i) => i + 1);
+    }
+
+    return [1, 2, 3, "...", totalPages - 1, totalPages];
+  };
+
   return (
-    <div className="flex justify-center gap-2">
-      <button className="flex items-center justify-between gap-2 py-2 px-3 cursor-pointer text-xs sm:text-base text-slate30 hover:text-slate100 transition-all">
-        {" "}
-        <FaArrowLeft className="w-4 h-4" />
-        Previous
+    <div className="flex items-center justify-center gap-2">
+      {/* Previous */}
+      <button
+        type="button"
+        disabled={currentPage === 1}
+        onClick={() => onPageChange(currentPage - 1)}
+        className="flex items-center gap-2 text-slate disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+      >
+        <FaArrowLeft />
+        <span>Previous</span>
       </button>
+
+      {/* Pages */}
       <div className="flex items-center gap-1 sm:gap-2">
-        {" "}
-        {["1", "2", "3", "...", "67", "68"].map((i) => (
-          <button
-            key={i}
-            className={`${i === "1" ? "bg-green25 text-white hover:bg-green" : "text-slate hover:bg-zinc600"} rounded-md w-6 sm:w-8 h-6 sm:h-8 flex items-center justify-center text-xs sm:text-base cursor-pointer transition-all`}
-          >
-            {i}
-          </button>
-        ))}
+        {getPages().map((page, index) =>
+          page === "..." ? (
+            <span
+              key={`ellipsis-${index}`}
+              className="text-slate px-1"
+            >
+              ...
+            </span>
+          ) : (
+            <button
+              type="button"
+              key={page}
+              onClick={() => onPageChange(page as number)}
+              className={`rounded-md w-6 sm:w-8 h-6 sm:h-8 flex items-center justify-center text-xs sm:text-base cursor-pointer transition-all ${
+                currentPage === page
+                  ? "bg-green25 text-white hover:bg-green"
+                  : "text-slate hover:bg-zinc600"
+              }`}
+            >
+              {page}
+            </button>
+          )
+        )}
       </div>
-      <button className="flex items-center justify-between gap-2 py-2 px-3 cursor-pointer text-xs sm:text-base text-slate hover:text-slate100 transition-all">
-        {" "}
-        Next <FaArrowRight className="w-4 h-4" />
+
+      {/* Next */}
+      <button
+        type="button"
+        disabled={currentPage === totalPages}
+        onClick={() => onPageChange(currentPage + 1)}
+        className="flex items-center gap-2 text-slate disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+      >
+        <span>Next</span>
+        <FaArrowRight />
       </button>
     </div>
   );

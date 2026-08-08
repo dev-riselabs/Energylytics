@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { fadeUp, fadeIn, fadeDown } from "../../animation";
+
 const stats = [
   { title: "Africans lack electricity", value: "600M+" },
   { title: "Renewables potential by 2040", value: "67%" },
@@ -11,17 +14,28 @@ function Hero() {
       <div className="max-w-250 flex flex-col gap-17.5 items-center w-full z-2 relative">
         <div className="flex flex-col gap-14">
           <div className="flex flex-col gap-5">
-            <div className="flex items-center gap-4 px-5 py-2 rounded-full bg-green10 self-center">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeDown}
+              className="flex items-center gap-4 px-5 py-2 rounded-full bg-green10 self-center"
+            >
               <div className="w-2 h-2 rounded-full bg-green"></div>
               <span className="text-green text-sm font-bold">
                 Data. Energy. Transformation.
               </span>
-            </div>
+            </motion.div>
             <div className="flex flex-col gap-3 items-center">
-              <h1 className="text-white text-3xl sm:text-[32px] font-bold text-center">
+              <motion.h1
+                variants={fadeUp}
+                initial="hidden"
+                animate="visible"
+                transition={{ delay: 0.3 }}
+                className="text-white text-3xl sm:text-[32px] font-bold text-center"
+              >
                 Leveraging data, artificial intelligence and knowledge-sharing
                 to accelerate Africa's clean energy transition
-              </h1>
+              </motion.h1>
               <p className="text-lg sm:text-xl text-white text-center">
                 We bring together energy data, analytics, policy insights and AI
                 modelling to help stakeholders understand emerging opportunities
@@ -29,14 +43,20 @@ function Hero() {
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-3 justify-center ">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.5 }}
+            className="flex items-center gap-3 justify-center "
+          >
             <button className="px-5 py-3 rounded-xl border border-green bg-green text-white text-sm font-bold font-dmSans hover:bg-white  hover:text-green transition-all cursor-pointer">
               Explore Our Work
             </button>
             <button className="px-5 py-3 rounded-xl border border-green30 bg-white text-green text-sm font-bold font-dmSans hover:bg-green hover:text-white transition-all cursor-pointer">
               Get in Touch
             </button>
-          </div>
+          </motion.div>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-193 w-full">
           {stats.map(({ title, value }) => (
