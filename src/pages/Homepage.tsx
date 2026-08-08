@@ -2,7 +2,6 @@ import { LuEye, LuGraduationCap, LuTarget } from "react-icons/lu";
 import AccentFeature from "../components/LandingPage/AccentFeature";
 import Hero from "../components/LandingPage/Hero";
 import { BiCoinStack } from "react-icons/bi";
-import CompanyProfile from "../components/LandingPage/CompanyProfile";
 import Powered from "../components/LandingPage/Powered";
 import FocusArea from "../components/LandingPage/FocusArea";
 import Approach from "../components/LandingPage/Approach";

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeUp, fadeIn, fadeDown } from "../../animation";
+import { fadeUp, fadeDown } from "../../animation";
 
 const stats = [
   { title: "Africans lack electricity", value: "600M+" },
