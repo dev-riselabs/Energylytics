@@ -22,7 +22,8 @@ function Hero() {
             >
               <div className="w-2 h-2 rounded-full bg-green"></div>
               <span className="text-green text-sm font-bold">
-                Data. Energy. Transformation.
+                {/* Data. Energy. Transformation. */}
+                Clean Energy. Climate Intelligence. Sustainable Infrastructure
               </span>
             </motion.div>
             <div className="flex flex-col gap-3 items-center">
@@ -33,13 +34,24 @@ function Hero() {
                 transition={{ delay: 0.3 }}
                 className="text-white text-3xl sm:text-[32px] font-bold text-center"
               >
-                Leveraging data, artificial intelligence and knowledge-sharing
-                to accelerate Africa's clean energy transition
+                {/* Leveraging data, artificial intelligence and knowledge-sharing
+                to accelerate Africa's clean energy transition */}
+                Energylytics Africa is a renewable energy, climate intelligence, 
+                waste-to-value and environmental infrastructure company that uses data, 
+                artificial intelligence and on-the-ground technology to accelerate 
+                Nigeria's transition towards sustainable energy systems, 
+                circular and low carbon economies
               </motion.h1>
               <p className="text-lg sm:text-xl text-white text-center">
-                We bring together energy data, analytics, policy insights and AI
+                {/* We bring together energy data, analytics, policy insights and AI
                 modelling to help stakeholders understand emerging opportunities
-                and barriers across the clean energy value chain.
+                and barriers across the clean energy value chain. */}
+                We combine data, policy insights, AI modelling, climate and
+                environmental intelligence, project management and knowledge
+                systems to help individuals, governments, businesses and
+                development partners turn energy data into better decisions and
+                better decisions into better energy infrastructure along the
+                clean energy value chain.
               </p>
             </div>
           </div>

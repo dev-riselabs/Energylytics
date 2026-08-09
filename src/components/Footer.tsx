@@ -14,9 +14,20 @@ const services = [
   { name: "Research & Insights", path: "/research-insight" },
 ];
 
+const footerLinks = [
+  {
+    label: "info@energylyticsafrica.com",
+    href: "mailto:info@energylyticsafrica.com",
+  },
+  {
+    label: "energylyticsafrica.com",
+    href: "https://energylyticsafrica.com",
+  },
+];
+
 function Footer() {
   return (
-    <footer className="flex flex-col gap-6 px-5 sm:px-7 md:px-15 py-15 divide-y-2 divide-zinc font-inter">
+    <footer className="flex flex-col gap-6 px-5 sm:px-7 md:px-15 py-15 divide-y-2 divide-green25 font-inter">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-15 justify-between pb-6">
         <div className="flex flex-col gap-5">
           <img src="/logo.png" alt="" className="w-50 h-25 object-cover" />
@@ -74,17 +85,23 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-4  items-center md:flex-row md:justify-between">
+      <div className="flex flex-col gap-4 items-center md:flex-row md:justify-between pt-6">
         <span className="font-inter text-sm sm:text-base text-slate50 text-center sm:text-left">
           © 2026 Energylytics Africa Limited. All rights reserved.
         </span>
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-10">
-          <span className="font-inter text-sm sm:text-base text-slate50">
-            info@energylyticsafrica.com
-          </span>
-          <span className="font-inter text-sm sm:text-base text-slate50">
-            energylyticsafrica.com
-          </span>
+          {footerLinks.map(({ label, href }) => (
+            <a
+              key={label}
+              href={href}
+              target={href.startsWith("http") ? "_blank" : undefined}
+              rel={href.startsWith("http") ? "noreferrer" : undefined}
+              className="font-inter text-sm sm:text-base text-slate50 transition-all hover:text-green25 flex items-center gap-2 pl-4 relative"
+            >
+              <span className="absolute left-0 top-1/2 -translate-y-1/2 block h-0 w-0 border-t-[5px] border-b-[5px] border-l-[7px] border-t-transparent border-b-transparent border-l-current" />
+              {label}
+            </a>
+          ))}
         </div>
       </div>
     </footer>

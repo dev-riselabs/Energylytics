@@ -9,13 +9,15 @@ const featuresAbout = [
   {
     title: "Our Mission",
     description:
-      "To leverage data and artificial intelligence to transform how Africa produces, manages and consumes energy, creating equitable access to power for all.",
+      // "To leverage data and artificial intelligence to transform how Africa produces, manages and consumes energy, creating equitable access to power for all.",
+      "To utilize data, artificial intelligence, clean energy and environmental innovation to make energy systems smarter, more accessible and sustainable, while helping Nigeria and the rest of Africa become resilient economies and infrastructure for the future.",
     icon: LuTarget,
   },
   {
     title: "Our Vision",
     description:
-      "To become Africa’s leading intelligence hub for clean energy innovation, policy influence and sustainable power management.",
+      // "To become Africa’s leading intelligence hub for clean energy innovation, policy influence and sustainable power management.",
+      "To become Africa’s leading platform for clean energy intelligence, climate innovation, waste-to- value and sustainable infrastructure, driving smarter decisions, accelerating the energy transition and enabling a more resilient and sustainable Africa.",
     icon: LuEye,
   },
 ];

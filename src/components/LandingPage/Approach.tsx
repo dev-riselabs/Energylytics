@@ -52,7 +52,7 @@ const actions = [
     isProject: false,
     title: "22%",
     description:
-      "In 2024, Africa's renewable energy financing grew by 22%, yet only 18% of deals included data-backed impact metrics—a gap Energylytics aims to close.",
+      "In 2024, Africa's renewable energy financing grew by 22%, yet only 18% of deals included data-backed impact metrics a gap Energylytics aims to close.",
   },
 ];
 

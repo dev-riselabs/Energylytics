@@ -33,8 +33,8 @@ function CompanyProfile() {
         </div>
       </div>
       <p className="text-lg sm:text-xl text-slate50 text-center max-w-[80ch]">
-        At Energylytics, we combine{" "}
-        <span className="text-green40">innovation, analytics</span>  and   
+        At Energylytics, we combine
+        <span className="text-green40">innovation, analytics</span> and
         <span className="text-green40"> impact</span> to power a smarter,
         greener and more equitable energy future. We believe that data holds the
         power to light up Africa sustainably.
