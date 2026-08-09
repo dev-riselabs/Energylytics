@@ -138,7 +138,7 @@ function Header() {
         </nav>
         <div className="flex flex-col gap-4">
           <button className="px-5 py-3 rounded-xl border border-green30 text-green text-sm font-bold font-dmSans hover:bg-green25 hover:text-white transition-all cursor-pointer">
-            Get a demo
+            Energy Calculator
           </button>
           <button className="px-5 py-3 rounded-xl border border-green bg-green25 text-white text-sm font-bold font-dmSans hover:bg-transparent hover:text-green transition-all cursor-pointer">
             Login/Sign Up
@@ -204,7 +204,7 @@ function Header() {
         </nav>
         <div className="flex items-center gap-4">
           <button className="px-5 py-3 rounded-xl border border-green30 text-green25 text-sm font-bold font-dmSans hover:bg-green25 hover:text-white transition-all cursor-pointer">
-            Get a demo
+            Energy Calculator
           </button>
           <button className="px-5 py-3 rounded-xl border border-green25 bg-green25 text-white text-sm font-bold font-dmSans hover:bg-transparent hover:text-green25 transition-all cursor-pointer">
             Login/Sign Up
