@@ -3,8 +3,9 @@ import { NavLink } from "react-router";
 const navLinks = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
-  { name: "Insights", path: "" },
-  { name: "Contact", path: "/blog" },
+  { name: "Our Solutions", path: "#" },
+  { name: "Blog", path: "/blog" },
+  { name: "Contact", path: "#" },
 ];
 
 const services = [
@@ -42,7 +43,7 @@ function Footer() {
         <div className="w-full flex items-center justify-between ">
           <div className="flex flex-col gap-5">
             <h4 className="text-green25 text-lg sm:text-xl font-semibold">
-              Company
+              Our Company
             </h4>
             <nav className="flex flex-col gap-3">
               {navLinks.map(({ name, path }) => (

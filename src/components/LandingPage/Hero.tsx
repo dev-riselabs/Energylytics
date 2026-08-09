@@ -42,17 +42,11 @@ function Hero() {
                 Nigeria's transition towards sustainable energy systems, 
                 circular and low carbon economies
               </motion.h1>
-              <p className="text-lg sm:text-xl text-white text-center">
-                {/* We bring together energy data, analytics, policy insights and AI
+              {/* <p className="text-lg sm:text-xl text-white text-center">
+                We bring together energy data, analytics, policy insights and AI
                 modelling to help stakeholders understand emerging opportunities
-                and barriers across the clean energy value chain. */}
-                We combine data, policy insights, AI modelling, climate and
-                environmental intelligence, project management and knowledge
-                systems to help individuals, governments, businesses and
-                development partners turn energy data into better decisions and
-                better decisions into better energy infrastructure along the
-                clean energy value chain.
-              </p>
+                and barriers across the clean energy value chain.
+              </p> */}
             </div>
           </div>
           <motion.div

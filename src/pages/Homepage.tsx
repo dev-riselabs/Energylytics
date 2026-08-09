@@ -31,21 +31,24 @@ const featuresAbout = [
 
 const featuresApproach = [
   {
-    title: "Data-Driven, AI Powered Energy Platform",
+    title: "INTELLIGENCE",
+    subtitle: "Data, AI & Digital Intelligence",
     description:
-      "Providing real-time insights on energy generation, distribution, and consumption through advanced analytics and predictive modelling.",
+      "We leverage energy, environmental and climate data, artificial intelligence, geospatial intelligence and advanced analytics to transform complex information into actionable insights for households, businesses, governments and investors.",
     icon: BiCoinStack,
   },
   {
-    title: "AI-Powered Energy Management Tool",
+    title: "ENERGY & ENVIRONMENTAL TRANSFORMATION",
+    subtitle: "Clean Energy, Climate & Sustainable Infrastructure",
     description:
-      "Leveraging machine learning to optimize energy efficiency, detect anomalies, reduce waste, and improve grid performance.",
+      "We develop and support innovative solutions across renewable and clean energy, energy access, climate resilience, circular economy, waste-to-value and environmental infrastructure, turning intelligence into practical, scalable solutions.",
     icon: HiOutlineCpuChip,
   },
   {
-    title: "Education and Advocacy Initiative",
+    title: "KNOWLEDGE & CAPACITY",
+    subtitle: "Research, Policy & Human Capital",
     description:
-      "Building awareness, technical capacity and public understanding of renewable energy through learning programs, campaigns, and partnerships.",
+      "We build the knowledge, skills, partnerships and institutional capabilities required to accelerate Africa's energy and sustainability transition through research, policy intelligence, training, knowledge platforms and strategic collaboration.",
     icon: LuGraduationCap,
   },
 ];

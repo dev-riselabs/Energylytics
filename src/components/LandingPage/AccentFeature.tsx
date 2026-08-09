@@ -5,6 +5,7 @@ import { staggerContainer, cardItem } from "../../animation";
 type FeatureProps = {
   icon: IconType;
   title: string;
+  subtitle?: string;
   description: string;
 };
 
@@ -33,6 +34,7 @@ function AccentFeature({
         <h3 className="text-[15px] font-bold text-white text-center">
           {title}
         </h3>
+        {/* {subtitle && <p>{subtitle}</p>} */}
       </div>
       <p className="text-lg sm:text-xl text-white text-center">{description}</p>
       <motion.div
@@ -42,7 +44,7 @@ function AccentFeature({
         viewport={{ once: true, amount: 0.15 }}
         className={`grid grid-cols-1 sm:grid-cols-2  gap-5 ${isColored ? "lg:grid-cols-6" : "lg:grid-cols-3"}`}
       >
-        {features.map(({ title, icon: Icon, description }) => (
+        {features.map(({ title, subtitle: featureSubtitle, icon: Icon, description }) => (
           <motion.div
             key={title}
             variants={cardItem}
@@ -59,6 +61,7 @@ function AccentFeature({
             </div>
             <div className="flex flex-col gap-4 sm:gap-6">
               <h4 className="text-base font-bold text-slate60">{title}</h4>
+              {featureSubtitle && <p>{featureSubtitle}</p>}
               <p className="text-base text-slate50">{description}</p>
             </div>
           </motion.div>

@@ -23,17 +23,22 @@ function Vision({ features }: VisionProps) {
         </h3>
       </div>
       <p className="text-lg sm:text-xl text-white text-center">
-        Energylytics Africa Limited is a Renewable Energy Intelligence Company
+        {/* Energylytics Africa Limited is a Renewable Energy Intelligence Company
         leveraging data science, artificial intelligence, and education to drive
-        the transition to clean, reliable and sustainable power across Africa.
+        the transition to clean, reliable and sustainable power across Africa. */}
+        We combine data, policy insights, AI modelling, climate and
+        environmental intelligence, project management and knowledge systems to
+        help individuals, governments, businesses and development partners turn
+        energy data into better decisions and better decisions into better
+        energy infrastructure along the clean energy value chain.
       </p>
-      <p className="text-lg sm:text-xl text-white text-center">
+      {/* <p className="text-lg sm:text-xl text-white text-center">
         Our mission is to enable smarter, data-driven decisions for governments,
         utilities, industries and communities working toward a carbon-neutral
         continent. By combining energy analytics, technology innovation, and
         public advocacy, we are building the intelligence that powers Africa’s
         renewable energy future.
-      </p>
+      </p> */}
       <div className="flex flex-col sm:flex-row gap-5">
         {features.map(({ title, icon: Icon, description }) => (
           <div

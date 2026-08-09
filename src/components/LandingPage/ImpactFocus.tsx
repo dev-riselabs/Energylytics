@@ -7,11 +7,13 @@ import { motion } from "framer-motion";
 import { staggerContainer, cardItem } from "../../animation";
 
 const chains = [
-  { icon: GiWindTurbine, title: "Renewable Energy Optimization" },
-  { icon: LuGrid3X3, title: "Smart Grid Development" },
-  { icon: FaRegLightbulb, title: "Climate Technology Innovation" },
-  { icon: BiSolidBarChartAlt2, title: "Data-Driven Energy Policy" },
-  { icon: RiGraduationCapLine, title: "Sustainable Development Education" },
+  { icon: GiWindTurbine, title: "Renewable Energy Optimization"},
+  // { icon: LuGrid3X3, title: "Smart Grid Development" },
+  { icon: LuGrid3X3, title: "Smart Grid & Climate Tech"},
+  // { icon: FaRegLightbulb, title: "Climate Technology Innovation" },
+  { icon: FaRegLightbulb, title: "Waste-to-Value Conversion"},
+  { icon: BiSolidBarChartAlt2, title: "Data-Driven Energy Policy"},
+  { icon: RiGraduationCapLine, title: "Sustainable Development Education"},
 ];
 
 function ImpactFocus() {
