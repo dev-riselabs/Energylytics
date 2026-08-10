@@ -61,8 +61,8 @@ function AccentFeature({
             </div>
             <div className="flex flex-col gap-4 sm:gap-6">
               <h4 className="text-base font-bold text-slate60">{title}</h4>
-              {featureSubtitle && <p>{featureSubtitle}</p>}
-              <p className="text-base text-slate50">{description}</p>
+              {featureSubtitle && <p className="text-base text-slate">{featureSubtitle}</p>}
+              <p className="text-sm sm:text-base text-slate50">{description}</p>
             </div>
           </motion.div>
         ))}

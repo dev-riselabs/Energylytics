@@ -21,24 +21,24 @@ const navLinks = [
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
   const [showServicesMenu, setShowServicesMenu] = useState(false);
-  const servicesMenuRef = useRef<HTMLDivElement | null>(null);
+  // const servicesMenuRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (
-        servicesMenuRef.current &&
-        !servicesMenuRef.current.contains(event.target as Node)
-      ) {
-        setShowServicesMenu(false);
-      }
-    }
+  // useEffect(() => {
+  //   function handleClickOutside(event: MouseEvent) {
+  //     if (
+  //       servicesMenuRef.current &&
+  //       !servicesMenuRef.current.contains(event.target as Node)
+  //     ) {
+  //       setShowServicesMenu(false);
+  //     }
+  //   }
 
-    document.addEventListener("mousedown", handleClickOutside);
+  //   document.addEventListener("mousedown", handleClickOutside);
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, []);
 
   function handleToggleShowMenu() {
     setShowMenu((prev) => !prev);
@@ -55,7 +55,7 @@ function Header() {
       </Link>
       <button
         onClick={handleToggleShowMenu}
-        className="cursor-pointer lg:hidden z-40"
+        className={`cursor-pointer lg:hidden z-40 ${showMenu ? "fixed top-10 right-5" : ""}`}
       >
         {showMenu ? (
           <MdClose className="w-5 h-5 text-black" />
@@ -67,7 +67,8 @@ function Header() {
         className={`
     fixed top-0 right-0 z-30
     w-2/3 h-screen
-    bg-white p-4 pt-20
+    overflow-y-auto
+    bg-white p-4 pt-15
     flex flex-col gap-10
     transition-all duration-500 ease-in-out
     ${
@@ -85,7 +86,7 @@ function Header() {
                   <button
                     type="button"
                     onClick={() => setShowServicesMenu((prev) => !prev)}
-                    className="group relative flex items-center gap-2 text-left text-slate text-base pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:border-t-[6px] before:border-b-[6px] before:border-l-[8px] before:border-t-transparent before:border-b-transparent before:border-l-current before:content-[''] before:block before:h-0 before:w-0"
+                    className="group relative flex items-center gap-2 text-left text-slate text-base pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:border-t-[6px] before:border-b-[6px] before:border-l-8 before:border-t-transparent before:border-b-transparent before:border-l-current before:content-[''] before:block before:h-0 before:w-0"
                   >
                     <span>{name}</span>
                     <FiChevronDown
@@ -95,24 +96,26 @@ function Header() {
                     />
                   </button>
                   {showServicesMenu && (
-                    <div className="ml-4 flex flex-col gap-2 border-l border-green25 pl-3">
-                      {serviceLinks.map(({ name: serviceName, path: servicePath }) => (
-                        <NavLink
-                          key={serviceName}
-                          to={servicePath}
-                          onClick={() => {
-                            setShowServicesMenu(false);
-                            setShowMenu(false);
-                          }}
-                          className={({ isActive }) =>
-                            isActive
-                              ? "text-green text-sm font-semibold"
-                              : "text-slate text-sm hover:text-green25"
-                          }
-                        >
-                          {serviceName}
-                        </NavLink>
-                      ))}
+                    <div className="ml-4 flex flex-col gap-2  pl-3">
+                      {serviceLinks.map(
+                        ({ name: serviceName, path: servicePath }) => (
+                          <NavLink
+                            key={serviceName}
+                            to={servicePath}
+                            onClick={() => {
+                              setShowServicesMenu(false);
+                              setShowMenu(false);
+                            }}
+                            className={({ isActive }) =>
+                              isActive
+                                ? "text-green text-sm font-semibold"
+                                : "text-slate text-sm hover:text-green25"
+                            }
+                          >
+                            {serviceName}
+                          </NavLink>
+                        ),
+                      )}
                     </div>
                   )}
                 </div>
@@ -127,8 +130,8 @@ function Header() {
                 onClick={() => setShowMenu(false)}
                 className={({ isActive }) =>
                   isActive
-                    ? "group relative text-green text-base font-semibold pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:border-t-[6px] before:border-b-[6px] before:border-l-[8px] before:border-t-transparent before:border-b-transparent before:border-l-current before:content-[''] before:block before:h-0 before:w-0"
-                    : "group relative text-slate text-base pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:border-t-[6px] before:border-b-[6px] before:border-l-[8px] before:border-t-transparent before:border-b-transparent before:border-l-current before:content-[''] before:block before:h-0 before:w-0"
+                    ? "group relative text-green text-base font-semibold pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:border-t-[6px] before:border-b-[6px] before:border-l-8 before:border-t-transparent before:border-b-transparent before:border-l-current before:content-[''] before:block before:h-0 before:w-0"
+                    : "group relative text-slate text-base pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:border-t-[6px] before:border-b-[6px] before:border-l-8 before:border-t-transparent before:border-b-transparent before:border-l-current before:content-[''] before:block before:h-0 before:w-0"
                 }
               >
                 {name}
@@ -146,16 +149,16 @@ function Header() {
         </div>
       </div>
 
-      <div className="lg:flex hidden flex-col gap-4 md:w-2/3 md:flex-row md:items-center md:justify-between">
+      <div className="lg:flex hidden flex-col gap-4  md:flex-row md:items-center md:justify-between">
         <nav className="flex items-center gap-5 xl:gap-7">
           {navLinks.map(({ name, path }) => {
             if (name === "Services") {
               return (
-                <div key={name} className="relative" ref={servicesMenuRef}>
+                <div key={name} className="relative" >
                   <button
                     type="button"
                     onClick={() => setShowServicesMenu((prev) => !prev)}
-                    className="group relative flex items-center gap-2 text-slate text-sm xl:text-base pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:border-t-[6px] before:border-b-[6px] before:border-l-[8px] before:border-t-transparent before:border-b-transparent before:border-l-current before:content-[''] before:block before:h-0 before:w-0"
+                    className="group relative flex items-center gap-2 text-slate text-sm xl:text-base pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:border-t-[6px] before:border-b-[6px] before:border-l-8 before:border-t-transparent before:border-b-transparent before:border-l-current before:content-[''] before:block before:h-0 before:w-0"
                   >
                     <span>{name}</span>
                     <FiChevronDown
@@ -166,20 +169,22 @@ function Header() {
                   </button>
                   {showServicesMenu && (
                     <div className="absolute left-0 top-full mt-3 w-72 rounded-xl border border-green25 bg-white p-3 shadow-lg z-40">
-                      {serviceLinks.map(({ name: serviceName, path: servicePath }) => (
-                        <NavLink
-                          key={serviceName}
-                          to={servicePath}
-                          onClick={() => setShowServicesMenu(false)}
-                          className={({ isActive }) =>
-                            isActive
-                              ? "block rounded-lg px-3 py-2 text-sm text-green font-semibold"
-                              : "block rounded-lg px-3 py-2 text-sm text-slate hover:bg-green10 hover:text-green25"
-                          }
-                        >
-                          {serviceName}
-                        </NavLink>
-                      ))}
+                      {serviceLinks.map(
+                        ({ name: serviceName, path: servicePath }) => (
+                          <NavLink
+                            key={serviceName}
+                            to={servicePath}
+                            onClick={() => setShowServicesMenu(false)}
+                            className={({ isActive }) =>
+                              isActive
+                                ? "block rounded-lg px-3 py-2 text-sm text-green font-semibold"
+                                : "block rounded-lg px-3 py-2 text-sm text-slate hover:bg-green10 hover:text-green25"
+                            }
+                          >
+                            {serviceName}
+                          </NavLink>
+                        ),
+                      )}
                     </div>
                   )}
                 </div>
@@ -193,8 +198,8 @@ function Header() {
                 end={path === "/"}
                 className={({ isActive }) =>
                   isActive
-                    ? "group relative text-green text-sm xl:text-base font-semibold pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:border-t-[6px] before:border-b-[6px] before:border-l-[8px] before:border-t-transparent before:border-b-transparent before:border-l-current before:content-[''] before:block before:h-0 before:w-0"
-                    : "group relative text-slate text-sm xl:text-base pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:border-t-[6px] before:border-b-[6px] before:border-l-[8px] before:border-t-transparent before:border-b-transparent before:border-l-current before:content-[''] before:block before:h-0 before:w-0"
+                    ? "group relative text-green text-sm xl:text-base font-semibold pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:border-t-[6px] before:border-b-[6px] before:border-l- befo8re:border-t-transparent before:border-b-transparent before:border-l-current before:content-[''] before:block before:h-0 before:w-0"
+                    : "group relative text-slate text-sm xl:text-base pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:border-t-[6px] before:border-b-[6px] before:border-l-8 before:border-t-transparent before:border-b-transparent before:border-l-current before:content-[''] before:block before:h-0 before:w-0"
                 }
               >
                 {name}

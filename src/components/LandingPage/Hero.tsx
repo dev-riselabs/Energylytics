@@ -9,7 +9,7 @@ const stats = [
 
 function Hero() {
   return (
-    <section className="hero-bg flex items-center justify-center px-5 sm:px-7 py-15  sm:py-25 relative font-inter">
+    <section className="hero-bg flex items-center justify-center px-5 sm:px-7 py-15  sm:py-25 relative font-inter h-full">
       <div className="absolute inset-0 bg-linear-to-r from-black/70 to-black/60 z-1"></div>
       <div className="max-w-250 flex flex-col gap-17.5 items-center w-full z-2 relative">
         <div className="flex flex-col gap-14">
@@ -18,10 +18,10 @@ function Hero() {
               initial="hidden"
               animate="visible"
               variants={fadeDown}
-              className="flex items-center gap-4 px-5 py-2 rounded-full bg-green10 self-center"
+              className="flex items-baseline sm:items-center justify-center gap-4 px-5 py-2 rounded-full bg-green10 self-center"
             >
-              <div className="w-2 h-2 rounded-full bg-green"></div>
-              <span className="text-green text-sm font-bold">
+              <div className="w-2 h-2 rounded-full bg-green shrink-0"></div>
+              <span className="text-green text-xs text-center sm:text-sm font-bold">
                 {/* Data. Energy. Transformation. */}
                 Clean Energy. Climate Intelligence. Sustainable Infrastructure
               </span>
@@ -32,7 +32,7 @@ function Hero() {
                 initial="hidden"
                 animate="visible"
                 transition={{ delay: 0.3 }}
-                className="text-white text-3xl sm:text-[32px] font-bold text-center"
+                className="text-white text-2xl sm:text-[32px] font-bold text-center"
               >
                 {/* Leveraging data, artificial intelligence and knowledge-sharing
                 to accelerate Africa's clean energy transition */}

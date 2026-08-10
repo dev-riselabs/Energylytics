@@ -88,8 +88,8 @@ function FocusArea() {
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.15 }}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-7 items-stretch"
+        viewport={{ once: true, amount: 0.05 }}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-7 w-full"
       >
         {areas.map((area, i) => {
           if (area.isImage && area.img) {
@@ -99,7 +99,7 @@ function FocusArea() {
                 variants={cardItem}
                 whileHover={{
                   scale: 1.02,
-                  transition: { duration: 0.2 },
+                  transition: { duration: 0.2 }, 
                 }}
                 className="h-auto"
               >
@@ -121,17 +121,17 @@ function FocusArea() {
                 }}
                 className="border border-zinc flex flex-col gap-8 p-7 md:p-10 rounded-xl bg-white"
               >
-                <div className="w-12.5 h-12.5 bg-green rounded-md flex items-center justify-center">
+                <div className="w-10 sm:w-12.5 h-10 sm:h-12.5 bg-green rounded-md flex items-center justify-center">
                   <BiCoinStack className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex flex-col gap-6">
                   <h4 className="text-base font-bold text-slate60">
                     {area.title}
                   </h4>
-                  <p>{area.subtitle}</p>
+                  <p className="text-sm text-slate50">{area.subtitle}</p>
                   <ul className="flex flex-col gap-2 list-disc pl-3">
                     {area.items?.map((item) => (
-                      <li key={item} className="text-base text-slate50">
+                      <li key={item} className="text-sm text-slate50">
                         {item}
                       </li>
                     ))}

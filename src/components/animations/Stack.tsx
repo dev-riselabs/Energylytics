@@ -17,21 +17,21 @@ export default function StackSection({
     offset: ["start start", "end start"],
   });
 
-//   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.94]);
+  //   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.94]);
   const y = useTransform(scrollYProgress, [0, 1], [0, -30]);
 
   return (
-    <section
-      ref={ref}
-      className="sticky top-0 min-h-screen"
-      style={{ zIndex: index }}
-    >
-      <motion.div
-        style={{  y }}
-        className={`min-h-screen ${className}`}
-      >
-        {children}
-      </motion.div>
-    </section>
+   <section
+  ref={ref}
+  className="relative"
+  style={{ zIndex: index }}
+>
+  <motion.div
+    style={{ y }}
+    className={`sticky top-0 ${className}`}
+  >
+    {children}
+  </motion.div>
+</section>
   );
 }

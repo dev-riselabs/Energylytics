@@ -87,12 +87,12 @@ function Approach() {
                     <h4 className="text-slate60 text-base font-medium">
                       {action.title}
                     </h4>
-                    <p className="text-slate50 text-base">{action.desc}</p>
+                    <p className="text-slate50 text-sm sm:text-base">{action.desc}</p>
                   </div>
                 </div>
                 <ul className="flex flex-col gap-3 list-disc pl-3">
                   {action.items?.map((item) => (
-                    <li key={item} className="text-base text-slate50">
+                    <li key={item} className="text-sm sm:text-base text-slate50">
                       {item}
                     </li>
                   ))}

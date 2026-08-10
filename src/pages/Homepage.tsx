@@ -56,42 +56,32 @@ const featuresApproach = [
 function Homepage() {
   return (
     <>
-      <StackSection index={1} className="">
-        <Hero />
-      </StackSection>
-      <StackSection index={2} className="">
-        <AccentFeature
-          // title="Building Intelligence for Africa’s Energy Future"
-          title=""
-          label="About Us"
-          // description="Energylytics is more than a tech company we're building the intelligence that powers Africa's renewable energy revolution."
-          description="Nigeria's future will be shaped by the quality of its energy systems, the resilience of its environmental/climate infrastructure and the intelligence with which it manages its natural resources."
-          features={featuresAbout}
-          isColored
-        />
-      </StackSection>
+      <Hero />
+      <AccentFeature
+        // title="Building Intelligence for Africa’s Energy Future"
+        title=""
+        label="About Us"
+        // description="Energylytics is more than a tech company we're building the intelligence that powers Africa's renewable energy revolution."
+        description="Nigeria's future will be shaped by the quality of its energy systems, the resilience of its environmental/climate infrastructure and the intelligence with which it manages its natural resources."
+        features={featuresAbout}
+        isColored
+      />
       {/* <StackSection index={3} className="bg-white">
       <CompanyProfile />
       </StackSection> */}
-      <StackSection index={3} className="">
-        <AccentFeature
-          title="Three Core Pillars"
-          label="Our Approach"
-          description="Our integrated approach combines cutting-edge technology, data intelligence and human capacity building."
-          features={featuresApproach}
-        />
-      </StackSection>
-      <StackSection index={4} className="bg-white">
-        <Powered />
-      </StackSection>
-      <StackSection index={5} className="">
-        <FocusArea />
-        <Approach />
-        <ImpactFocus />
-        <Build />
-        <Partnership />
-        <Insight />
-      </StackSection>
+      <AccentFeature
+        title="Three Core Pillars"
+        label="Our Approach"
+        description="Our integrated approach combines cutting-edge technology, data intelligence and human capacity building."
+        features={featuresApproach}
+      />
+      <Powered />
+      <FocusArea />
+      <Approach />
+      <ImpactFocus />
+      <Build />
+      <Partnership />
+      <Insight />
     </>
   );
 }

@@ -40,7 +40,7 @@ function Footer() {
             <span className="font-semibold">Headquarters:</span> Abuja, Nigeria
           </span>
         </div>
-        <div className="w-full flex items-center justify-between ">
+        <div className="w-full flex items-start justify-between ">
           <div className="flex flex-col gap-5">
             <h4 className="text-green25 text-lg sm:text-xl font-semibold">
               Our Company
