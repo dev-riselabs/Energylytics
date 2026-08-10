@@ -10,7 +10,7 @@ import { HiOutlineCpuChip } from "react-icons/hi2";
 import Build from "../components/LandingPage/Build";
 import Partnership from "../components/LandingPage/Partnership";
 import Insight from "../components/LandingPage/Insight";
-import StackSection from "../components/animations/Stack";
+// import StackSection from "../components/animations/Stack";
 
 const featuresAbout = [
   {

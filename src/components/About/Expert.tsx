@@ -1,8 +1,8 @@
 const experts = [
-  { img: "/ceo.jpg", name: "Tomi Afilaka", title: "Lead Technical Engineer" },
-  { img: "/john.jpg", name: "Jerome Mangwat", title: "Community Outreach Lead" },
-  { img: "/john.jpg", name: "Nneka Icheoku", title: "Lead Data and AI Analyst" },
-  { img: "/aisha.jpg", name: "Mohammed Ibrahim", title: "Project Manager, Infrastructure & Energy" },
+  { img: "/avatar.png", name: "Tomi Afilaka", title: "Lead Technical Engineer" },
+  { img: "/avatar.png", name: "Jerome Mangwat", title: "Community Outreach Lead" },
+  { img: "/avatar.png", name: "Nneka Icheoku", title: "Lead Data and AI Analyst" },
+  { img: "/avatar.png", name: "Mohammed Ibrahim", title: "Project Manager, Infrastructure & Energy" },
 ];
 
 function Expert() {

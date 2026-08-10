@@ -33,8 +33,12 @@ function Footer() {
         <div className="flex flex-col gap-5">
           <img src="/logo.png" alt="" className="w-50 h-25 object-cover" />
           <span className="text-sm sm:text-base text-slate50 max-w-[50ch]">
-            Building the intelligence that powers Africa's renewable energy
-            revolution through data, AI, and education.
+            {/* Building the intelligence that powers Africa's renewable energy
+            revolution through data, AI, and education. */}
+            At Energylytics Africa, we believe that better data and 
+            intelligence should lead to better decisions and better 
+            decisions should lead to better infrastructure, stronger 
+            institutions and more sustainable communities.
           </span>
           <span className="text-sm sm:text-base text-slate50">
             <span className="font-semibold">Headquarters:</span> Abuja, Nigeria
