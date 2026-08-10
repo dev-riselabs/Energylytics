@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { FiChevronDown, FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { Link, NavLink } from "react-router";
@@ -198,7 +198,7 @@ function Header() {
                 end={path === "/"}
                 className={({ isActive }) =>
                   isActive
-                    ? "group relative text-green text-sm xl:text-base font-semibold pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:border-t-[6px] before:border-b-[6px] before:border-l- befo8re:border-t-transparent before:border-b-transparent before:border-l-current before:content-[''] before:block before:h-0 before:w-0"
+                    ? "group relative text-green text-sm xl:text-base font-semibold pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:border-t-[6px] before:border-b-[6px] before:border-l-[8px] before:border-t-transparent before:border-b-transparent before:border-l-current before:content-[''] before:block before:h-0 before:w-0"
                     : "group relative text-slate text-sm xl:text-base pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:border-t-[6px] before:border-b-[6px] before:border-l-8 before:border-t-transparent before:border-b-transparent before:border-l-current before:content-[''] before:block before:h-0 before:w-0"
                 }
               >
