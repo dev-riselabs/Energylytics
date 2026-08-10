@@ -40,11 +40,12 @@ function CoreValues() {
     <section className="py-20 px-5 sm:px-7 md:px-15 font-inter flex flex-col gap-10 items-center">
       <div className="flex items-center gap-4 px-5 py-2 rounded-full bg-green25 self-center">
         <div className="w-2 h-2 rounded-full bg-white"></div>
-        <span className="text-white text-sm font-bold">Core Values</span>
+        <span className="text-white text-sm font-bold">Our Core Values</span>
       </div>
       <p className="text-lg sm:text-xl text-slate text-center ">
-        The principles that guide every report we publish and every partnership
-        we build.
+        {/* The principles that guide every report we publish and every partnership
+        we build. */}
+        The Principles that guide all the work we do
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-5">
         {features.map(({ title, icon: Icon, description }, i) => (

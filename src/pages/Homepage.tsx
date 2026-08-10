@@ -61,7 +61,8 @@ function Homepage() {
       </StackSection>
       <StackSection index={2} className="">
         <AccentFeature
-          title="Building Intelligence for Africa’s Energy Future"
+          // title="Building Intelligence for Africa’s Energy Future"
+          title=""
           label="About Us"
           // description="Energylytics is more than a tech company we're building the intelligence that powers Africa's renewable energy revolution."
           description="Nigeria's future will be shaped by the quality of its energy systems, the resilience of its environmental/climate infrastructure and the intelligence with which it manages its natural resources."

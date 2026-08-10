@@ -88,7 +88,7 @@ function Footer() {
       </div>
       <div className="flex flex-col gap-4 items-center md:flex-row md:justify-between pt-6">
         <span className="font-inter text-sm sm:text-base text-slate50 text-center sm:text-left">
-          © 2026 Energylytics Africa Limited. All rights reserved.
+          © 2026 Energylytics Africa Limited | <a href="#">Privacy Policy</a>| <a href="#">Terms of Use</a> | <a href="#">Cookie Policy</a> 
         </span>
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-10">
           {footerLinks.map(({ label, href }) => (

@@ -11,18 +11,18 @@ function RenewableFuture() {
             accelerate Africa’s transition towards a cleaner, more resilient and 
             sustainable future.
           </h3>
-          <p className="text-lg sm:text-xl text-white max-w-[70ch] text-center">
+          {/* <p className="text-lg sm:text-xl text-white max-w-[70ch] text-center"> */}
             {/* We bridge the gap between complex energy data and actionable
             strategies, empowering governments, investors and developers to
             build a sustainable tomorrow */}
-            We combine energy intelligence, AI-powered analytics, renewable and 
+            {/* We combine energy intelligence, AI-powered analytics, renewable and 
             clean energy solutions, climate and environmental intelligence, 
             circular economy solutions, project development and knowledge systems 
             to help households, businesses, governments and development partners 
             understand complex energy and environmental challenges, make better 
             decisions and build solutions that create lasting economic, social and 
-            environmental value.
-          </p>
+            environmental value. */}
+          {/* </p> */}
         </div>
       </div>
     </section>

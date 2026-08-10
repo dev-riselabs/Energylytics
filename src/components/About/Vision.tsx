@@ -18,9 +18,9 @@ function Vision({ features }: VisionProps) {
           <div className="w-2 h-2 rounded-full bg-green"></div>
           <span className="text-green text-sm font-bold">About Us</span>
         </div>
-        <h3 className="text-[15px] font-bold text-white text-center">
+        {/* <h3 className="text-[15px] font-bold text-white text-center">
           Building Intelligence for Africa’s Energy Future
-        </h3>
+        </h3> */}
       </div>
       <p className="text-lg sm:text-xl text-white text-center">
         {/* Energylytics Africa Limited is a Renewable Energy Intelligence Company

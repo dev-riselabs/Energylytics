@@ -28,10 +28,10 @@ function ImpactFocus() {
           Driving Change Across the Value Chain
         </h3>
       </div>
-      <p className="text-lg sm:text-xl text-white text-center">
+      {/* <p className="text-lg sm:text-xl text-white text-center">
         Our work creates measurable impact across renewable energy optimization,
         policy development, and sustainable innovation.
-      </p>
+      </p> */}
       <motion.div
         variants={staggerContainer}
         initial="hidden"
