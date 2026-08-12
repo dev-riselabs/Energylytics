@@ -26,7 +26,7 @@ function About() {
   return (
     <>
       <RenewableFuture />
-      <Vision features={featuresAbout} />
+      <Vision  />
       <CoreValues />
       <ReadySection />
       <Expert />
