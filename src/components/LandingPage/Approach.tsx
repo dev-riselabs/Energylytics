@@ -12,6 +12,7 @@ const actions = [
       "Carbon intensity of national grids",
       "Investment inflows and project pipelines",
     ],
+    img : '/project1.jpg'
   },
   {
     isProject: false,
@@ -19,12 +20,7 @@ const actions = [
     description:
       "Nigeria, Kenya and South Africa collectively attracted 48% of Africa's clean energy investment in 2023, but 70% of off-grid funding still targets East Africa.",
   },
-  {
-    isProject: false,
-    title: "92%",
-    description:
-      "Our AI models help development agencies deploy resources where impact is maximized.",
-  },
+  
   {
     isProject: true,
     project: "Project 2",
@@ -35,6 +31,13 @@ const actions = [
       "Model trained on 12 million+ household energy data points",
       "Enables utilities and investors to maximize impact",
     ],
+    img: '/project2.jpg'
+  },
+  {
+    isProject: false,
+    title: "92%",
+    description:
+      "Our AI models help development agencies deploy resources where impact is maximized.",
   },
   
   {
@@ -47,6 +50,7 @@ const actions = [
       "Climate risk-adjusted investment scoring",
       "Public-private financing benchmarks",
     ],
+    img: '/project3.png'
   },
   {
     isProject: false,
@@ -59,25 +63,27 @@ const actions = [
 function Approach() {
   return (
     <section className="flex flex-col gap-7 items-center fonr-inter bg-white px-5 sm:px-7 md:px-15 py-20">
-      <div className="flex items-center gap-4 px-5 py-2 rounded-full bg-green25 self-center">
-        <div className="w-2 h-2 rounded-full bg-white"></div>
-        <span className="text-white text-sm font-bold">Our Approach</span>
-      </div>
+      
+      <div className="flex items-center gap-4 px-5 py-2 rounded-full border border-green50 self-center">
+          <div className="w-2 h-2 rounded-full bg-green25"></div>
+          <span className="text-green25 text-sm font-bold">Our Approach</span>
+        </div>
       <h3 className="text-[15px] font-bold text-slate">
         Transforming Energy Data into Action
       </h3>
 
-      <p className="text-lg sm:text-xl text-slate50 text-center">
+      <p className="text-lg sm:text-xl text-slate50 text-center max-w-[53ch]">
         We deliver actionable intelligence through three flagship initiatives
-        that are reshaping Africa's energy landscape.
+       <span className="text-green25"> that are reshaping Africa's energy landscape.</span> 
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-9 items-center gap-12.5">
+      <div className="flex flex-col gap-12.5">
         {actions.map((action, i) => {
           if (action.isProject) {
             return (
+              <div key={action.title} className="grid grid-cols-1 md:grid-cols-5 ">
               <div
-                key={action.title}
-                className="md:col-span-4 flex flex-col gap-7"
+                
+                className=" flex flex-col gap-7 md:col-span-2 md:justify-center"
               >
                 <div className="flex flex-col gap-6">
                   <div className="py-2 px-5 rounded-full items-center justify-center flex gap-2 bg-green45  text-green text-sm font-bold self-start">
@@ -98,12 +104,14 @@ function Approach() {
                   ))}
                 </ul>
               </div>
+              <img src={action.img} alt="" className="rounded-3xl md:col-span-3 object-cover w-full h-auto"/>
+              </div>
             );
           } else {
             return (
               <div
                 key={`${action.title}-${i}`}
-                className={` border-zinc border rounded-2xl md:col-span-5 flex flex-col p-10 gap-7.5 ${
+                className={` border-zinc border rounded-2xl flex flex-col p-10 gap-7.5 ${
                   i === 1 ? 'bg-green55':
                   i === 2 ? 'bg-green75' :
                   'bg-green65'

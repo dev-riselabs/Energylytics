@@ -76,7 +76,7 @@
 }
 
 .hero-bg {
-  background-image: url("/hero-bg.jpg");
+  background-image: url("/hero-bg.png");
   background-size: cover;
   background-position: center;
 }
@@ -115,4 +115,10 @@
   background-image: url("/build-bg.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.home-about-bg{
+  background-image: url("/about-bg.png");
+  background-size: cover;
+  background-position: bottom;
 }
