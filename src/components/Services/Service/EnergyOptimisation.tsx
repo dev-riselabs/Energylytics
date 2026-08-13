@@ -14,7 +14,7 @@ const energyStats = [
 
 function EnergyOptimisation() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10 bg-green60 px-5 sm:px-7 md:px-15 py-15">
+    <section id='energy-optimisation' className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10 bg-green60 px-5 sm:px-7 md:px-15 py-15">
       <img
         src="/ai-optimisation.jpg"
         alt=""

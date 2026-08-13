@@ -20,7 +20,7 @@ const statsTwo = [
 
 function InvestmentAdvisory() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-8 px-5 sm:px-7 md:px-15 py-15 bg-green60 font-inter">
+    <section id='project' className="grid grid-cols-1 md:grid-cols-2 gap-8 px-5 sm:px-7 md:px-15 py-15 bg-green60 font-inter">
       <img
         src="/service-investment.jpg"
         alt=""

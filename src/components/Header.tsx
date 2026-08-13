@@ -10,9 +10,9 @@ const navLinks = [
     path: "/about",
     children: [
       { title: "Who We Are", path: "" },
-      { title: "Mission & Vision", path: "" },
+      { title: "Mission & Vision", path: "/about#about-mission" },
       { title: "Our Approach", path: "" },
-      { title: "Our Team", path: "" },
+      { title: "Our Team", path: "/about#experts" },
       { title: "Our Impact", path: "" },
       { title: "Knowledge, Education & Advocacy", path: "" },
     ],
@@ -33,13 +33,13 @@ const navLinks = [
     title: "services",
     path: "/services",
     children: [
-      { title: "Energy Analytics", path: "" },
-      { title: "AI & Optimisation", path: "" },
-      { title: "Clean Energy Advisory", path: "" },
-      { title: "Climate & Environmental Advisory", path: "" },
-      { title: "Project Management", path: "" },
-      { title: "Policy & Market Intelligence", path: "" },
-      { title: "Research & Capacity Building", path: "" },
+      { title: "Energy Analytics", path: "/sevices#energy-analytics" },
+      { title: "AI & Optimisation", path: "/services#energy-optimisation" },
+      { title: "Clean Energy Advisory", path: "/services#clean-energy" },
+      { title: "Climate & Environmental Advisory", path: "/sevices#climate" },
+      { title: "Project Management", path: "/services#project" },
+      { title: "Policy & Market Intelligence", path: "/services#policy" },
+      { title: "Research & Capacity Building", path: "/services#capacity" },
     ],
   },
   {
@@ -135,13 +135,13 @@ function Header() {
               {navItem.children && openDropdown === navItem.title && (
                 <div className="absolute top-full left-0 min-w-40 w-50 max-w-100 rounded-md bg-white shadow-lg p-2 z-20 flex flex-col gap-1">
                   {navItem.children.map((child) => (
-                    <NavLink
+                    <a
                       key={child.title}
-                      to={child.path}
+                      href={child.path}
                       className="block px-3 py-2 text-sm hover:bg-slate10 rounded-md"
                     >
                       {child.title}
-                    </NavLink>
+                    </a>
                   ))}
                 </div>
               )}

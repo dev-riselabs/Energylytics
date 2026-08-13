@@ -24,7 +24,7 @@ const emergingStats = [
 
 
 function AdvisoryPolicy() {
-  return <section className="bg-zinc800 px-5 sm:px-7 md:px-15 py-15 grid grid-cols-1 md:grid-cols-5 gap-10">
+  return <section id='policy' className="bg-zinc800 px-5 sm:px-7 md:px-15 py-15 grid grid-cols-1 md:grid-cols-5 gap-10">
         <div className="md:col-span-2 flex flex-col gap-12.5">
           <h3 className="text-slate font-manrope text-2xl font-medium">
             7. POLICY, MARKET INTELLIGENCE & ADVISORY POLICY

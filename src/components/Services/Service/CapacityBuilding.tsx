@@ -21,7 +21,7 @@ const smartStats = [
 
 function CapacityBuilding() {
   return (
-    <section className="flex flex-col gap-8 px-5 sm:px-7 md:px-15 py-15 bg-green60">
+    <section id='capacity' className="flex flex-col gap-8 px-5 sm:px-7 md:px-15 py-15 bg-green60">
       <h3 className="text-white font-manrope text-2xl font-medium text-center">
         9. KNOWLEDGE, RESEARCH & CAPACITY BUILDING
       </h3>

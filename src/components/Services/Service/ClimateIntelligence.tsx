@@ -28,7 +28,7 @@ const emergingStats = [
 
 function ClimateIntelligence() {
   return (
-    <section className="bg-green60 px-5 sm:px-7 md:px-15 py-15 grid grid-cols-1 md:grid-cols-5 gap-10">
+    <section id='climate' className="bg-green60 px-5 sm:px-7 md:px-15 py-15 grid grid-cols-1 md:grid-cols-5 gap-10">
       <img
         src="/service-climate-img.jpg"
         alt=""

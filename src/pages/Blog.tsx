@@ -19,7 +19,7 @@ const articles = [
   },
   {
     id: 2,
-    img: "/insight.jpg",
+    img: "/energy-blog.png",
     time: "6 min read",
     date: "Oct 18, 2023",
     label: "ENERGY POLICY",
@@ -29,7 +29,7 @@ const articles = [
   },
   {
     id: 3,
-    img: "/insight.jpg",
+    img: "/investment-blog.jpg",
     time: "7 min read",
     date: "Oct 15, 2023",
     label: "INVESTMENT",
@@ -39,7 +39,7 @@ const articles = [
   },
   {
     id: 4,
-    img: "/insight.jpg",
+    img: "/solar-blog.jpg",
     time: "5 min read",
     date: "Oct 12, 2023",
     label: "SOLAR ENERGY",
@@ -49,7 +49,7 @@ const articles = [
   },
   {
     id: 5,
-    img: "/insight.jpg",
+    img: "/images (32).jpg.jpeg",
     time: "9 min read",
     date: "Oct 10, 2023",
     label: "GRID",
@@ -61,7 +61,7 @@ const articles = [
   // Add more articles
   {
     id: 6,
-    img: "/insight.jpg",
+    img: "/57db1394-2416-4dc2-af13-da26cead6987.png",
     time: "6 min read",
     date: "Oct 8, 2023",
     label: "POLICY",
@@ -71,7 +71,7 @@ const articles = [
 
   {
     id: 7,
-    img: "/insight.jpg",
+    img: "/TECHNOLOGY.jpg.jpeg",
     time: "8 min read",
     date: "Oct 5, 2023",
     label: "TECHNOLOGY",
@@ -81,7 +81,7 @@ const articles = [
 
   {
     id: 8,
-    img: "/insight.jpg",
+    img: "/investment-blog.jpg",
     time: "5 min read",
     date: "Oct 2, 2023",
     label: "INVESTMENT",

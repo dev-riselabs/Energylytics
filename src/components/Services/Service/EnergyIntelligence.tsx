@@ -19,7 +19,7 @@ const decisionStats= [
 
 function EnergyIntelligence() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-10 px-5 sm:px-7 md:px-15 bg-zinc800 py-15">
+    <section id='energy-analytics' className="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-10 px-5 sm:px-7 md:px-15 bg-zinc800 py-15">
       <div className="flex flex-col gap-7">
         <h2 className="text-slate font-manrope text-2xl font-medium">
           1. ENERGY INTELLIGENCE & ANALYTICS
