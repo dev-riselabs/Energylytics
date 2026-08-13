@@ -11,6 +11,7 @@ import EnergyPlatform from "./pages/EnergyPlatform";
 import ManagementTool from "./pages/ManagementTool";
 import EducationPlatform from "./pages/EducationPlatform";
 import Blog from "./pages/Blog";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route index element={<Homepage />} />
           <Route path="about" element={<About />} />
           <Route path="solutions" element={<Solutions />} />
+          <Route path="services" element={<Services />} />
           <Route path="energy-platform" element={<EnergyPlatform />} />
           <Route path="management-tool" element={<ManagementTool />} />
           <Route path="education-advocacy" element={<EducationPlatform />} />
