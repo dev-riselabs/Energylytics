@@ -25,7 +25,7 @@ function App() {
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Homepage />} />
           <Route path="about" element={<About />} />
-          <Route path="research-insight" element={<Solutions />} />
+          <Route path="solutions" element={<Solutions />} />
           <Route path="energy-platform" element={<EnergyPlatform />} />
           <Route path="management-tool" element={<ManagementTool />} />
           <Route path="education-advocacy" element={<EducationPlatform />} />
