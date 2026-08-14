@@ -1,6 +1,9 @@
+import { useState, type FormEvent } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { MdOutlineArrowRight } from "react-icons/md";
 import { Link } from "react-router";
+
+const CONTACT_EMAIL = "developer@risenetworks.org";
 
 const navLinks = [
   {title : 'Explore', links : [
@@ -61,6 +64,21 @@ const footerLinks = [
 ];
 
 function Footer() {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+
+  function handleSubscribe(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const mailSubject = "[Energylytics Newsletter] New subscription";
+    const body = [
+      `Full Name: ${fullName}`,
+      `Email: ${email}`,
+      "",
+      "Please add this subscriber to the Energylytics newsletter list.",
+    ].join("\n");
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(body)}`;
+  }
+
   return (
     <footer className="flex flex-col gap-6 px-5 sm:px-7 md:px-10 lg:px-15 py-10 md:py-15 divide-y-2 divide-zinc font-manrope bg-green35">
       <div className="flex flex-col gap-8 md:gap-10 pb-7">
@@ -69,28 +87,29 @@ function Footer() {
           <img src="/logo.png" alt="" className="w-40 md:w-50 h-16 md:h-25 object-contain" />
           <h5>Have a challenge we're equipped to solve?</h5>
           <span className="text-sm sm:text-base text-slate50 md:max-w-[60ch]">
-            Partner with Energylytics Africa <a href="/contact"><FaArrowRight/></a>
+            Partner with Energylytics Africa <a href="/contact-us"><FaArrowRight/></a>
             {/* Building the intelligence that powers Africa's renewable energy revolution through data, AI and education. */}
           </span>
           <span className="text-sm sm:text-base text-slate50">
             <span className="font-semibold">Headquarters:</span> Abuja, Nigeria
           </span>
         </div>
-        <div className="flex flex-col gap-6 lg:w-1/2">
+        <form onSubmit={handleSubscribe} className="flex flex-col gap-6 lg:w-1/2">
           <p className="text-base sm:text-xl text-slate50">Get weekly updates on the newest projects and programms right in your mailbox.
 </p>
           <span className="text-base sm:text-xl text-green">Subscribe now!</span>
           <div className="flex flex-col gap-4 sm:flex-row">
             <div className="flex flex-col gap-2.5 flex-1">
-              <label htmlFor="" className="text-slate text-base">Full Name <span className="text-red">*</span></label>
-              <input type="text" name="" id="" placeholder="John Doe" className="rounded-md border border-black/50 text-sm text-slate px-3 py-3 outline-none"/>
+              <label htmlFor="footer-full-name" className="text-slate text-base">Full Name <span className="text-red">*</span></label>
+              <input required type="text" name="fullName" id="footer-full-name" value={fullName} onChange={e => setFullName(e.target.value)} placeholder="John Doe" className="rounded-md border border-black/50 text-sm text-slate px-3 py-3 outline-none"/>
             </div>
             <div className="flex flex-col gap-2.5 flex-1">
-              <label htmlFor="" className="text-slate text-base">Email Address <span className="text-red">*</span></label>
-              <input type="email" name="" id="" placeholder="johndoe@gmail.com" className="rounded-md border border-black/50 text-sm text-slate px-3 py-3 outline-none"/>
+              <label htmlFor="footer-email" className="text-slate text-base">Email Address <span className="text-red">*</span></label>
+              <input required type="email" name="email" id="footer-email" value={email} onChange={e => setEmail(e.target.value)} placeholder="johndoe@gmail.com" className="rounded-md border border-black/50 text-sm text-slate px-3 py-3 outline-none"/>
             </div>
           </div>
-        </div>
+          <button type="submit" className="self-start px-5 py-2.5 rounded-md bg-green25 text-white text-sm font-bold font-dmSans border border-green25 hover:bg-transparent hover:text-green25 transition-all cursor-pointer">Subscribe</button>
+        </form>
 
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
