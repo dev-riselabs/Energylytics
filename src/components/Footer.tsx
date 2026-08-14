@@ -62,11 +62,11 @@ const footerLinks = [
 
 function Footer() {
   return (
-    <footer className="flex flex-col gap-6 px-5 sm:px-7 md:px-15 py-15 divide-y-2 divide-zinc font-manrope bg-green35">
-      <div className="flex flex-col gap-10 pb-7">
+    <footer className="flex flex-col gap-6 px-5 sm:px-7 md:px-10 lg:px-15 py-10 md:py-15 divide-y-2 divide-zinc font-manrope bg-green35">
+      <div className="flex flex-col gap-8 md:gap-10 pb-7">
       <div className="flex flex-col gap-7 lg:flex-row lg:justify-between">
          <div className="flex flex-col gap-5">
-          <img src="/logo.png" alt="" className="w-50 h-25 object-cover" />
+          <img src="/logo.png" alt="" className="w-40 md:w-50 h-16 md:h-25 object-contain" />
           <span className="text-sm sm:text-base text-slate50 md:max-w-[30ch]">
             Building the intelligence that powers Africa's renewable energy revolution through data, AI and education.
           </span>
@@ -91,11 +91,11 @@ function Footer() {
         </div>
 
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
         {
-          navLinks.map(linkItem => <div key={linkItem.title} className="flex flex-col gap-5">
-            <h4 className="text-base sm:text-xl font-semibold text-green25">{linkItem.title}</h4>
-            <div className="flex flex-col gap-4 list-disc">
+          navLinks.map(linkItem => <div key={linkItem.title} className="flex flex-col gap-4 md:gap-5">
+            <h4 className="text-base sm:text-lg md:text-xl font-semibold text-green25">{linkItem.title}</h4>
+            <div className="flex flex-col gap-3 md:gap-4 list-disc">
               {
                 linkItem.links.map(link => <Link key={link.title} to={link.path} className="text-sm sm:text-base text-slate hover:text-green25 transition-all font-light flex items-center gap-1.5"> <MdOutlineArrowRight className="w-6 h-6" />{link.title}</Link>)
               }

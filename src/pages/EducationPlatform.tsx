@@ -13,7 +13,7 @@ function EducationPlatform() {
       
       <WhyJoin />
       <EventWorkshop />
-      <div className="bg-white px-5 sm:px-10 md:px-20 py-15">
+      <div className="bg-white px-5 sm:px-7 md:px-10 lg:px-20 py-10 md:py-15">
         <PlaformTemplate
           label1="EDUCATION"
           label2="CERTIFICATION"
@@ -24,7 +24,7 @@ function EducationPlatform() {
           description="Master the fundamentals of energy markets at your own pace. Our learning hub offers digital tracks covering Energy Policy, Market Analytics and Sustainable Investment Strategies."
         />
       </div>
-      <div className="bg-zinc600 px-5 sm:px-10 md:px-20 py-15">
+      <div className="bg-zinc600 px-5 sm:px-7 md:px-10 lg:px-20 py-10 md:py-15">
         <PlaformTemplate
           label1="PUBLICATIONS"
           label2="INSIGHTS"

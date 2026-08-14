@@ -12,7 +12,7 @@ type SolutionProps = {
 function Solution({ accent, position, title, descriptions, order, img }: SolutionProps) {
   return (
     <div
-      className={`grid grid-cols-1 md:grid-cols-2 gap-5 px-5 sm:px-7 md:px-15 py-15 ${accent ? "bg-green60" : "bg-zinc800"}`}
+      className={`grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-5 px-5 sm:px-7 md:px-10 lg:px-15 py-10 md:py-15 ${accent ? "bg-green60" : "bg-zinc800"}`}
     >
       <img src={img} alt="" className={`${order === 2 ? 'order-2' : ''} rounded-4xl h-full md:h-103 w-full object-cover`}/>
       <div className="flex flex-col gap-6 justify-center">

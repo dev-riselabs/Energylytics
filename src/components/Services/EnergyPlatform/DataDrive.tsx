@@ -14,19 +14,19 @@ const stats = [
 
 function DataDrive() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-zinc800 px-5 sm:px-7 md:px-15 py-15 md:items-stretch">
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 bg-zinc800 px-5 sm:px-7 md:px-10 lg:px-15 py-10 md:py-15 md:items-stretch">
       <img
         src="/data-drive.png"
         alt=""
-        className="object-cover w-full rounded-2xl"
+        className="object-cover w-full h-64 sm:h-80 md:h-auto rounded-2xl"
       />
-      <div className="flex flex-col gap-7 justify-center">
-        <div className="flex flex-col gap-6">
-          <div className="flex flex-col gap-5">
-            <h4 className="text-slate text-2xl font-medium">
+      <div className="flex flex-col gap-6 md:gap-7 justify-center">
+        <div className="flex flex-col gap-5 md:gap-6">
+          <div className="flex flex-col gap-4 md:gap-5">
+            <h4 className="text-slate text-xl sm:text-2xl font-medium">
               Data that drive decisions
             </h4>
-            <p className="text-slate50 text-base">
+            <p className="text-slate50 text-sm sm:text-base">
               Stop relying on outdated spreadsheets. Our dashboard gives you a
               centralized view of your entire portfolio's health, from
               individual inverter performance to regional grid stability.

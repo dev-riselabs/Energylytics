@@ -79,10 +79,10 @@ const areas: Area[] = [
 
 function FocusArea() {
   return (
-    <section className="flex flex-col gap-7 items-center fonr-inter px-5 sm:px-7 md:px-15 py-20 focus-area-bg">
-      <div className="flex items-center gap-4 px-5 py-2 rounded-full bg-white self-center">
+    <section className="flex flex-col gap-6 md:gap-7 items-center fonr-inter px-5 sm:px-7 md:px-10 lg:px-15 py-12 md:py-20 focus-area-bg">
+      <div className="flex items-center gap-3 sm:gap-4 px-4 sm:px-5 py-2 rounded-full bg-white self-center">
         <div className="w-2 h-2 rounded-full bg-green"></div>
-        <span className="text-green text-sm font-bold">Our Focus Areas</span>
+        <span className="text-green text-xs sm:text-sm font-bold">Our Focus Areas</span>
       </div>
       <motion.div
         variants={staggerContainer}
@@ -119,12 +119,12 @@ function FocusArea() {
                   scale: 1.02,
                   transition: { duration: 0.2 },
                 }}
-                className="border border-zinc flex flex-col gap-8 p-7 md:p-10 rounded-xl bg-white"
+                className="border border-zinc flex flex-col gap-6 sm:gap-8 p-6 sm:p-7 md:p-10 rounded-xl bg-white"
               >
                 <div className="w-10 sm:w-12.5 h-10 sm:h-12.5 bg-green rounded-md flex items-center justify-center">
-                  <BiCoinStack className="w-6 h-6 text-white" />
+                  <BiCoinStack className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-4 sm:gap-6">
                   <h4 className="text-base font-bold text-slate60">
                     {area.title}
                   </h4>

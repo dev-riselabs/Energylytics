@@ -18,18 +18,18 @@ const chains = [
 
 function ImpactFocus() {
   return (
-    <section className="flex flex-col gap-7 items-center font-inter bg-green25 px-5 sm:px-7 md:px-15 py-20">
+    <section className="flex flex-col gap-6 md:gap-7 items-center font-inter bg-green25 px-5 sm:px-7 md:px-10 lg:px-15 py-12 md:py-20">
       <div className="flex flex-col items-center gap-4">
-        <div className="flex items-center gap-4 px-5 py-2 rounded-full border border-white self-center">
+        <div className="flex items-center gap-3 sm:gap-4 px-4 sm:px-5 py-2 rounded-full border border-white self-center">
           <div className="w-2 h-2 rounded-full bg-white"></div>
-          <span className="text-white text-sm font-bold">Our Impact Focus</span>
+          <span className="text-white text-xs sm:text-sm font-bold">Our Impact Focus</span>
         </div>
-        <h3 className="text-[15px] font-bold text-white">
+        <h3 className="text-sm sm:text-[15px] font-bold text-white text-center">
           Driving Change Across the Value Chain
         </h3>
-      
+
       </div>
-      <p className="text-lg sm:text-xl text-white text-center max-w-[50ch]">
+      <p className="text-base sm:text-lg md:text-xl text-white text-center max-w-[50ch]">
         Our work creates measurable impact across renewable energy optimization, policy development and sustainable innovation.
       </p>
       {/* <motion.div

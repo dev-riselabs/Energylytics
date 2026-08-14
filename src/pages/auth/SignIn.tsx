@@ -4,10 +4,10 @@ import { Link } from "react-router";
 
 function SignIn() {
   return (
-    <section className="bg-white flex-1 h-full w-full flex flex-col gap-8 p-4">
-      <div className="flex flex-col gap-6 items-center">
-        <img src="/logo.png" alt="" className="w-50 h-20 md:h-23 object-cover" />
-        <h1 className="text-4xl font-prata text-black">Welcome Back</h1>
+    <section className="bg-white flex-1 h-full w-full flex flex-col gap-6 md:gap-8 p-4 sm:p-6 md:p-4">
+      <div className="flex flex-col gap-4 md:gap-6 items-center">
+        <img src="/logo.png" alt="" className="w-40 md:w-50 h-16 md:h-23 object-contain" />
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-prata text-black text-center">Welcome Back</h1>
       </div>
       <form action="" className="flex flex-col gap-5">
         <div className="flex flex-col gap-2 font-inter">

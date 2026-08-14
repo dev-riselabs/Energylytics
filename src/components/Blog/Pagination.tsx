@@ -20,15 +20,15 @@ function Pagination({
   };
 
   return (
-    <div className="flex items-center justify-center gap-2">
+    <div className="flex items-center justify-center gap-2 text-sm sm:text-base flex-wrap">
       {/* Previous */}
       <button
         type="button"
         disabled={currentPage === 1}
         onClick={() => onPageChange(currentPage - 1)}
-        className="flex items-center gap-2 text-slate disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+        className="flex items-center gap-1.5 sm:gap-2 text-slate disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
       >
-        <FaArrowLeft />
+        <FaArrowLeft className="w-3 h-3 sm:w-4 sm:h-4" />
         <span>Previous</span>
       </button>
 
@@ -64,10 +64,10 @@ function Pagination({
         type="button"
         disabled={currentPage === totalPages}
         onClick={() => onPageChange(currentPage + 1)}
-        className="flex items-center gap-2 text-slate disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+        className="flex items-center gap-1.5 sm:gap-2 text-slate disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
       >
         <span>Next</span>
-        <FaArrowRight />
+        <FaArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
       </button>
     </div>
   );

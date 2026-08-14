@@ -107,14 +107,14 @@ function Blog() {
   );
 
   return (
-    <div className="bg-zinc900 grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-5 px-5 sm:px-7 md:px-15 py-20">
-      <div className="md:col-span-3 lg:col-span-2 flex flex-col gap-7">
-        <div className="flex flex-col gap-6.5">
-          <h1 className="text-3xl sm:text-[32px] text-slate font-bold">
+    <div className="bg-zinc900 grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-6 md:gap-5 px-5 sm:px-7 md:px-10 lg:px-15 py-12 md:py-20">
+      <div className="md:col-span-3 lg:col-span-2 flex flex-col gap-6 md:gap-7">
+        <div className="flex flex-col gap-5 md:gap-6.5">
+          <h1 className="text-2xl sm:text-3xl md:text-[28px] lg:text-[32px] text-slate font-bold leading-tight">
             Energy Intelligence Insights
           </h1>
 
-          <p className="text-lg sm:text-xl text-slate">
+          <p className="text-base sm:text-lg md:text-xl text-slate">
             Leading analysis on renewable energy trends, policy
             and investment across Africa. Stay ahead of the
             transition.
