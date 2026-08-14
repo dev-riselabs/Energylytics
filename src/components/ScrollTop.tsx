@@ -3,14 +3,25 @@ import { useLocation } from "react-router";
 
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // or "auto" for instant scrolling
-    });
-  }, [pathname]);
+    if (hash) {
+      const element = document.getElementById(hash.substring(1));
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  }, [pathname, hash]);
 
   return null;
 };

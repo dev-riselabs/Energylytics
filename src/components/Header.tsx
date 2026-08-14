@@ -9,7 +9,7 @@ const navLinks = [
     title: "about us",
     path: "/about",
     children: [
-      { title: "Who We Are", path: "" },
+      { title: "Who We Are", path: "/about" },
       { title: "Mission & Vision", path: "/about#about-mission" },
       { title: "Our Approach", path: "" },
       { title: "Our Impact", path: "/social-impact" },
@@ -21,7 +21,7 @@ const navLinks = [
     title: "solutions",
     path: "/solutions",
     children: [
-      { title: "Energy Data Platform", path: "" },
+      { title: "Energy Data Platform", path: "/solutions" },
       { title: "Energy Calculator", path: "" },
       { title: "AI Energy Management", path: "" },
       { title: "Clean Energy Solutions", path: "" },
@@ -33,7 +33,7 @@ const navLinks = [
     title: "services",
     path: "/services",
     children: [
-      { title: "Energy Analytics", path: "/sevices#energy-analytics" },
+      { title: "Energy Analytics", path: "/services" },
       { title: "AI & Optimisation", path: "/services#energy-optimisation" },
       { title: "Clean Energy Advisory", path: "/services#clean-energy" },
       { title: "Climate & Environmental Advisory", path: "/sevices#climate" },
@@ -46,7 +46,7 @@ const navLinks = [
     title: "partnerships",
     path: "/partnerships",
     children: [
-      { title: "Government", path: "/partnerships#government" },
+      { title: "Government", path: "/partnerships" },
       { title: "Private Sector", path: "/partnerships#private" },
       { title: "Development Partners", path: "/partnerships#development" },
       { title: "Technology", path: "/partnerships#technology" },
@@ -57,7 +57,7 @@ const navLinks = [
     title: "insights",
     path: "/insights",
     children: [
-      { title: "Research", path: "" },
+      { title: "Research", path: "/insights" },
       { title: "Energy Intelligence", path: "" },
       { title: "Climate & Sustainability", path: "" },
       { title: "Policy & Market Insights", path: "" },
@@ -93,62 +93,65 @@ function Header() {
       </button>
       <div className="lg:flex items-center gap-5 hidden xl:flex-1 xl:justify-between ">
         <nav className="flex items-center gap-2 xl:gap-4">
-          {navLinks.map((navItem) => (
-            <div
-              key={navItem.title}
-              className="relative"
-              onMouseEnter={() => {
-                if (navItem.children) {
-                  setOpenDropdown(navItem.title);
-                }
-              }}
-              onMouseLeave={() => {
-                if (navItem.children) {
-                  setOpenDropdown(null);
-                }
-              }}
+  {navLinks.map((navItem) => (
+    <div
+      key={navItem.title}
+      className="relative"
+      onMouseEnter={() => {
+        if (navItem.children) {
+          setOpenDropdown(navItem.title);
+        }
+      }}
+      onMouseLeave={() => {
+        if (navItem.children) {
+          setOpenDropdown(null);
+        }
+      }}
+    >
+      <NavLink
+        to={navItem.children ? "#" : navItem.path}
+        onClick={(e) => {
+          if (navItem.children) {
+            e.preventDefault();
+
+            setOpenDropdown(
+              openDropdown === navItem.title ? null : navItem.title
+            );
+          }
+        }}
+        className={({ isActive }) =>
+          `${
+            isActive && !navItem.children
+              ? "text-green25 font-bold hover:text-green"
+              : "text-zinc100 hover:text-slate"
+          } transition-all text-xs xl:text-sm capitalize flex items-center gap-1`
+        }
+      >
+        <MdPlayArrow className="w-4 h-4" />
+
+        {navItem.title}
+
+        {navItem.children && (
+          <MdKeyboardArrowDown className="w-4 h-4" />
+        )}
+      </NavLink>
+
+      {navItem.children && openDropdown === navItem.title && (
+        <div className="absolute top-full left-0 min-w-40 w-50 max-w-100 rounded-md bg-white shadow-lg p-2 z-20 flex flex-col gap-1">
+          {navItem.children.map((child) => (
+            <NavLink
+              key={child.title}
+              to={child.path}
+              className="block px-3 py-2 text-sm hover:bg-green25 hover:text-white rounded-md"
             >
-              <NavLink
-                to={navItem.path}
-                onClick={() => {
-                  if (navItem.children) {
-                    setOpenDropdown(
-                      openDropdown === navItem.title ? null : navItem.title,
-                    );
-                  }
-                }}
-                className={({ isActive }) =>
-                  `${
-                    isActive
-                      ? "text-green25 font-bold hover:text-green"
-                      : "text-zinc100 hover:text-slate"
-                  } transition-all text-xs xl:text-sm capitalize flex items-center gap-1`
-                }
-              >
-                <MdPlayArrow className="w-4 h-4" />
-                {navItem.title}
-
-                {navItem.children && (
-                  <MdKeyboardArrowDown className="w-4 h-4" />
-                )}
-              </NavLink>
-
-              {navItem.children && openDropdown === navItem.title && (
-                <div className="absolute top-full left-0 min-w-40 w-50 max-w-100 rounded-md bg-white shadow-lg p-2 z-20 flex flex-col gap-1">
-                  {navItem.children.map((child) => (
-                    <a
-                      key={child.title}
-                      href={child.path}
-                      className="block px-3 py-2 text-sm hover:bg-green25 hover:text-white rounded-md"
-                    >
-                      {child.title}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
+              {child.title}
+            </NavLink>
           ))}
-        </nav>
+        </div>
+      )}
+    </div>
+  ))}
+</nav>
 
         <div className="flex flex-col lg:flex-row gap-3">
           <button className="px-2 xl:px-5 py-3 rounded-xl border border-green30 text-green text-xs xl:text-sm font-bold font-dmSans hover:bg-green25 hover:text-white transition-all cursor-pointer">

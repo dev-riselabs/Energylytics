@@ -39,7 +39,7 @@ function CircularEconomy() {
               </h4>
               <div className="flex flex-col gap-4">
                 {renewableStats.map((stat) => (
-                  <span className="text-sm sm:text-base text-slate50 flex items-center gap-2">
+                  <span key={stat} className="text-sm sm:text-base text-slate50 flex items-center gap-2">
                     <FaCircleCheck className="w-4 h-4 shrink-0 text-green25" /> {stat}
                   </span>
                 ))}
@@ -52,7 +52,7 @@ function CircularEconomy() {
               </h4>
               <div className="flex flex-col gap-4">
                 {cleanStats.map((stat) => (
-                  <span className="text-sm sm:text-base text-slate50 flex items-center gap-2">
+                  <span key={stat} className="text-sm sm:text-base text-slate50 flex items-center gap-2">
                     <FaCircleCheck className="w-4 h-4 shrink-0 text-green25" /> {stat}
                   </span>
                 ))}
@@ -65,7 +65,7 @@ function CircularEconomy() {
               </h4>
               <div className="flex flex-col gap-4">
                 {emergingStats.map((stat) => (
-                  <span className="text-sm sm:text-base text-slate50 flex items-center gap-2">
+                  <span key={stat} className="text-sm sm:text-base text-slate50 flex items-center gap-2">
                     <FaCircleCheck className="w-4 h-4 shrink-0 text-green25" /> {stat}
                   </span>
                 ))}
