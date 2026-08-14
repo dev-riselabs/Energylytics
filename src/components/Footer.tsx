@@ -79,7 +79,7 @@ function Footer() {
         <div className="flex flex-col gap-6 lg:w-1/2">
           <p className="text-base sm:text-xl text-slate50">Get weekly updates on the newest projects and programms right in your mailbox.
 </p>
-          <span className="text-base sm:text-xl text-green">Subscribe now!</span>
+          <button className="text-base sm:text-xl text-green cursor-pointer hover:text-green transition-all">Subscribe now!</button>
           <div className="flex flex-col gap-4 sm:flex-row">
             <div className="flex flex-col gap-2.5 flex-1">
               <label htmlFor="" className="text-slate text-base">Full Name <span className="text-red">*</span></label>
@@ -108,11 +108,11 @@ function Footer() {
       </div>
       </div>
 
-      <div className="flex flex-col gap-4 md:flex-row items-center md:justify-between">
-        <p className="text-sm sm:text-base text-slate50 text-center md:text-left">© 2026 Energylytics Africa Limited. All rights reserved.</p>
-        <div className="flex flex-col gap-4 md:flex-row md:justify-between items-center md:w-4/5">
+      <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5  items-center md:justify-between">
+        <p className="text-sm sm:text-base text-slate50 text-center md:text-left md:col-span-1 xl:col-span-2">© 2026 Energylytics Africa Limited. All rights reserved.</p>
+        <div className="flex flex-col gap-4 md:flex-row md:justify-between items-center md:col-span-2 xl:col-span-3">
           {
-            footerLinks.map(link => <a key={link.label} href={link.href} className="text-sm sm:text-base underline text-green25 hover:text-green transition-all flex gap-1.5"><MdOutlineArrowRight className="w-6 h-6" /> {link.label}</a>)
+            footerLinks.map(link => <a key={link.label} href={link.href} className="text-sm underline text-green25 hover:text-green transition-all flex gap-1.5"><MdOutlineArrowRight className="w-6 h-6" /> {link.label}</a>)
           }
         </div>
       </div>
