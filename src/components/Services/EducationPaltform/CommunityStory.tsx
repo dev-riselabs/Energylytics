@@ -38,7 +38,7 @@ function CommunityStory() {
           <div key={name} className="flex flex-col divide-y divide-zinc border border-zinc rounded-xl p-7.5 gap-10.75 ">
             <div className="flex flex-col gap-6 pb-10">
                 <div className="flex items-center gap-2">{
-                    [1,2,3,4,5].map(i => <IoStar className={`w-5 h-5 ${i <= rate ? 'text-green25' : 'text-slate50'}`} />)
+                    [1,2,3,4,5].map(i => <IoStar key={i} className={`w-5 h-5 ${i <= rate ? 'text-green25' : 'text-slate50'}`} />)
                 }</div>
                 <p className="text-base text-slate50">{story}</p>
             </div>

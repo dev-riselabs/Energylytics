@@ -8,11 +8,11 @@ const navLinks = [
     {title : 'Our Services', path: '/services'},
     {title : 'Our Solutions', path: '/solutions'},
     {title : 'Our Projects', path: ''},
-    {title : 'Our Impact', path: ''},
+    {title : 'Our Impact', path: '/social-impact'},
     {title : 'Insights', path: '/insights'},
   ]},
   {title : 'Work With US', links : [
-    {title : 'Partnerships', path: ''},
+    {title : 'Partnerships', path: '/partnerships'},
     {title : 'Government & Public Sector', path: ''},
     {title : 'Private Sector', path: ''},
     {title : 'Development Partners', path: ''},

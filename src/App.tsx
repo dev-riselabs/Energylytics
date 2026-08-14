@@ -11,7 +11,8 @@ import EnergyPlatform from "./pages/EnergyPlatform";
 import ManagementTool from "./pages/ManagementTool";
 import EducationPlatform from "./pages/EducationPlatform";
 import Blog from "./pages/Blog";
-import Services from "./pages/Services";
+import Partnerships from "./pages/Partnerships";
+import SocialImpact from "./pages/SocialImpact";
 
 function App() {
   return (
@@ -26,12 +27,13 @@ function App() {
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Homepage />} />
           <Route path="about" element={<About />} />
-          <Route path="solutions" element={<Solutions />} />
-          <Route path="services" element={<Services />} />
+          <Route path="research-insight" element={<Solutions />} />
           <Route path="energy-platform" element={<EnergyPlatform />} />
           <Route path="management-tool" element={<ManagementTool />} />
           <Route path="education-advocacy" element={<EducationPlatform />} />
           <Route path="blog" element={<Blog />} />
+          <Route path="partnerships" element={<Partnerships />} />
+          <Route path="social-impact" element={<SocialImpact />} />
         </Route>
       </Routes>
     </BrowserRouter>

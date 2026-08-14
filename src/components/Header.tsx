@@ -13,7 +13,7 @@ const navLinks = [
       { title: "Mission & Vision", path: "" },
       { title: "Our Approach", path: "" },
       { title: "Our Team", path: "" },
-      { title: "Our Impact", path: "" },
+      { title: "Our Impact", path: "/social-impact" },
       { title: "Knowledge, Education & Advocacy", path: "" },
     ],
   },
