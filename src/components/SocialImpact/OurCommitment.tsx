@@ -1,8 +1,8 @@
 function OurCommitment() {
   return (
-    <section className="bg-white px-5 sm:px-7 md:px-15 py-15 md:py-20">
-      <div className="flex flex-col gap-10 items-center max-w-[1200px] mx-auto">
-        <h2 className="text-green text-xl sm:text-2xl font-bold text-center uppercase">
+    <section className="bg-white px-5 sm:px-7 md:px-10 lg:px-15 py-12 md:py-20">
+      <div className="flex flex-col gap-6 md:gap-10 items-center max-w-[1200px] mx-auto">
+        <h2 className="text-green text-lg sm:text-xl md:text-2xl font-bold text-center uppercase leading-tight">
           OUR COMMITMENT
         </h2>
 
