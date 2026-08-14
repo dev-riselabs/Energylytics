@@ -54,14 +54,14 @@ function InvestmentAdvisory() {
         <div className="flex gap-3 items-start">
           <div className="flex flex-col gap-4">
             {statsOne.map((stat) => (
-              <span className="text-sm sm:text-base text-white flex items-center gap-2">
+              <span key={stat} className="text-sm sm:text-base text-white flex items-center gap-2">
                 <FaCircleCheck className="w-4 h-4 shrink-0 text-green25" /> {stat}
               </span>
             ))}
           </div>
           <div className="flex flex-col gap-4">
             {statsTwo.map((stat) => (
-              <span className="text-sm sm:text-base text-white flex items-center gap-2">
+              <span key={stat} className="text-sm sm:text-base text-white flex items-center gap-2">
                 <FaCircleCheck className="w-4 h-4 shrink-0 text-green25" /> {stat}
               </span>
             ))}

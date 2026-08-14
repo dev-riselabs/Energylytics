@@ -9,7 +9,7 @@ const navLinks = [
     title: "about us",
     path: "/about",
     children: [
-      { title: "Who We Are", path: "" },
+      { title: "Who We Are", path: "/about" },
       { title: "Mission & Vision", path: "/about#about-mission" },
       { title: "Our Approach", path: "" },
       { title: "Our Impact", path: "/social-impact" },
@@ -21,7 +21,7 @@ const navLinks = [
     title: "solutions",
     path: "/solutions",
     children: [
-      { title: "Energy Data Platform", path: "" },
+      { title: "Energy Data Platform", path: "/solutions" },
       { title: "Energy Calculator", path: "" },
       { title: "AI Energy Management", path: "" },
       { title: "Clean Energy Solutions", path: "" },
@@ -33,7 +33,7 @@ const navLinks = [
     title: "services",
     path: "/services",
     children: [
-      { title: "Energy Analytics", path: "/sevices#energy-analytics" },
+      { title: "Energy Analytics", path: "/services" },
       { title: "AI & Optimisation", path: "/services#energy-optimisation" },
       { title: "Clean Energy Advisory", path: "/services#clean-energy" },
       { title: "Climate & Environmental Advisory", path: "/sevices#climate" },
@@ -46,7 +46,7 @@ const navLinks = [
     title: "partnerships",
     path: "/partnerships",
     children: [
-      { title: "Government", path: "/partnerships#government" },
+      { title: "Government", path: "/partnerships" },
       { title: "Private Sector", path: "/partnerships#private" },
       { title: "Development Partners", path: "/partnerships#development" },
       { title: "Technology", path: "/partnerships#technology" },
@@ -57,14 +57,14 @@ const navLinks = [
     title: "insights",
     path: "/insights",
     children: [
-      { title: "Research", path: "" },
+      { title: "Research", path: "/insights" },
       { title: "Energy Intelligence", path: "" },
       { title: "Climate & Sustainability", path: "" },
       { title: "Policy & Market Insights", path: "" },
       { title: "News", path: "" },
     ],
   },
-  { title: "contact", path: "/contact" },
+  { title: "contact", path: "/contact-us" },
 ];
 
 function Header() {
@@ -89,7 +89,11 @@ function Header() {
         className={`cursor-pointer text-slate30 hover:text-slate transition-all lg:hidden ${showMenu ? "fixed right-5 top-6 z-40" : ""}`}
         aria-label={showMenu ? "Close menu" : "Open menu"}
       >
-        {showMenu ? <MdClose className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
+        {showMenu ? (
+          <MdClose className="w-6 h-6" />
+        ) : (
+          <FiMenu className="w-6 h-6" />
+        )}
       </button>
       <div className="lg:flex items-center gap-5 hidden xl:flex-1 xl:justify-between ">
         <nav className="flex items-center gap-2 xl:gap-4">
@@ -109,9 +113,11 @@ function Header() {
               }}
             >
               <NavLink
-                to={navItem.path}
-                onClick={() => {
+                to={navItem.children ? "#" : navItem.path}
+                onClick={(e) => {
                   if (navItem.children) {
+                    e.preventDefault();
+
                     setOpenDropdown(
                       openDropdown === navItem.title ? null : navItem.title,
                     );
@@ -119,13 +125,14 @@ function Header() {
                 }}
                 className={({ isActive }) =>
                   `${
-                    isActive
+                    isActive && !navItem.children
                       ? "text-green25 font-bold hover:text-green"
                       : "text-zinc100 hover:text-slate"
                   } transition-all text-xs xl:text-sm capitalize flex items-center gap-1`
                 }
               >
                 <MdPlayArrow className="w-4 h-4" />
+
                 {navItem.title}
 
                 {navItem.children && (
@@ -136,13 +143,13 @@ function Header() {
               {navItem.children && openDropdown === navItem.title && (
                 <div className="absolute top-full left-0 min-w-40 w-50 max-w-100 rounded-md bg-white shadow-lg p-2 z-20 flex flex-col gap-1">
                   {navItem.children.map((child) => (
-                    <a
+                    <NavLink
                       key={child.title}
-                      href={child.path}
+                      to={child.path}
                       className="block px-3 py-2 text-sm hover:bg-green25 hover:text-white rounded-md"
                     >
                       {child.title}
-                    </a>
+                    </NavLink>
                   ))}
                 </div>
               )}
@@ -175,7 +182,7 @@ function Header() {
      }
    `}
       >
-        <nav className="flex flex-col gap-3">
+        <nav className="flex items-center gap-2 xl:gap-4">
           {navLinks.map((navItem) => (
             <div
               key={navItem.title}
@@ -192,9 +199,11 @@ function Header() {
               }}
             >
               <NavLink
-                to={navItem.path}
-                onClick={() => {
+                to={navItem.children ? "#" : navItem.path}
+                onClick={(e) => {
                   if (navItem.children) {
+                    e.preventDefault();
+
                     setOpenDropdown(
                       openDropdown === navItem.title ? null : navItem.title,
                     );
@@ -202,12 +211,14 @@ function Header() {
                 }}
                 className={({ isActive }) =>
                   `${
-                    isActive
+                    isActive && !navItem.children
                       ? "text-green25 font-bold hover:text-green"
                       : "text-zinc100 hover:text-slate"
-                  } transition-all text-sm capitalize flex items-center gap-1`
+                  } transition-all text-xs xl:text-sm capitalize flex items-center gap-1`
                 }
               >
+                <MdPlayArrow className="w-4 h-4" />
+
                 {navItem.title}
 
                 {navItem.children && (
@@ -216,15 +227,15 @@ function Header() {
               </NavLink>
 
               {navItem.children && openDropdown === navItem.title && (
-                <div className=" flex flex-col gap-1">
+                <div className="absolute top-full left-0 min-w-40 w-50 max-w-100 rounded-md bg-white shadow-lg p-2 z-20 flex flex-col gap-1">
                   {navItem.children.map((child) => (
-                    <a
+                    <NavLink
                       key={child.title}
-                      href={child.path}
+                      to={child.path}
                       className="block px-3 py-2 text-sm hover:bg-green25 hover:text-white rounded-md"
                     >
                       {child.title}
-                    </a>
+                    </NavLink>
                   ))}
                 </div>
               )}
