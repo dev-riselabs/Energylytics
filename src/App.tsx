@@ -14,6 +14,7 @@ import Blog from "./pages/Blog";
 import Partnerships from "./pages/Partnerships";
 import SocialImpact from "./pages/SocialImpact";
 import Services from "./pages/Services";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="social-impact" element={<SocialImpact />} />
           <Route path='/services' element={<Services/>}/>
           <Route path='/solutions' element={<Solutions/>}/>
+          <Route path='/contact-us' element={<Contact/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

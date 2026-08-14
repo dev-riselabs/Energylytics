@@ -64,7 +64,7 @@ const navLinks = [
       { title: "News", path: "" },
     ],
   },
-  { title: "contact", path: "/contact" },
+  { title: "contact", path: "/contact-us" },
 ];
 
 function Header() {
@@ -89,69 +89,73 @@ function Header() {
         className={`cursor-pointer text-slate30 hover:text-slate transition-all lg:hidden ${showMenu ? "fixed right-5 top-6 z-40" : ""}`}
         aria-label={showMenu ? "Close menu" : "Open menu"}
       >
-        {showMenu ? <MdClose className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
+        {showMenu ? (
+          <MdClose className="w-6 h-6" />
+        ) : (
+          <FiMenu className="w-6 h-6" />
+        )}
       </button>
       <div className="lg:flex items-center gap-5 hidden xl:flex-1 xl:justify-between ">
         <nav className="flex items-center gap-2 xl:gap-4">
-  {navLinks.map((navItem) => (
-    <div
-      key={navItem.title}
-      className="relative"
-      onMouseEnter={() => {
-        if (navItem.children) {
-          setOpenDropdown(navItem.title);
-        }
-      }}
-      onMouseLeave={() => {
-        if (navItem.children) {
-          setOpenDropdown(null);
-        }
-      }}
-    >
-      <NavLink
-        to={navItem.children ? "#" : navItem.path}
-        onClick={(e) => {
-          if (navItem.children) {
-            e.preventDefault();
-
-            setOpenDropdown(
-              openDropdown === navItem.title ? null : navItem.title
-            );
-          }
-        }}
-        className={({ isActive }) =>
-          `${
-            isActive && !navItem.children
-              ? "text-green25 font-bold hover:text-green"
-              : "text-zinc100 hover:text-slate"
-          } transition-all text-xs xl:text-sm capitalize flex items-center gap-1`
-        }
-      >
-        <MdPlayArrow className="w-4 h-4" />
-
-        {navItem.title}
-
-        {navItem.children && (
-          <MdKeyboardArrowDown className="w-4 h-4" />
-        )}
-      </NavLink>
-
-      {navItem.children && openDropdown === navItem.title && (
-        <div className="absolute top-full left-0 min-w-40 w-50 max-w-100 rounded-md bg-white shadow-lg p-2 z-20 flex flex-col gap-1">
-          {navItem.children.map((child) => (
-            <NavLink
-              key={child.title}
-              to={child.path}
-              className="block px-3 py-2 text-sm hover:bg-green25 hover:text-white rounded-md"
+          {navLinks.map((navItem) => (
+            <div
+              key={navItem.title}
+              className="relative"
+              onMouseEnter={() => {
+                if (navItem.children) {
+                  setOpenDropdown(navItem.title);
+                }
+              }}
+              onMouseLeave={() => {
+                if (navItem.children) {
+                  setOpenDropdown(null);
+                }
+              }}
             >
-              {child.title}
-            </NavLink>
+              <NavLink
+                to={navItem.children ? "#" : navItem.path}
+                onClick={(e) => {
+                  if (navItem.children) {
+                    e.preventDefault();
+
+                    setOpenDropdown(
+                      openDropdown === navItem.title ? null : navItem.title,
+                    );
+                  }
+                }}
+                className={({ isActive }) =>
+                  `${
+                    isActive && !navItem.children
+                      ? "text-green25 font-bold hover:text-green"
+                      : "text-zinc100 hover:text-slate"
+                  } transition-all text-xs xl:text-sm capitalize flex items-center gap-1`
+                }
+              >
+                <MdPlayArrow className="w-4 h-4" />
+
+                {navItem.title}
+
+                {navItem.children && (
+                  <MdKeyboardArrowDown className="w-4 h-4" />
+                )}
+              </NavLink>
+
+              {navItem.children && openDropdown === navItem.title && (
+                <div className="absolute top-full left-0 min-w-40 w-50 max-w-100 rounded-md bg-white shadow-lg p-2 z-20 flex flex-col gap-1">
+                  {navItem.children.map((child) => (
+                    <NavLink
+                      key={child.title}
+                      to={child.path}
+                      className="block px-3 py-2 text-sm hover:bg-green25 hover:text-white rounded-md"
+                    >
+                      {child.title}
+                    </NavLink>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
-        </div>
-      )}
-    </div>
-  ))}
-</nav>
+        </nav>
 
         <div className="flex flex-col lg:flex-row gap-3">
           <button className="px-2 xl:px-5 py-3 rounded-xl border border-green30 text-green text-xs xl:text-sm font-bold font-dmSans hover:bg-green25 hover:text-white transition-all cursor-pointer">
@@ -178,7 +182,7 @@ function Header() {
      }
    `}
       >
-        <nav className="flex flex-col gap-3">
+        <nav className="flex items-center gap-2 xl:gap-4">
           {navLinks.map((navItem) => (
             <div
               key={navItem.title}
@@ -195,9 +199,11 @@ function Header() {
               }}
             >
               <NavLink
-                to={navItem.path}
-                onClick={() => {
+                to={navItem.children ? "#" : navItem.path}
+                onClick={(e) => {
                   if (navItem.children) {
+                    e.preventDefault();
+
                     setOpenDropdown(
                       openDropdown === navItem.title ? null : navItem.title,
                     );
@@ -205,12 +211,14 @@ function Header() {
                 }}
                 className={({ isActive }) =>
                   `${
-                    isActive
+                    isActive && !navItem.children
                       ? "text-green25 font-bold hover:text-green"
                       : "text-zinc100 hover:text-slate"
-                  } transition-all text-sm capitalize flex items-center gap-1`
+                  } transition-all text-xs xl:text-sm capitalize flex items-center gap-1`
                 }
               >
+                <MdPlayArrow className="w-4 h-4" />
+
                 {navItem.title}
 
                 {navItem.children && (
@@ -219,15 +227,15 @@ function Header() {
               </NavLink>
 
               {navItem.children && openDropdown === navItem.title && (
-                <div className=" flex flex-col gap-1">
+                <div className="absolute top-full left-0 min-w-40 w-50 max-w-100 rounded-md bg-white shadow-lg p-2 z-20 flex flex-col gap-1">
                   {navItem.children.map((child) => (
-                    <a
+                    <NavLink
                       key={child.title}
-                      href={child.path}
+                      to={child.path}
                       className="block px-3 py-2 text-sm hover:bg-green25 hover:text-white rounded-md"
                     >
                       {child.title}
-                    </a>
+                    </NavLink>
                   ))}
                 </div>
               )}

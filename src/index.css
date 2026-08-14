@@ -50,6 +50,7 @@
   --color-slate200: #797979;
 
   --color-zinc: #c4c4c4;
+  --color-zinc50 : #C9C9C9;
   --color-zinc100: #939090;
   --color-zinc200: #f9fafb;
   --color-zinc300: #172030;
@@ -62,11 +63,13 @@
   --color-black100: #333333;
   --color-black200: #222222;
   --color-black300: #0d1b12;
+  --color-black400 : #011C2B;
   --color-red: #ff383c;
   --color-purple: #ede3ff;
   --color-purple10: #3d00b7;
   --color-brown: #ffeacc;
   --color-brown10: #995b03;
+  --color-yellow: #F6AF03;
 }
 
 .auth-bg {
