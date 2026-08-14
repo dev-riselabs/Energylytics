@@ -1,3 +1,4 @@
+import { FaArrowRight } from "react-icons/fa";
 import { GoDotFill } from "react-icons/go";
 import { MdOutlineArrowRight } from "react-icons/md";
 import { Link, NavLink } from "react-router";
@@ -67,8 +68,10 @@ function Footer() {
       <div className="flex flex-col gap-7 lg:flex-row lg:justify-between">
          <div className="flex flex-col gap-5">
           <img src="/logo.png" alt="" className="w-40 md:w-50 h-16 md:h-25 object-contain" />
+          <h5>Have a challenge we're equipped to solve?</h5>
           <span className="text-sm sm:text-base text-slate50 md:max-w-[30ch]">
-            Building the intelligence that powers Africa's renewable energy revolution through data, AI and education.
+            Partner with Energylytics Africa <a href="/contact"><FaArrowRight/>   </a>
+            {/* Building the intelligence that powers Africa's renewable energy revolution through data, AI and education. */}
           </span>
           <span className="text-sm sm:text-base text-slate50">
             <span className="font-semibold">Headquarters:</span> Abuja, Nigeria
