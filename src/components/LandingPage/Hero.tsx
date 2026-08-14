@@ -55,12 +55,12 @@ function Hero() {
             initial="hidden"
             animate="visible"
             transition={{ delay: 0.5 }}
-            className="flex flex-wrap items-center gap-3 justify-start sm:justify-center "
+            className="flex items-center gap-2 sm:gap-3 justify-start sm:justify-center "
           >
-            <button className="px-5 py-3 rounded-xl border border-green25 bg-green25 text-white text-sm font-bold font-dmSans hover:bg-white  hover:text-green transition-all cursor-pointer">
+            <button className="px-3 sm:px-5 py-2 sm:py-3 rounded-lg sm:rounded-xl border border-green25 bg-green25 text-white text-xs sm:text-sm font-bold font-dmSans whitespace-nowrap hover:bg-white  hover:text-green transition-all cursor-pointer">
               Explore Our Work
             </button>
-            <button className="px-5 py-3 rounded-xl border border-green30 bg-white text-green25 text-sm font-bold font-dmSans hover:bg-green25 hover:text-white transition-all cursor-pointer">
+            <button className="px-3 sm:px-5 py-2 sm:py-3 rounded-lg sm:rounded-xl border border-green30 bg-white text-green25 text-xs sm:text-sm font-bold font-dmSans whitespace-nowrap hover:bg-green25 hover:text-white transition-all cursor-pointer">
               Get in Touch
             </button>
           </motion.div>
