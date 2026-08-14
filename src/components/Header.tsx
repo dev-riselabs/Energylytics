@@ -138,7 +138,7 @@ function Header() {
                     <a
                       key={child.title}
                       href={child.path}
-                      className="block px-3 py-2 text-sm hover:bg-slate10 rounded-md"
+                      className="block px-3 py-2 text-sm hover:bg-green25 hover:text-white rounded-md"
                     >
                       {child.title}
                     </a>
