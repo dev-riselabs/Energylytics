@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FiChevronDown, FiMenu } from "react-icons/fi";
+import {  FiMenu } from "react-icons/fi";
 import { MdClose, MdKeyboardArrowDown } from "react-icons/md";
 import { Link, NavLink } from "react-router";
 
