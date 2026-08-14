@@ -12,7 +12,7 @@ const actions = [
       "Carbon intensity of national grids",
       "Investment inflows and project pipelines",
     ],
-    img : '/project1.jpg'
+    img : '/project1.png'
   },
   {
     isProject: false,
