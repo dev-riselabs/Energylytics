@@ -30,12 +30,12 @@ const PartnersCarousel = () => {
   }, [emblaApi]);
 
   return (
-    <section className="w-full bg-white py-15 flex flex-col gap-8 px-5 sm:px-7 md:px-15">
-      <h2 className=" text-center text-lg font-medium uppercase tracking-[0.2em] text-black/80 font-inria">
+    <section className="w-full bg-white py-10 md:py-15 flex flex-col gap-6 md:gap-8 px-5 sm:px-7 md:px-10 lg:px-15">
+      <h2 className="text-center text-sm sm:text-base md:text-lg font-medium uppercase tracking-[0.2em] text-black/80 font-inria">
         TRUSTED BY ENERGY LEADERS ACROSS AFRICA
       </h2>
 
-      <div className="mx-auto flex items-center gap-4 px-4 w-full">
+      <div className="mx-auto flex items-center gap-2 sm:gap-4 px-0 sm:px-4 w-full">
         {/* Left Button */}
         <button
           onClick={scrollPrev}
