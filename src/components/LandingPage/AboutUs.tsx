@@ -29,7 +29,7 @@ function AboutUs() {
         <h3 className="text-[15px] font-bold text-green25 text-center font-manrope">
           Building Intelligence for Africa’s Energy Future
         </h3>
-        <h4 className="text-[32px] font-semibold text-center text-zinc400">
+        <h4 className="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-center text-zinc400">
           Energylytics is more than a tech company.
           <br />
           <span className="text-green">
@@ -40,17 +40,17 @@ function AboutUs() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {
-            about.map(({title, description, icon:Icon, img}, i) => <div key={title} className="bg-green35 p-10 rounded-[20px] gap-5 pr-0 grid grid-cols-2">
-                  <div className="flex flex-col gap-7 flex-1">
-                    <div className="w-17.5 h-17.5 bg-green85 flex items-center justify-center rounded-xl">
+            about.map(({title, description, icon:Icon, img}, i) => <div key={title} className="bg-green35 p-6 sm:p-8 lg:p-10 rounded-[20px] gap-5 sm:pr-0 grid grid-cols-1 sm:grid-cols-2">
+                  <div className="flex flex-col gap-6 sm:gap-7 flex-1">
+                    <div className="w-14 h-14 md:w-17.5 md:h-17.5 bg-green85 flex items-center justify-center rounded-xl">
                         <Icon className="w-6 h-6 text-white" />
                     </div>
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-4 sm:gap-6">
                         <h4 className="border-b border-green60 pb-2 text-base font-bold text-slate60 self-start">{title}</h4>
-                        <p className="text-base text-slate50">{description}</p>
+                        <p className="text-sm sm:text-base text-slate50">{description}</p>
                     </div>
                   </div>
-                  <img src={img} alt="" className={`w-full h-full object-cover ${i === 1? 'rounded-3xl skew-y-14' : 'rounded-full'}`} />
+                  <img src={img} alt="" className={`w-full h-48 sm:h-full object-cover ${i === 1? 'rounded-3xl sm:skew-y-14' : 'rounded-3xl sm:rounded-full'}`} />
             </div>)
         }
       </div>

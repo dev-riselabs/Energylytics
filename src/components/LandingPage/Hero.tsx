@@ -10,16 +10,16 @@ const stats = [
 
 function Hero() {
   return (
-    <section className="hero-bg flex items-center justify-center px-5 sm:px-7 lg:px-15 py-15  sm:py-25 relative font-inter h-full">
+    <section className="hero-bg flex items-center justify-center px-5 sm:px-7 md:px-10 lg:px-15 py-15 sm:py-20 lg:py-25 relative font-inter h-full">
       <div className="absolute inset-0 bg-linear-to-r from-black/20 to-black/30 z-1"></div>
-      <div className=" flex flex-col gap-17.5 w-full z-2 relative">
-        <div className="flex flex-col gap-14 items-start">
+      <div className=" flex flex-col gap-10 md:gap-17.5 w-full z-2 relative">
+        <div className="flex flex-col gap-8 md:gap-14 items-start">
           <div className="flex flex-col gap-5">
             <motion.div
               initial="hidden"
               animate="visible"
               variants={fadeDown}
-              className="flex items-baseline sm:items-center justify-center gap-4 px-5 py-2 rounded-full bg-green35 self-start"
+              className="flex items-baseline sm:items-center justify-center gap-3 sm:gap-4 px-4 sm:px-5 py-2 rounded-full bg-green35 self-start max-w-full"
             >
               <div className="w-2 h-2 rounded-full bg-green shrink-0"></div>
               <span className="text-green text-xs text-center sm:text-sm font-bold">
@@ -33,7 +33,7 @@ function Hero() {
                 initial="hidden"
                 animate="visible"
                 transition={{ delay: 0.3 }}
-                className="text-white text-2xl sm:text-[32px] font-bold max-w-[40ch]"
+                className="text-white text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-bold max-w-[40ch]"
               >
                 {/* Leveraging data, artificial intelligence and knowledge-sharing
                 to accelerate Africa's clean energy transition */}
@@ -55,7 +55,7 @@ function Hero() {
             initial="hidden"
             animate="visible"
             transition={{ delay: 0.5 }}
-            className="flex items-center gap-3 justify-center "
+            className="flex flex-wrap items-center gap-3 justify-start sm:justify-center "
           >
             <button className="px-5 py-3 rounded-xl border border-green25 bg-green25 text-white text-sm font-bold font-dmSans hover:bg-white  hover:text-green transition-all cursor-pointer">
               Explore Our Work
@@ -65,18 +65,18 @@ function Hero() {
             </button>
           </motion.div>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-260 w-full md:border md:border-green25 rounded-xl md:p-7.5 md:divide-x md:divide-slate30">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-3 max-w-260 w-full md:border md:border-green25 rounded-xl md:p-7.5 md:divide-x md:divide-slate30">
           {stats.map(({ title, value }) => (
-            <div key={title} className="flex items-center gap-4">
-              <div className="w-18.5 h-18.5 rounded-full border border-green50 flex items-center justify-center shrink-0"><AiFillThunderbolt className="w-7 h-7 text-green25" /></div>
-              <div  className="flex flex-col gap-3">
-              <h4 className="text-green15 text-2xl sm:text-[32px] font-dmSans font-bold">
+            <div key={title} className="flex items-center gap-4 md:px-4 first:md:pl-0">
+              <div className="w-14 h-14 md:w-18.5 md:h-18.5 rounded-full border border-green50 flex items-center justify-center shrink-0"><AiFillThunderbolt className="w-6 h-6 md:w-7 md:h-7 text-green25" /></div>
+              <div  className="flex flex-col gap-2 md:gap-3">
+              <h4 className="text-green15 text-2xl md:text-3xl lg:text-[32px] font-dmSans font-bold">
                 {value}
               </h4>
               <p className="text-sm  text-white font-inter">{title}</p>
             </div>
             </div>
-            
+
           ))}
         </div>
       </div>
