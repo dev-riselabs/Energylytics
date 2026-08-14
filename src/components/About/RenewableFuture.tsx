@@ -1,6 +1,6 @@
 function RenewableFuture() {
   return (
-    <section className="py-15 px-5 sm:px-7 md:px-15 font-inter bg-green75 grid grid-cols-1 gap-5 md:grid-cols-2 md:pr-0 md:pb-0">
+    <section className="py-10 md:py-15 px-5 sm:px-7 md:px-10 lg:px-15 font-inter bg-green75 grid grid-cols-1 gap-6 md:grid-cols-2 md:pr-0 md:pb-0">
       {/* <div className="h-75 rounded-4xl flex items-center justify-center gap-6 about-bg relative overflow-hidden px-4">
         <div className="absolute inset-0 bg-linear-to-r from-green/77 via-green/77 to-green/77"></div>
         <div className="flex flex-col gap-7.5 items-center relative z-2">
@@ -25,9 +25,9 @@ function RenewableFuture() {
           {/* </p> */}
         {/* </div> */}
       {/* </div> */} 
-      <div className="flex flex-col gap-5 md:justify-center">
-        <h1 className="font-manrope text-[32px] text-green25 font-bold">Pioneering Intelligence for Africa’s Renewable Future</h1>
-        <p className="text-xl text-slate">We bridge the gap between complex energy data and actionable strategies, empowering governments, investors and developers to build a sustainable tomorrow</p>
+      <div className="flex flex-col gap-4 md:gap-5 md:justify-center">
+        <h1 className="font-manrope text-2xl sm:text-3xl md:text-[28px] lg:text-[32px] leading-tight text-green25 font-bold">Pioneering Intelligence for Africa’s Renewable Future</h1>
+        <p className="text-base sm:text-lg md:text-xl text-slate">We bridge the gap between complex energy data and actionable strategies, empowering governments, investors and developers to build a sustainable tomorrow</p>
 
       </div>
       <img src="/about-hero-img.png" alt="" className="w-full"/>
