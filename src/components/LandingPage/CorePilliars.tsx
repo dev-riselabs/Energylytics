@@ -33,25 +33,36 @@ function CorePilliars() {
         <h3 className="text-[15px] font-bold text-green25 text-center font-manrope">
           Three Core Pillars
         </h3>
-        <h4 className="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-center text-zinc400">
+        <h4 className="text-2xl font-semibold text-center text-zinc400">
           Our integrated approach combines cutting-edge technology,
           <span className="text-green">
             data intelligence and human capacity building.
           </span>
         </h4>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 auto-rows-[280px] sm:auto-rows-auto sm:grid-rows-[350px_350px] gap-5">
-        {
-            stats.map((stat, i) => <div key={stat.title} className={`rounded-3xl  overflow-hidden relative ${i=== 0 ? 'sm:row-span-2' : ''}`}>
-                <div className="absolute inset-0 bg-black/60 z-1"></div>
-                <img src={stat.img} alt="" className="w-full h-full object-cover"/>
-                <div className="flex flex-col gap-3 md:gap-6 absolute bottom-5 left-5 right-5 z-2 font-manrope">
-                    <h5 className="text-white text-xl md:text-2xl font-medium">{stat.title}</h5>
-                <p className="text-base md:text-xl text-white">{stat.description}</p>
-                </div>
-
-            </div>)
-        }
+      <div className="grid grid-cols-1 sm:grid-cols-2 auto-rows-70 sm:auto-rows-auto sm:grid-rows-[350px_350px] gap-5">
+        {stats.map((stat, i) => (
+          <div
+            key={stat.title}
+            className={`rounded-3xl  overflow-hidden relative ${i === 0 ? "sm:row-span-2" : ""}`}
+          >
+            <div className="absolute inset-0 bg-black/60 z-1"></div>
+            <img src={stat.img} alt="" className="w-full h-full object-cover" />
+            <div className="flex flex-col gap-3 md:gap-6 absolute bottom-5 left-5 right-5 z-2 font-manrope">
+              <h5 className="text-white text-xl md:text-2xl font-medium">
+                {stat.title}
+              </h5>
+              <div className="flex flex-col gap-3">
+                <h6 className="text-xl font-extrabold text-green25">
+                  {stat.sub}
+                </h6>
+                <p className="text-base md:text-xl text-white">
+                  {stat.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
