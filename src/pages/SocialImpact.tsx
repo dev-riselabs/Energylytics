@@ -1,25 +1,26 @@
-import Hero from "../components/SocialImpact/Hero";
-import HowWeDeliverImpact from "../components/SocialImpact/HowWeDeliverImpact";
+import BeyondBusiness from "../components/SocialImpact/BeyondBusiness";
+import Commitment from "../components/SocialImpact/Commitment";
 import EnergyAccess from "../components/SocialImpact/EnergyAccess";
-import PositiveImpact from "../components/SocialImpact/PositiveImpact";
-import EquitableEnergy from "../components/SocialImpact/EquitableEnergy";
-import GlobalReach from "../components/SocialImpact/GlobalReach";
-import CommunityEngagement from "../components/SocialImpact/CommunityEngagement";
-import Innovation from "../components/SocialImpact/Innovation";
-import OurCommitment from "../components/SocialImpact/OurCommitment";
+import EnergyLiteracy from "../components/SocialImpact/EnergyLiteracy";
+import EnviromentalEducation from "../components/SocialImpact/EnviromentalEducation";
+import EnviromentInitiative from "../components/SocialImpact/EnviromentInitiative";
+import Hero from "../components/SocialImpact/Hero";
+import ImpactInnovation from "../components/SocialImpact/ImpactInnovation";
+import YouthDevelopment from "../components/SocialImpact/YouthDevelopment";
+
 
 function SocialImpact() {
   return (
     <>
       <Hero />
-      <HowWeDeliverImpact />
-      <EnergyAccess />
-      <PositiveImpact />
-      <EquitableEnergy />
-      <GlobalReach />
-      <CommunityEngagement />
-      <Innovation />
-      <OurCommitment />
+      <BeyondBusiness/>
+      <EnergyAccess/>
+      <EnergyLiteracy/>
+      <EnviromentalEducation/>
+      <YouthDevelopment/>
+      <EnviromentInitiative/>
+      <ImpactInnovation/>
+      <Commitment/>
     </>
   );
 }
