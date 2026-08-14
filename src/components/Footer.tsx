@@ -69,7 +69,7 @@ function Footer() {
           <img src="/logo.png" alt="" className="w-40 md:w-60 h-16 md:h-35 object-contain" />
           <h5>Have a challenge we're equipped to solve?</h5>
           <span className="text-sm sm:text-base text-slate50 md:max-w-[60ch] flex items-center gap-2">
-            Partner with Energylytics Africa <a href="/contact-us"><FaArrowRight/></a>
+            <a href="/contact-us"> Partner with Energylytics Africa</a> <FaArrowRight/>
             {/* Building the intelligence that powers Africa's renewable energy revolution through data, AI and education. */}
           </span>
           <span className="text-sm sm:text-base text-slate50">
@@ -83,11 +83,11 @@ function Footer() {
           <div className="flex flex-col gap-4 sm:flex-row">
             <div className="flex flex-col gap-2.5 flex-1">
               <label htmlFor="" className="text-slate text-base">Full Name <span className="text-red">*</span></label>
-              <input type="text" name="" id="" placeholder="John Doe" className="rounded-md border border-black/50 text-sm text-slate px-3 py-3 outline-none"/>
+              <input type="text" name="" id="" placeholder="Hafsat Ndanusa" className="rounded-md border border-black/50 text-sm text-slate px-3 py-3 outline-none"/>
             </div>
             <div className="flex flex-col gap-2.5 flex-1">
               <label htmlFor="" className="text-slate text-base">Email Address <span className="text-red">*</span></label>
-              <input type="email" name="" id="" placeholder="johndoe@gmail.com" className="rounded-md border border-black/50 text-sm text-slate px-3 py-3 outline-none"/>
+              <input type="email" name="" id="" placeholder="@gmail.com" className="rounded-md border border-black/50 text-sm text-slate px-3 py-3 outline-none"/>
             </div>
           </div>
         </div>

@@ -27,7 +27,7 @@ function Partnership() {
           <div className="w-2 h-2 rounded-full bg-green25"></div>
           <span className="text-green25 text-xs sm:text-sm font-bold text-center">Partnerships & Collaborations</span>
         </div>
-        <p className="text-base sm:text-lg md:text-xl text-slate text-center max-w-[55ch]">
+        <p className="text-sm sm:text-base md:text-lg text-slate text-center max-w-[70ch]">
         We collaborate across sectors to ensure that renewable energy data
         drives smarter decisions, accelerates investment, and creates lasting
        <span className="text-green25"> impact for communities across Africa.</span>
@@ -41,8 +41,8 @@ function Partnership() {
             <div className="absolute bg-black/60 inset-0 "></div>
             <img src={img} alt="" className="w-full h-full object-cover"/>
             <div className="flex flex-col gap-3 sm:gap-4 md:gap-5 absolute left-5 bottom-5 right-5 font-manrope">
-              <h4 className="text-xl md:text-2xl font-medium text-white">{title}</h4>
-              <p className="text-base md:text-xl text-white">{description}</p>
+              <h4 className="text-md md:text-md font-medium text-white">{title}</h4>
+              <p className="text-sm md:text-md text-white">{description}</p>
             </div>
           </div>
         ))}

@@ -16,7 +16,7 @@ function Insight() {
           Insights & Publications
         </span>
       </div>
-      <p className="text-base sm:text-lg md:text-xl text-white text-center max-w-[60ch]">
+      <p className="text-sm sm:text-md md:text-lg text-white text-center max-w-[85ch]">
         Stay informed with Energylytics' data-driven analyses and research on
         Africa's renewable energy landscape.
       </p>

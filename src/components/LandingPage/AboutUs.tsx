@@ -29,7 +29,7 @@ function AboutUs() {
         <h3 className="text-[15px] font-bold text-green25 text-center font-manrope">
           Building Intelligence for Africa’s Energy Future
         </h3>
-        <h4 className="text-2xl  font-semibold text-center text-zinc400">
+        <h4 className="text-md  font-semibold text-center text-zinc400">
           Nigeria's future will be shaped by the quality of its energy systems, the resilience of its environmental/climate infrastructure and 
           <br />
           <span className="text-green">

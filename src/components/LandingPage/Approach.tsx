@@ -72,7 +72,7 @@ function Approach() {
         Transforming Energy Data into Action
       </h3>
 
-      <p className="text-base sm:text-lg md:text-xl text-slate50 text-center max-w-[53ch]">
+      <p className="text-sm sm:text-md md:text-lg text-slate50 text-center max-w-[85ch]">
         We deliver actionable intelligence through three flagship initiatives
        <span className="text-green25"> that are reshaping Africa's energy landscape.</span>
       </p>

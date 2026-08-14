@@ -33,7 +33,7 @@ function CorePilliars() {
         <h3 className="text-[15px] font-bold text-green25 text-center font-manrope">
           Three Core Pillars
         </h3>
-        <h4 className="text-2xl font-semibold text-center text-zinc400">
+        <h4 className="text-md font-semibold text-center text-zinc400">
          Our integrated approach combines cutting-edge technology,  
           <span className="text-green"> data intelligence and human capacity building
           </span>
@@ -48,14 +48,14 @@ function CorePilliars() {
             <div className="absolute inset-0 bg-black/60 z-1"></div>
             <img src={stat.img} alt="" className="w-full h-full object-cover" />
             <div className="flex flex-col gap-3 md:gap-6 absolute bottom-5 left-5 right-5 z-2 font-manrope">
-              <h5 className="text-white text-xl md:text-2xl font-medium">
+              <h5 className="text-white text-lg md:text-xl font-medium">
                 {stat.title}
               </h5>
               <div className="flex flex-col gap-3">
-                <h6 className="text-xl font-extrabold text-green25">
+                <h6 className="text-lg font-extrabold text-green25">
                   {stat.sub}
                 </h6>
-                <p className="text-base md:text-xl text-white">
+                <p className="text-sm md:text-lg text-white">
                   {stat.description}
                 </p>
               </div>
