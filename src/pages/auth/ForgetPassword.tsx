@@ -8,9 +8,9 @@ function ForgetPassword() {
     setStep(step);
   }
   return (
-    <section className="bg-white flex-1 h-full w-full flex flex-col gap-8 p-4">
+    <section className="bg-white flex-1 h-full w-full flex flex-col gap-6 md:gap-8 p-4 sm:p-6 md:p-4">
       <div className="flex justify-center">
-        <img src="/logo.png" alt="" className="w-50 h-23 object-cover" />
+        <img src="/logo.png" alt="" className="w-40 md:w-50 h-16 md:h-23 object-contain" />
       </div>
 
       {step === 1 && (

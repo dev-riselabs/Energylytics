@@ -4,15 +4,15 @@ function AuthLayout() {
   const location = useLocation()
   const isSignUp = location.pathname.startsWith('/signup')
   return (
-    <main className="auth-bg min-h-screen h-full relative px-5 md:px-15 py-10">
+    <main className="auth-bg min-h-screen h-full relative px-4 sm:px-5 md:px-10 lg:px-15 py-6 md:py-10">
       <div className="absolute inset-0 bg-linear-to-r from-black/44 to-black/50"></div>
 
       <div className=" bg-white rounded-2xl flex p-2 w-full relative z-2 h-full flex-col md:flex-row">
-        <div className={`flex-1 h-auto rounded-2xl flex flex-col gap-3 auth-bg relative overflow-hidden p-5 pt-15 ${isSignUp ? 'order-2' :''}`}>
+        <div className={`flex-1 h-40 sm:h-56 md:h-auto rounded-2xl flex flex-col gap-3 auth-bg relative overflow-hidden p-5 pt-8 md:pt-15 ${isSignUp ? 'md:order-2' :''}`}>
           <div className="absolute inset-0 bg-linear-to-r from-black/44 to-black/20"></div>
-          <div className={`flex flex-col gap-2 font-inter z-2 relative mt-auto ${isSignUp ? 'items-end' :''}`}>
-            <h2 className="text-3xl font-bold text-white">Energylytics</h2>
-            <p className="text-xl text-white">We bring together energy data, analytics, policy insights and AI modelling to help stakeholders understand emerging opportunities and barriers across the clean energy value chain.</p>
+          <div className={`flex flex-col gap-2 font-inter z-2 relative mt-auto ${isSignUp ? 'md:items-end' :''}`}>
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Energylytics</h2>
+            <p className="text-sm md:text-xl text-white line-clamp-3 md:line-clamp-none">We bring together energy data, analytics, policy insights and AI modelling to help stakeholders understand emerging opportunities and barriers across the clean energy value chain.</p>
           </div>
         </div>
         <Outlet />
