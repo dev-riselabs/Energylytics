@@ -19,19 +19,19 @@ function FinancePartner() {
       className="w-full h-full rounded-4xl object-cover"
     />
     <div className="flex flex-col gap-7">
-      <h2 className="text-slate font-manrope text-2xl font-medium">
+      <h2 className="text-slate font-manrope text-xl sm:text-2xl font-medium">
         3. DEVELOPMENT FINANCE PARTNERS
       </h2>
-      <p className="text-base text-slate50 font-manrope">
+      <p className="text-sm sm:text-base text-slate50 font-manrope">
         We work with development agencies, multilateral institutions, development finance institutions, climate funds, philanthropic organisations and impact investors to design programmes and projects capable of delivering measurable development outcomes.
       </p>
-      <p className="text-base text-slate font-manrope font-medium">
+      <p className="text-sm sm:text-base text-slate font-manrope font-medium">
         Our partnerships can support:
       </p>
       <div className="flex flex-col gap-4">
         {energyStats.map((stat) => (
-          <span className="text-base text-slate50 flex items-center gap-2">
-            <FaCircleCheck className="w-5 h-5 text-green25" /> {stat}
+          <span className="text-sm sm:text-base text-slate50 flex items-center gap-2">
+            <FaCircleCheck className="w-4 h-4 text-green25 shrink-0" /> {stat}
           </span>
         ))}
       </div>

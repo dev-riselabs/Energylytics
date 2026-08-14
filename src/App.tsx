@@ -36,6 +36,7 @@ function App() {
           <Route path="partnerships" element={<Partnerships />} />
           <Route path="social-impact" element={<SocialImpact />} />
           <Route path='/services' element={<Services/>}/>
+          <Route path='/solutions' element={<Solutions/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

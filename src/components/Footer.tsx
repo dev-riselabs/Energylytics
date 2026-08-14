@@ -108,7 +108,7 @@ function Footer() {
 
       <div className="flex flex-col gap-4 md:flex-row items-center md:justify-between">
         <p className="text-sm sm:text-base text-slate50 text-center md:text-left">© 2026 Energylytics Africa Limited. All rights reserved.</p>
-        <div className="flex flex-col gap-4 md:flex-row md:justify-between items-center md:w-3/5">
+        <div className="flex flex-col gap-4 md:flex-row md:justify-between items-center md:w-4/5">
           {
             footerLinks.map(link => <a key={link.label} href={link.href} className="text-sm sm:text-base underline text-green25 hover:text-green transition-all">{link.label}</a>)
           }

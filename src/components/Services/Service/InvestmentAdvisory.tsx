@@ -24,14 +24,14 @@ function InvestmentAdvisory() {
       <img
         src="/service-investment.jpg"
         alt=""
-        className="w-full h-104 rounded-4xl"
+        className="w-full h-full md:h-104 rounded-4xl"
       />
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-3.5">
-          <h3 className="text-white font-manrope text-2xl font-medium">
+          <h3 className="text-white font-manrope text-xl sm:text-2xl font-medium">
             8. PROJECT DEVELOPMENT & INVESTMENT ADVISORY
           </h3>
-          <p className="text-base text-white">
+          <p className="text-sm sm:text-base text-white">
             This is our bridge between{" "}
             <span className="font-semibold">
               intelligence and infrastructure
@@ -40,34 +40,34 @@ function InvestmentAdvisory() {
           </p>
         </div>
         <div className="flex flex-col gap-5">
-          <p className="text-base font-medium font-manrope text-white">
+          <p className="text-sm sm:text-base font-medium font-manrope text-white">
             We help take ideas from:
           </p>
-          <p className="text-base font-bold text-white">
+          <p className="text-sm sm:text-base font-bold text-white">
             Opportunity → Feasibility → Design → Financing → Implementation →
             Impact
           </p>
         </div>
-        <p className="text-xl font-medium font-manrope text-white">
+        <p className="text-lg sm:text-xl font-medium font-manrope text-white">
           Services include:
         </p>
         <div className="flex gap-3 items-start">
           <div className="flex flex-col gap-4">
             {statsOne.map((stat) => (
-              <span className="text-base text-white flex items-center gap-2">
-                <FaCircleCheck className="w-4.5 h-4.5 text-green25" /> {stat}
+              <span className="text-sm sm:text-base text-white flex items-center gap-2">
+                <FaCircleCheck className="w-4 h-4 shrink-0 text-green25" /> {stat}
               </span>
             ))}
           </div>
           <div className="flex flex-col gap-4">
             {statsTwo.map((stat) => (
-              <span className="text-base text-white flex items-center gap-2">
-                <FaCircleCheck className="w-4.5 h-4.5 text-green25" /> {stat}
+              <span className="text-sm sm:text-base text-white flex items-center gap-2">
+                <FaCircleCheck className="w-4 h-4 shrink-0 text-green25" /> {stat}
               </span>
             ))}
           </div>
         </div>
-        <div className="bg-green55 rounded-xl px-10 py-7.5 text-base font-bold text-slate font-manrope">We turn intelligence into bankable projects.</div>
+        <div className="bg-green55 rounded-xl px-6 sm:px-10 py-7.5 text-sm sm:text-base font-bold text-slate font-manrope">We turn intelligence into bankable projects.</div>
       </div>
     </section>
   );

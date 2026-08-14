@@ -6,12 +6,12 @@ function Hero() {
           PARTNERSHIPS
         </h1>
         <div className="flex flex-col gap-2">
-          <p className="text-xl text-slate">
+          <p className="text-base sm:text-xl text-slate">
             Building Partnerships to Power Africa's Sustainable Future Africa's
             energy and environmental challenges are too complex for any one
             organisation to solve alone.
           </p>
-          <p className="text-xl text-slate">
+          <p className="text-base sm:text-xl text-slate">
             At Energylytics Africa, we build strategic partnerships that bring
             together government, industry, technology, finance, research and
             communities to develop and scale practical solutions. We work with
@@ -21,7 +21,7 @@ function Hero() {
           </p>
         </div>
       </div>
-      <img src="/partnership-hero.png" alt="" />
+      <img src="/partnership-hero.png" alt="" className="h-full object-cover object-center"/>
     </section>
   );
 }

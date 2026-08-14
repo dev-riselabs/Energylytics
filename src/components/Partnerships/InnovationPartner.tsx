@@ -7,10 +7,10 @@ function InnovationPartner() {
         className="w-full h-full rounded-4xl"
       />
       <div className="flex flex-col gap-6 md:justify-center">
-        <h2 className="text-white font-manrope text-2xl font-medium">
+        <h2 className="text-white font-manrope text-xl sm:text-2xl font-medium">
           5. TECHNOLOGY & INNOVATION PARTNERS
         </h2>
-        <p className="text-base text-white font-manrope">
+        <p className="text-sm sm:text-base text-white font-manrope">
           We partner with technology companies, startups, engineering firms and
           solution providers to bring proven and emerging technologies into
           African energy and environmental markets.

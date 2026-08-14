@@ -21,27 +21,27 @@ function EnergyOptimisation() {
         className="rounded-3xl h-full object-cover"
       />
       <div className="flex flex-col gap-7">
-        <h2 className="text-white font-manrope text-2xl font-medium">
+        <h2 className="text-white font-manrope text-xl sm:text-2xl font-medium">
           2. AI FOR ENERGY OPTIMISATION
         </h2>
-        <p className="text-base text-white">AI-Powered Energy Analytics</p>
+        <p className="text-sm sm:text-base text-white">AI-Powered Energy Analytics</p>
         <div className="flex flex-col gap-4">
           {energyStats.map((stat) => (
-            <span className="text-base text-white flex items-center gap-2">
-              <FaCircleCheck className="w-5 h-5 text-green25" /> {stat}
+            <span className="text-sm sm:text-base text-white flex items-center gap-2">
+              <FaCircleCheck className="w-4 h-4 shrink-0 text-green25" /> {stat}
             </span>
           ))}
         </div>
       </div>
-      <div className="flex flex-col gap-4 p-10 rounded-3xl bg-green55 font-manrope md:col-span-2">
-        <h4 className="text-xl  text-slate font-medium">
+      <div className="flex flex-col gap-4 p-7 sm:p-10 rounded-3xl bg-green55 font-manrope md:col-span-2">
+        <h4 className="text-lg sm:text-xl  text-slate font-medium">
           Intelligent Energy Management
         </h4>
-        <p className="text-base text-slate50">
+        <p className="text-sm sm:text-base text-slate50">
           For households, businesses, mini-grids, energy companies and public
           infrastructure.
         </p>
-        <p className="text-base text-slate50">
+        <p className="text-sm sm:text-base text-slate50">
           We use AI to make energy systems more efficient, affordable, reliable
           and predictable.
         </p>

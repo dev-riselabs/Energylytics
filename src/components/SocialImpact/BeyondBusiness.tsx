@@ -4,21 +4,21 @@ function BeyondBusiness() {
       <img
         src="/beyond-business.jpg"
         alt=""
-        className="rounded-4xl object-cover"
+        className="rounded-4xl object-cover h-full"
       />
-      <div className="flex flex-col gap-10 md:justify-center">
-        <h2 className="text-2xl  text-white font-medium">
+      <div className="flex flex-col gap-6 sm:gap-10 md:justify-center">
+        <h2 className="text-xl sm:text-2xl  text-white font-medium">
           Creating Value Beyond Our Business
         </h2>
         <div className="flex flex-col gap-3">
-          <p className="text-xl text-white">
+          <p className="text-base sm:text-xl text-white">
             At Energylytics Africa, we believe that sustainable development is
             not only about the projects we deliver, it is also about the
             communities and people whose lives those projects touch. Our
             commitment to social impact is embedded in our approach to energy,
             climate, environment and technology.
           </p>
-          <p className="text-xl text-white">
+          <p className="text-base sm:text-xl text-white">
             Through our Corporate Social Responsibility and community-impact
             initiatives, we invest our resources, expertise and partnerships in
             programmes that improve lives, build opportunity and strengthen
