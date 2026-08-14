@@ -34,9 +34,8 @@ function CorePilliars() {
           Three Core Pillars
         </h3>
         <h4 className="text-2xl font-semibold text-center text-zinc400">
-          Our integrated approach combines cutting-edge technology,
-          <span className="text-green">
-            data intelligence and human capacity building.
+         Our integrated approach combines cutting-edge technology,  
+          <span className="text-green"> data intelligence and human capacity building
           </span>
         </h4>
       </div>

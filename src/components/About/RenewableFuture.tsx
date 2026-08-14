@@ -1,6 +1,6 @@
 function RenewableFuture() {
   return (
-    <section className="py-10 md:py-15 px-5 sm:px-7 md:px-10 lg:px-15 font-inter bg-green75 grid grid-cols-1 gap-6 md:grid-cols-2 md:pr-0 md:pb-0">
+    <section className="py-10 md:py-15 px-5 sm:px-7 md:px-10 lg:px-15 font-inter bg-green75 grid grid-cols-1 gap-6 md:grid-cols-2 md:pr-0 md:pb-0 lg:pr-0">
       {/* <div className="h-75 rounded-4xl flex items-center justify-center gap-6 about-bg relative overflow-hidden px-4">
         <div className="absolute inset-0 bg-linear-to-r from-green/77 via-green/77 to-green/77"></div>
         <div className="flex flex-col gap-7.5 items-center relative z-2">

@@ -70,12 +70,11 @@ function CoreValues() {
 
       <div className="flex items-center gap-3 sm:gap-4 px-4 sm:px-5 py-2 rounded-full border border-green50 self-center">
           <div className="w-2 h-2 rounded-full bg-green25"></div>
-          <span className="text-green25 text-xs sm:text-sm font-bold text-center">Partnerships & Collaborations</span>
+          <span className="text-green25 text-xs sm:text-sm font-bold text-center">Our Core Values</span>
         </div>
         <p className="text-base sm:text-lg md:text-xl text-slate text-center max-w-[55ch]">
-        We collaborate across sectors to ensure that renewable energy data
-        drives smarter decisions, accelerates investment, and creates lasting
-       <span className="text-green25"> impact for communities across Africa.</span>
+        The Principles that guide all the 
+       <span className="text-green25"> work we do</span>
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
         {features.map(({ title, img, description }) => (

@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 function ReadySection() {
   return (
     // <section className="py-20 px-5 sm:px-7 md:px-15 font-inter">
@@ -27,16 +29,16 @@ function ReadySection() {
         <h3 className="text-white text-xl sm:text-2xl font-manrope text-center">Ready to Power the Future?</h3>
         <p className="text-base sm:text-lg md:text-xl text-white text-center">Whether you are an investor looking for opportunities or a government entity planning infrastructure, our data lights the way</p>
         <div className="flex items-center gap-3 sm:gap-5 md:gap-7.5 w-full">
-          <button className="px-3 sm:px-5 py-2 sm:py-3 flex-1 rounded-lg sm:rounded-xl border border-green bg-green25 text-white text-xs sm:text-sm font-bold font-dmSans whitespace-nowrap hover:bg-transparent hover:text-white transition-all cursor-pointer">
+          <Link to='/contact-us' className="px-3 sm:px-5 py-2 sm:py-3 flex-1 flex items-center justify-center rounded-lg sm:rounded-xl border border-green bg-green25 text-white text-xs sm:text-sm font-bold font-dmSans whitespace-nowrap hover:bg-transparent hover:text-white transition-all cursor-pointer">
             Contact Us
-          </button>
-          <button className="px-3 sm:px-5 py-2 sm:py-3 flex-1 rounded-lg sm:rounded-xl border border-green30 bg-white text-green text-xs sm:text-sm font-bold font-dmSans whitespace-nowrap hover:bg-green25 hover:text-white transition-all cursor-pointer">
+          </Link>
+          <Link to='/services' className="px-3 sm:px-5 py-2 sm:py-3 flex-1 flex items-center justify-center rounded-lg sm:rounded-xl border border-green30 bg-white text-green text-xs sm:text-sm font-bold font-dmSans whitespace-nowrap hover:bg-green25 hover:text-white transition-all cursor-pointer">
            View Services
-          </button>
+          </Link>
 
         </div>
       </div>
-      <img src="/about-power-img.jpg" alt="" className="md:col-span-3 w-full h-64 sm:h-80 md:h-[500px] rounded-3xl object-cover" />
+      <img src="/about-power-img.jpg" alt="" className="md:col-span-3 w-full h-64 sm:h-80 md:h-125 rounded-3xl object-cover" />
 
 
     </section>

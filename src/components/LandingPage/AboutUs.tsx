@@ -29,12 +29,11 @@ function AboutUs() {
         <h3 className="text-[15px] font-bold text-green25 text-center font-manrope">
           Building Intelligence for Africa’s Energy Future
         </h3>
-        <h4 className="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-center text-zinc400">
-          Energylytics is more than a tech company.
+        <h4 className="text-2xl  font-semibold text-center text-zinc400">
+          Nigeria's future will be shaped by the quality of its energy systems, the resilience of its environmental/climate infrastructure and 
           <br />
           <span className="text-green">
-            We're building the intelligence that powers Africa's renewable
-            energy revolution.
+            the intelligence with which it manages its natural resources.
           </span>
         </h4>
       </div>
