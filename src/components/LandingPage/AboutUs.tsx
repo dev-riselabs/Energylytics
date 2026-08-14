@@ -7,14 +7,14 @@ const about = [
     icon: TbTargetArrow,
     img: "/mission-img.png",
     description:
-      "To leverage data and artificial intelligence to transform how Africa produces, manages and consumes energy, creating equitable access to power for all.",
+      "To utilize data, artificial intelligence, clean energy and environmental innovation to make energy systems smarter, more accessible and sustainable, while helping Nigeria and the rest of Africa become resilient economies and infrastructure for the future.",
   },
   {
     title: "Our Vision",
     icon: GoEye,
     img: "/vision-img.png",
     description:
-      "To become Africa’s leading intelligence hub for clean energy innovation, policy influence and sustainable power management.",
+      "To become Africa’s leading platform for clean energy intelligence, climate innovation, waste-to- value and sustainable infrastructure, driving smarter decisions, accelerating the energy transition and enabling a more resilient and sustainable Africa.",
   },
 ];
 
@@ -50,7 +50,7 @@ function AboutUs() {
                         <p className="text-base text-slate50">{description}</p>
                     </div>
                   </div>
-                  <img src={img} alt="" className={`w-full h-full object-cover ${i === 1? 'rounded-3xl skew-y-14' : 'rounded-full'}`} />
+                  <img src={img} alt="" className={`w-full h-full max-h-70 self-center object-cover ${i === 1? 'rounded-3xl skew-y-14' : 'rounded-full'}`} />
             </div>)
         }
       </div>

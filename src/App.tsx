@@ -13,6 +13,7 @@ import EducationPlatform from "./pages/EducationPlatform";
 import Blog from "./pages/Blog";
 import Partnerships from "./pages/Partnerships";
 import SocialImpact from "./pages/SocialImpact";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="blog" element={<Blog />} />
           <Route path="partnerships" element={<Partnerships />} />
           <Route path="social-impact" element={<SocialImpact />} />
+          <Route path='/services' element={<Services/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

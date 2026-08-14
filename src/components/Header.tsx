@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FiChevronDown, FiMenu } from "react-icons/fi";
-import { MdClose, MdKeyboardArrowDown } from "react-icons/md";
+import { MdClose, MdKeyboardArrowDown, MdPlayArrow } from "react-icons/md";
 import { Link, NavLink } from "react-router";
 
 const navLinks = [
@@ -46,11 +46,11 @@ const navLinks = [
     title: "partnerships",
     path: "/partnerships",
     children: [
-      { title: "Government", path: "" },
-      { title: "Private Sector", path: "" },
-      { title: "Development Partners", path: "" },
-      { title: "Technology", path: "" },
-      { title: "Research & Academia", path: "" },
+      { title: "Government", path: "/partnerships#government" },
+      { title: "Private Sector", path: "/partnerships#private" },
+      { title: "Development Partners", path: "/partnerships#development" },
+      { title: "Technology", path: "/partnerships#technology" },
+      { title: "Research & Academia", path: "/partnerships#knowledge" },
     ],
   },
   {
@@ -76,7 +76,7 @@ function Header() {
   }
 
   return (
-    <header className="flex items-center justify-between bg-white h-20  lg:h-30.5 px-5 sm:px-7 md:px-15">
+    <header className="flex items-center justify-between bg-white h-20 lg:gap-8 lg:h-30.5 px-5 sm:px-7 md:px-15">
       <Link to="/" className="cursor-pointer">
         <img
           src="/logo.png"
@@ -91,8 +91,8 @@ function Header() {
         {" "}
         {showMenu ? <MdClose /> : <FiMenu />}
       </button>
-      <div className="lg:flex items-center gap-5 hidden">
-        <nav className="flex items-center gap-3">
+      <div className="lg:flex items-center gap-5 hidden xl:flex-1 xl:justify-between ">
+        <nav className="flex items-center gap-2 xl:gap-4">
           {navLinks.map((navItem) => (
             <div
               key={navItem.title}
@@ -122,9 +122,10 @@ function Header() {
                     isActive
                       ? "text-green25 font-bold hover:text-green"
                       : "text-zinc100 hover:text-slate"
-                  } transition-all text-sm capitalize flex items-center gap-1`
+                  } transition-all text-xs xl:text-sm capitalize flex items-center gap-1`
                 }
               >
+                <MdPlayArrow className="w-4 h-4" />
                 {navItem.title}
 
                 {navItem.children && (
@@ -149,12 +150,12 @@ function Header() {
           ))}
         </nav>
 
-        <div className="flex flex-col lg:flex-row gap-4">
-          <button className="px-5 py-3 rounded-xl border border-green30 text-green text-sm font-bold font-dmSans hover:bg-green25 hover:text-white transition-all cursor-pointer">
+        <div className="flex flex-col lg:flex-row gap-3">
+          <button className="px-2 xl:px-5 py-3 rounded-xl border border-green30 text-green text-xs xl:text-sm font-bold font-dmSans hover:bg-green25 hover:text-white transition-all cursor-pointer">
             Get Demo
           </button>
-          <button className="px-5 py-3 rounded-xl border border-green bg-green25 text-white text-sm font-bold font-dmSans hover:bg-transparent hover:text-green transition-all cursor-pointer">
-            Login/Sign Up
+          <button className="px-2 xl:px-5 py-3 rounded-xl border border-green bg-green25 text-white text-xs xl:text-sm font-bold font-dmSans hover:bg-transparent hover:text-green transition-all cursor-pointer">
+            {/* Login/Sign Up */} SignUp
           </button>
         </div>
       </div>

@@ -58,15 +58,15 @@ function ImpactFocus() {
           </motion.div>
         ))}
       </motion.div> */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-        <img src="/impact-focus.jpg" alt="" className="w-full md:col-span-2 h-full max-h-[500px] object-cover rounded-3xl"/>
-        <div className="flex flex-col gap-4 md:col-span-1 md:p-7.5 md:justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-6 w-full">
+        <img src="/impact-focus.jpg" alt="" className="w-full md:col-span-3 h-full max-h-[600px] object-cover md:object-center rounded-3xl"/>
+        <div className="flex flex-col gap-4 md:col-span-2 md:p-7.5 md:justify-center">
           {chains.map(({ icon: Icon, title }) => (
-            <div key={title} className="flex items-center gap-4">
-              <div className="w-18.5 h-18.5 rounded-md flex items-center justify-center bg-green45">
+            <div key={title} className="flex items-center gap-4  w-full">
+              <div className="w-18.5 h-18.5 shrink-0 rounded-md flex items-center justify-center bg-green45">
                 <Icon className="w-6 h-6 text-green25" />
               </div>
-              <h5 className="text-xl text-white max-w-[15ch]">{title}</h5>
+              <h5 className="text-xl text-white ">{title}</h5>
             </div>
           ))}
         </div>

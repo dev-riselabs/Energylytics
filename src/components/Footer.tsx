@@ -1,4 +1,5 @@
 import { GoDotFill } from "react-icons/go";
+import { MdOutlineArrowRight } from "react-icons/md";
 import { Link, NavLink } from "react-router";
 
 const navLinks = [
@@ -96,7 +97,7 @@ function Footer() {
             <h4 className="text-base sm:text-xl font-semibold text-green25">{linkItem.title}</h4>
             <div className="flex flex-col gap-4 list-disc">
               {
-                linkItem.links.map(link => <Link key={link.title} to={link.path} className="text-sm sm:text-base text-slate hover:text-green25 transition-all font-light flex items-center gap-1.5"> <GoDotFill className="w-3 h-3" />{link.title}</Link>)
+                linkItem.links.map(link => <Link key={link.title} to={link.path} className="text-sm sm:text-base text-slate hover:text-green25 transition-all font-light flex items-center gap-1.5"> <MdOutlineArrowRight className="w-6 h-6" />{link.title}</Link>)
               }
 
             </div>

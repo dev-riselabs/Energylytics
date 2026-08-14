@@ -1,8 +1,26 @@
 const stats = [
-    {title : 'Data-Driven, AI Powered Energy Platform', img : '/core-data-driven.jpg', description: 'Providing real-time insights on energy generation, distribution, and consumption through advanced analytics and predictive modelling.'},
-    {title : 'AI-Powered Energy Management Tool', img : '/core-management-tool.png', description: 'Leveraging machine learning to optimize energy efficiency, detect anomalies, reduce waste and improve grid performance.'},
-    {title : 'Education and Advocacy Initiative', img : '/core-education.jpg', description: 'Building awareness, technical capacity and public understanding of renewable energy through learning programs, campaigns and partnerships.'},
-]
+  {
+    title: "INTELLIGENCE",
+    sub: "Data, AI & Digital Intelligence",
+    img: "/pillar1.png",
+    description:
+      "We leverage energy, environmental and climate data, artificial intelligence, geospatial intelligence and advanced analytics to transform complex information into actionable insights for households, businesses, governments and investors.",
+  },
+  {
+    title: "ENERGY & ENVIRONMENTAL TRANSFORMATION",
+    sub: "Clean Energy, Climate & Sustainable Infrastructure",
+    img: "/pillar2.png",
+    description:
+      "We develop and support innovative solutions across renewable and clean energy, energy access, climate resilience, circular economy, waste-to-value and environmental infrastructure, turning intelligence into practical, scalable solutions.",
+  },
+  {
+    title: "KNOWLEDGE & CAPACITY",
+    sub: "Research, Policy & Human Capital",
+    img: "/pillar3.jpg",
+    description:
+      "We build the knowledge, skills, partnerships and institutional capabilities required to accelerate Africa's energy and sustainability transition through research, policy intelligence, training, knowledge platforms and strategic collaboration.",
+  },
+];
 
 function CorePilliars() {
   return (
@@ -23,17 +41,24 @@ function CorePilliars() {
         </h4>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-[350px_350px] gap-5">
-        {
-            stats.map((stat, i) => <div key={stat.title} className={`rounded-3xl  overflow-hidden relative ${i=== 0 ? 'sm:row-span-2' : ''}`}>
-                <div className="absolute inset-0 bg-black/60"></div>
-                <img src={stat.img} alt="" className="w-full h-full object-cover"/>
-                <div className="flex flex-col gap-6 absolute bottom-5 left-5 right-5 font-manrope">
-                    <h5 className="text-white text-2xl font-medium">{stat.title}</h5>
+        {stats.map((stat, i) => (
+          <div
+            key={stat.title}
+            className={`rounded-3xl  overflow-hidden relative ${i === 0 ? "sm:row-span-2" : ""}`}
+          >
+            <div className="absolute inset-0 bg-black/60"></div>
+            <img src={stat.img} alt="" className="w-full h-full object-cover" />
+            <div className="flex flex-col gap-6 absolute bottom-5 left-5 right-5 font-manrope">
+              <h5 className="text-white text-2xl font-medium">{stat.title}</h5>
+              <div className="flex flex-col gap-3">
+                <h6 className="text-xl font-extrabold text-green25">
+                  {stat.sub}
+                </h6>
                 <p className="text-xl text-white">{stat.description}</p>
-                </div>
-                
-            </div>)
-        }
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
