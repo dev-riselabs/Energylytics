@@ -7,7 +7,7 @@ const experts = [
 
 function Expert() {
   return (
-    <section className="bg-zinc500 px-5 sm:px-7 md:px-15 py-20 flex flex-col items-center gap-8">
+    <section id='experts' className="bg-zinc500 px-5 sm:px-7 md:px-15 py-20 flex flex-col items-center gap-8">
       <h3 className="text-slate font-bold text-[15px]">Our Experts</h3>
       <p className="text-lg sm:text-xl text-slate50 text-center max-w-[60ch]">
         Our Diverse Team of Analysts, Engineers, Project Managers and Administrators
