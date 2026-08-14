@@ -25,26 +25,26 @@ const features = [
 
 function WhoPlatformFor() {
   return (
-    <section className="py-20 px-5 sm:px-7 md:px-15 font-inter flex flex-col gap-10 items-center bg-black300">
-      <h2 className="text-white text-2xl font-medium">
+    <section className="py-12 md:py-20 px-5 sm:px-7 md:px-10 lg:px-15 font-inter flex flex-col gap-6 md:gap-10 items-center bg-black300">
+      <h2 className="text-white text-xl sm:text-2xl font-medium text-center">
         Who Is This Platform For?
       </h2>
-      <p className="text-base text-white text-center max-w-[60ch]">
+      <p className="text-sm sm:text-base text-white text-center max-w-[60ch]">
         We serve a diverse community of professionals dedicated to advancing the
         African energy sector
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 w-full">
         {features.map(({ title, icon: Icon, description }) => (
           <div
             key={title}
-            className={`rounded-2xl p-7 flex flex-col gap-7.5 flex-1 border border-zinc bg-white`}
+            className={`rounded-2xl p-6 sm:p-7 flex flex-col gap-5 sm:gap-7.5 flex-1 border border-zinc bg-white`}
           >
-            <div className="w-12.5 h-12.5 bg-green85 rounded-md flex items-center justify-center">
-              <Icon className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 md:w-12.5 md:h-12.5 bg-green85 rounded-md flex items-center justify-center">
+              <Icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
             </div>
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-4 md:gap-6">
               <h4 className="text-base font-bold text-slate60">{title}</h4>
-              <p className="text-base text-slate50">{description}</p>
+              <p className="text-sm sm:text-base text-slate50">{description}</p>
             </div>
           </div>
         ))}
