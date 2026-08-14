@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeUp, fadeDown } from "../../animation";
 import { AiFillThunderbolt } from "react-icons/ai";
+import { Link } from "react-router";
 
 const stats = [
   { title: "Africans lack electricity", value: "600M+" },
@@ -57,12 +58,12 @@ function Hero() {
             transition={{ delay: 0.5 }}
             className="flex items-center gap-2 sm:gap-3 justify-start sm:justify-center "
           >
-            <button className="px-3 sm:px-5 py-2 sm:py-3 rounded-lg sm:rounded-xl border border-green25 bg-green25 text-white text-xs sm:text-sm font-bold font-dmSans whitespace-nowrap hover:bg-white  hover:text-green transition-all cursor-pointer">
+            <Link to='/services' className="px-3 sm:px-5 py-2 sm:py-3 rounded-lg sm:rounded-xl border border-green25 bg-green25 text-white text-xs sm:text-sm font-bold font-dmSans whitespace-nowrap hover:bg-white  hover:text-green transition-all cursor-pointer">
               Explore Our Work
-            </button>
-            <button className="px-3 sm:px-5 py-2 sm:py-3 rounded-lg sm:rounded-xl border border-green30 bg-white text-green25 text-xs sm:text-sm font-bold font-dmSans whitespace-nowrap hover:bg-green25 hover:text-white transition-all cursor-pointer">
+            </Link>
+            <Link to='/contact-us' className="px-3 sm:px-5 py-2 sm:py-3 rounded-lg sm:rounded-xl border border-green30 bg-white text-green25 text-xs sm:text-sm font-bold font-dmSans whitespace-nowrap hover:bg-green25 hover:text-white transition-all cursor-pointer">
               Get in Touch
-            </button>
+            </Link>
           </motion.div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-3 max-w-260 w-full md:border md:border-green25 rounded-xl md:p-7.5 md:divide-x md:divide-slate30">
