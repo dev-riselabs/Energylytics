@@ -76,20 +76,20 @@ function Header() {
   }
 
   return (
-    <header className="flex items-center justify-between bg-white h-20  lg:h-30.5 px-5 sm:px-7 md:px-15">
+    <header className="flex items-center justify-between bg-white h-16 sm:h-20 lg:h-30.5 px-5 sm:px-7 md:px-10 lg:px-15">
       <Link to="/" className="cursor-pointer">
         <img
           src="/logo.png"
           alt=""
-          className="w-25 md:w-50 h-25 object-cover"
+          className="w-24 sm:w-32 md:w-40 lg:w-50 h-12 sm:h-16 lg:h-25 object-contain"
         />
       </Link>
       <button
         onClick={handleToggleShowMenu}
-        className={`cursor-pointer text-slate30 hover:text-slate transition-all lg:hidden ${showMenu ? "fixed right-5 top-8 z-40" : ""}`}
+        className={`cursor-pointer text-slate30 hover:text-slate transition-all lg:hidden ${showMenu ? "fixed right-5 top-6 z-40" : ""}`}
+        aria-label={showMenu ? "Close menu" : "Open menu"}
       >
-        {" "}
-        {showMenu ? <MdClose /> : <FiMenu />}
+        {showMenu ? <MdClose className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
       </button>
       <div className="lg:flex items-center gap-5 hidden">
         <nav className="flex items-center gap-3">
