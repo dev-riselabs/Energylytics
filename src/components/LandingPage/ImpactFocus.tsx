@@ -3,8 +3,8 @@ import { FaRegLightbulb } from "react-icons/fa";
 import { GiWindTurbine } from "react-icons/gi";
 import { LuGrid3X3 } from "react-icons/lu";
 import { RiGraduationCapLine } from "react-icons/ri";
-import { motion } from "framer-motion";
-import { staggerContainer, cardItem } from "../../animation";
+// import { motion } from "framer-motion";
+// import { staggerContainer, cardItem } from "../../animation";
 
 const chains = [
   { icon: GiWindTurbine, title: "Renewable Energy Optimization"},
