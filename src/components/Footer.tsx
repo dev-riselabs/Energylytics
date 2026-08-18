@@ -1,6 +1,9 @@
+import { useState, type FormEvent } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { MdOutlineArrowRight } from "react-icons/md";
 import { Link } from "react-router";
+
+const CONTACT_EMAIL = "developer@risenetworks.org";
 
 const navLinks = [
   {title : 'Explore', links : [
@@ -61,6 +64,21 @@ const footerLinks = [
 ];
 
 function Footer() {
+  // const [fullName, setFullName] = useState("");
+  // const [email, setEmail] = useState("");
+
+  function handleSubscribe(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const mailSubject = "[Energylytics Newsletter] New subscription";
+    const body = [
+      `Full Name: ${fullName}`,
+      `Email: ${email}`,
+      "",
+      "Please add this subscriber to the Energylytics newsletter list.",
+    ].join("\n");
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(body)}`;
+  }
+
   return (
     <footer className="flex flex-col gap-6 px-5 sm:px-7 md:px-10 lg:px-15 py-10 md:py-15 divide-y-2 divide-zinc font-manrope bg-green35">
       <div className="flex flex-col gap-8 md:gap-10 pb-7">
@@ -75,7 +93,7 @@ function Footer() {
             <span className="font-semibold">Headquarters:</span> Abuja, Nigeria
           </span>
         </div>
-        <div className="flex flex-col gap-6 lg:w-1/2">
+        <form onSubmit={handleSubscribe} className="flex flex-col gap-6 lg:w-1/2">
           <p className="text-base sm:text-xl text-slate50">Get weekly updates on the newest projects and programms right in your mailbox.
 </p>
           <button className="text-base sm:text-xl text-green cursor-pointer hover:text-green transition-all">Subscribe now!</button>
@@ -89,7 +107,8 @@ function Footer() {
               <input type="email" name="" id="" placeholder="@gmail.com" className="rounded-md border border-black/50 text-sm text-slate px-3 py-3 outline-none"/>
             </div>
           </div>
-        </div>
+          <button type="submit" className="self-start px-5 py-2.5 rounded-md bg-green25 text-white text-sm font-bold font-dmSans border border-green25 hover:bg-transparent hover:text-green25 transition-all cursor-pointer">Subscribe</button>
+        </form>
 
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
