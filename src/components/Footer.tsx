@@ -84,16 +84,22 @@ function Footer() {
       <div className="flex flex-col gap-8 md:gap-10 pb-7">
       <div className="flex flex-col gap-7 lg:flex-row lg:justify-between lg:items-center">
          <div className="flex flex-col gap-5">
-          <img src="/logo.png" alt="" className="w-40 md:w-60 h-16 md:h-35 object-contain" />
-          <h5>Have a challenge we're equipped to solve?</h5>
-          <span className="text-sm sm:text-base text-slate50 md:max-w-[60ch]">
-            <a href="/contact-us">Partner with Energylytics Africa </a><FaArrowRight/>
-            {/* Building the intelligence that powers Africa's renewable energy revolution through data, AI and education. */}
-          </span>
-          <span className="text-sm sm:text-base text-slate50">
-            <span className="font-semibold">Headquarters:</span> Abuja, Nigeria
-          </span>
-        </div>
+            <img
+              src="/logo.png"
+              alt=""
+              className="w-40 md:w-60 h-16 md:h-35 object-contain"
+            />
+            <h5>Have a challenge we're equipped to solve?</h5>
+            <span className="text-sm sm:text-base text-slate50 md:max-w-[60ch] flex items-center gap-2">
+              <a href="/contact-us"> Partner with Energylytics Africa</a>{" "}
+              <FaArrowRight />
+            </span>
+            <span className="text-sm sm:text-base text-slate50">
+              <span className="font-semibold">
+                Projects Operations HQ - Abuja, Nigeria
+              </span>
+            </span>
+          </div>
         <form onSubmit={handleSubscribe} className="flex flex-col gap-6 lg:w-1/2">
           <p className="text-base sm:text-xl text-slate50">Get weekly updates on the newest projects and programms right in your mailbox.
 </p>
