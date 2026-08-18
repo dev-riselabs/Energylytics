@@ -70,7 +70,6 @@ function Footer() {
           <h5>Have a challenge we're equipped to solve?</h5>
           <span className="text-sm sm:text-base text-slate50 md:max-w-[60ch] flex items-center gap-2">
             <a href="/contact-us"> Partner with Energylytics Africa</a> <FaArrowRight/>
-            {/* Building the intelligence that powers Africa's renewable energy revolution through data, AI and education. */}
           </span>
           <span className="text-sm sm:text-base text-slate50">
             <span className="font-semibold">Headquarters:</span> Abuja, Nigeria
