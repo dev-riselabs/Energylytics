@@ -39,7 +39,7 @@ function CorePilliars() {
           </span>
         </h4>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 auto-rows-70 sm:auto-rows-auto sm:grid-rows-[350px_350px] gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 auto-rows-70 sm:auto-rows-auto sm:grid-rows-[320px_320px] gap-4">
         {stats.map((stat, i) => (
           <div
             key={stat.title}
@@ -48,14 +48,14 @@ function CorePilliars() {
             <div className="absolute inset-0 bg-black/60 z-1"></div>
             <img src={stat.img} alt="" className="w-full h-full object-cover" />
             <div className="flex flex-col gap-3 md:gap-6 absolute bottom-5 left-5 right-5 z-2 font-manrope">
-              <h5 className="text-white text-lg md:text-xl font-medium">
+              <h5 className="text-white text-lg font-medium">
                 {stat.title}
               </h5>
-              <div className="flex flex-col gap-3">
-                <h6 className="text-lg font-extrabold text-green25">
+              <div className="flex flex-col gap-2.5">
+                <h6 className="text-base font-extrabold text-green25">
                   {stat.sub}
                 </h6>
-                <p className="text-sm md:text-lg text-white">
+                <p className="text-sm text-white">
                   {stat.description}
                 </p>
               </div>
